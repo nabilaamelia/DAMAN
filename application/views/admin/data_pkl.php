@@ -42,7 +42,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                  <form action="<?php echo base_url().'admin/edit_data_pkl'; ?>" method="post" enctype="multipart/form-data" >
+                  <form action="<?php echo base_url().'admin/edit_data_pkl/'.$pkl->id_data_pkl; ?>" method="post" enctype="multipart/form-data" >
 
                     <div class="form-group">
                       <label>Nama</label>
@@ -86,14 +86,15 @@
 
                     <div class="form-group">
                       <label>foto</label><br>
+                      <input type="hidden" name="foto_awal" class="form-control" value="<?php echo $pkl->foto ?>">
                       <input type="file" name="foto" class="form-control">
                     </div>
 
                 </div>
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <?php echo anchor('admin/data_pkl',
-                    '<div class="btn  btn-success">Close</div>') ?>
+                  
+                  <button type="button" class="btn  btn-success" data-dismiss="modal" aria-label="Close">Close</button>
                 </div>
 
                 </form>
@@ -170,8 +171,7 @@
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Simpan</button>
-        <?php echo anchor('admin/data_pkl',
-          '<div class="btn  btn-success">Close</div>') ?>
+        <button type="button" class="btn  btn-success" data-dismiss="modal" aria-label="Close">Close</button>
       </div>
 
       </form>
