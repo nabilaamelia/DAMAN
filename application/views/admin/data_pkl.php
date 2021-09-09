@@ -105,7 +105,26 @@
         <!-- Akhir edit data -->
             
         </td> 
-        <td><?php echo anchor('admin/data_barang/hapus/' .$pkl->id_data_pkl, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
+        <td>
+        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_data_pkl<?php echo $pkl->id_data_pkl; ?>"><i class="fa fa-trash"></i></i></button>
+          <!-- <?php echo anchor('admin/data_barang/hapus/' .$pkl->id_data_pkl, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?> -->
+      </td>
+       <!-- Modal Popup untuk delete-->
+      <div class="modal fade" id="hapus_data_pkl<?php echo $pkl->id_data_pkl; ?>">
+        <div class="modal-dialog">
+          <div class="modal-content" style="margin-top:100px;">
+            <div class="modal-header">
+              <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+              <h4 class="modal-title" style="text-align:center;">Anda yakin akan menghapus data ini.. ?</h4>
+            </div>
+                      
+            <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
+              <a href="<?php echo base_url().'admin/hapus_data_pkl/'.$pkl->id_data_pkl; ?>" class="btn btn-danger btn-sm" id="delete_link">Hapus</a>
+              <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
         
       </tr>
 

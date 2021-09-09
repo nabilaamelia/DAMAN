@@ -60,7 +60,7 @@ class Admin extends CI_Controller{
 		redirect('admin/data_pkl');
     }
 
-	public function edit_data_pkl()
+	public function edit_data_pkl($id)
 	{
 		$nama_pkl		= $this->input->post('nama_pkl');
 		$asal_sekolah	= $this->input->post('asal_sekolah');
@@ -74,43 +74,53 @@ class Admin extends CI_Controller{
 		$foto			= $_FILES['foto']['name'];
 		echo $foto_awal .'<br>';
 		echo $foto;
-		// if ($foto	='') {
-		// 	$data = array(
-		// 		'nama_pkl' 		=> $nama_pkl, 
-		// 		'asal_sekolah' 	=> $asal_sekolah,
-		// 		'no_hp' 		=> $no_hp, 
-		// 		'email' 		=> $email,
-		// 		'kota' 			=> $kota, 
-		// 		'alamat' 		=> $alamat,
-		// 		'tgl_mulai' 	=> $tgl_mulai,
-		// 		'tgl_selesai' 	=> $tgl_selesai          
-		// 	);
-		// }
-        // else{
-		// 	$config ['upload_path'] = './assets/images/profile_anak_pkl';
-		// 	$config ['allowed_types'] = 'jpg|jpeg|png|gif';
+		echo $nama_pkl;
+		if ($foto == null) {
+			$data = array(
+				'nama_pkl' 		=> $nama_pkl, 
+				'asal_sekolah' 	=> $asal_sekolah,
+				'no_hp' 		=> $no_hp, 
+				'email' 		=> $email,
+				'kota' 			=> $kota, 
+				'alamat' 		=> $alamat,
+				'tgl_mulai' 	=> $tgl_mulai,
+				'tgl_selesai' 	=> $tgl_selesai          
+			);
+		}
+        else{
+			$config ['upload_path'] = './assets/images/profile_anak_pkl';
+			$config ['allowed_types'] = 'jpg|jpeg|png|gif';
 
-		// 	$this->load->library('upload', $config);
-		// 	if(!$this->upload->do_upload('foto')){
-		// 		echo "Gambar gagal diupload";
-		// 	} else {
-		// 		$foto=$this->upload->data('file_name');
-		// 	}
-		// 	$data = array(
-		// 		'nama_pkl' 		=> $nama_pkl, 
-		// 		'asal_sekolah' 	=> $asal_sekolah,
-		// 		'no_hp' 		=> $no_hp, 
-		// 		'email' 		=> $email,
-		// 		'kota' 			=> $kota, 
-		// 		'alamat' 		=> $alamat,
-		// 		'tgl_mulai' 	=> $tgl_mulai,
-		// 		'tgl_selesai' 	=> $tgl_selesai,
-		// 		'foto' 			=> $foto            
-		// 	);
-		// }
-
-		// $this->model_barang->tambah_barang($data, 'tb_brg');
-		// redirect('admin/data_barang/index');
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('foto')){
+				echo "Gambar gagal diupload";
+			} else {
+				$foto=$this->upload->data('file_name');
+			}
+			$data = array(
+				'nama_pkl' 		=> $nama_pkl, 
+				'asal_sekolah' 	=> $asal_sekolah,
+				'no_hp' 		=> $no_hp, 
+				'email' 		=> $email,
+				'kota' 			=> $kota, 
+				'alamat' 		=> $alamat,
+				'tgl_mulai' 	=> $tgl_mulai,
+				'tgl_selesai' 	=> $tgl_selesai,
+				'foto' 			=> $foto            
+			);
+		}
+		$where = array(
+			'id_data_pkl' => $id 
+		);
+		$this->model_datapkl->edit_data_pkl($data, $where, 'tb_data_pkl');
+		redirect('admin/data_pkl');
+	}
+	public function hapus_data_pkl($id) {
+		$where = array(
+			'id_data_pkl' => $id 
+		);
+		$this->model_datapkl->hapus_data($where, 'tb_data_pkl');
+		redirect(base_url().'admin/data_pkl');
 	}
 } 
 ?>
