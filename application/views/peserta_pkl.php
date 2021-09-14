@@ -3,13 +3,35 @@
             <img title='' src='http://pegawai.pnm.ac.id/assets/file/pegawai/foto/20170908104836.JPG' style='border-radius: 5px;'/>
         </div>
         <div>
-            <table>
-                <tr><td>NIP/NIK</td><td>:</td><td>198601182014041001</td></tr>
-                <tr><td>Nama Dosen</td><td>:</td><td>Mohammad Erik Echsony, S.ST., M.T.</td></tr>
-                <tr><td>NIDN</td><td>:</td><td>0018018603</td></tr>
-                <tr><td>No. Telp/HP</td><td>:</td><td>-</td></tr>
-                <tr><td>Alamat</td><td>:</td><td>Jln Teratai RT 007 RW 001 Paciran Lamongan Jawa Timur</td></tr>
-                <tr><td>Email</td><td>:</td><td>erik_sony@pnm.ac.id</td></tr>
+            <table class="table table-bordered">
+                <tr>
+                    <td>NO</td>
+                    <td>Nama</td>
+                    <td>ASAL SEKOLAH</td>
+                    <td>NO HP</td>
+                    <td>EMAIL</td>
+                    <td>KOTA</td>
+                    <td>MULAI</td>
+                    <td>SELESAI</td>
+                </tr>
+
+                <?php
+                $no=1;
+                foreach ($datapkl as $pkl) : ?>
+                <tr>
+                    <td><?php echo $no++ ?></td>
+                    <td><?php echo $pkl->nama_pkl ?></td>
+                    <td><?php echo $pkl->asal_sekolah ?></td>
+                    <td><?php echo $pkl->no_hp ?></td>
+                    <td><?php echo $pkl->email ?></td>
+                    <td><?php echo $pkl->kota ?></td>
+                    <td><?php echo $pkl->tgl_mulai ?></td>
+                    <td><?php echo $pkl->tgl_selesai ?></td>
+                </tr>
+
+
+                <?php endforeach; ?>
+
             </table>
         </div>
     </div>
