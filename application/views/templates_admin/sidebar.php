@@ -30,25 +30,37 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/data_pkl') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>DATA PKL</span></a>
+                    <span>DATA PESERTA</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/invoice') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/data_pengurus') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Invoice</span></a>
+                    <span>DATA PENGURUS</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/invoice/bayar') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/info_daman') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Bukti TF</span></a>
+                    <span>INFO DAMAN</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/chat_admin/chat') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/presensi_peserta') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Inbox Customer</span></a>
+                    <span>PRESENSI PESERTA</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('admin/forum_diskusi') ?>">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>FORUM DISKUSI</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('admin/admin') ?>">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>ADMIN</span></a>
             </li>
 
             <!-- Sidebar Toggler (Sidebar) -->

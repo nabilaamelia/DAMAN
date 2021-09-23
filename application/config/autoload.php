@@ -132,5 +132,5 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('Model_datapkl');
+$autoload['model'] = array('Model_data');
 // $autoload['model'] = array('model_barang','model_invoice','model_chat','model_kategori','model_auth');
