@@ -35,9 +35,9 @@
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">PKL</a>
                         
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="info.php">INFO PKL</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('Info') ?>">INFO PKL</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="peserta_pkl">DAFTAR ANAK PKL</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl') ?>">DAFTAR ANAK PKL</a></li>
                             <li><div class="dropdown-divider"></div></li>
                         
                         </ul>
