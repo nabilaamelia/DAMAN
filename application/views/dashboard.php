@@ -92,7 +92,7 @@
                 
                                         <div class="d-flex pt-2 pb-4">
                                             <div>
-                                                <img class="avatar" src="./assets/images/testimonial-1.jpg" alt="testimonial">
+                                                <img class="avatar" src="<?php echo $dtpgs->foto ?>">
                                             </div>
                                             <div class="ms-3 pt-2">
                                                 <h6><?php echo $dtpgs->nama ?></h6>
