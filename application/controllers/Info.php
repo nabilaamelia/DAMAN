@@ -10,6 +10,6 @@ class Info extends CI_Controller{
 		$this->load->view('info', $data);
 		$this->load->view('templates/footer');
 	}
-}
+} 
 
 ?>

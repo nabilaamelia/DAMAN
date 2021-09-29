@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Tutorial Card Bootstrap 4</h5>
+                            <a href="<?php echo base_url() ?>"><h5 class="text-dark">Tutorial Card Bootstrap 4</h5></a>                            
                             <p class="card-text">Tutorial cara membuat card vertikal.</p>
                             <p class="card-text"><small class="text-muted">Diposting 19 menit lalu</small></p>
                         </div>
