@@ -63,6 +63,7 @@
     </section> <!-- end of about -->
 
     <!-- Testimonials -->
+    
     <div class="slider-1 testimonial text-light d-flex align-items-center " id="testimonial">
         <div class="container">
             <div class="row">
@@ -72,82 +73,40 @@
                     
                 </div>
             </div> <!-- end of row -->
+            
             <div class="row p-2" data-aos="zoom-in">
                 <div class="col-lg-12">
 
+                
                     <!-- Card Slider -->
                     <div class="slider-container">
                         <div class="swiper-container card-slider">
                             <div class="swiper-wrapper">
+
+                            <?php foreach ($datapengurus as $dtpgs) : ?>
                                 
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-                                    
-                                        <div class="d-flex pt-4">
+                                        
+                
+                                        <div class="d-flex pt-2 pb-4">
                                             <div>
                                                 <img class="avatar" src="./assets/images/testimonial-1.jpg" alt="testimonial">
                                             </div>
                                             <div class="ms-3 pt-2">
-                                                <h6>Marlene Visconte</h6>
-                                                <p>General Manager - Scouter</p>
+                                                <h6><?php echo $dtpgs->nama ?></h6>
+                                                <p><?php echo $dtpgs->jabatan ?></p>
+                                                
                                             </div>
                                         </div>
+
+                                        <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
                                     </div>
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-                                        <div class="d-flex pt-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-2.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <h6>John Spiker</h6>
-                                                <p>Team Leader - Vanquish</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-                                        <div class="d-flex pt-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-3.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <h6>Stella Virtuoso</h6>
-                                                <p>Design Chief - Upscale</p>
-                                            </div>
-                                        </div>
-                                    </div>      
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
-                                        <div class="d-flex pt-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-4.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <p>Mike tim</p>
-                                                <p>Investor - TechGroww</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
+
+                                <?php endforeach ?>
 
                             </div> <!-- end of swiper-wrapper -->
         
@@ -161,7 +120,9 @@
                     <!-- end of card slider -->
 
                 </div> <!-- end of col -->
+                
             </div> <!-- end of row -->
+            
         </div> <!-- end of container -->
     </div> <!-- end of testimonials -->
 

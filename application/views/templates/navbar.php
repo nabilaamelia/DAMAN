@@ -17,7 +17,7 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault" >
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('dashboard') ?>">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">PROFIL</a>

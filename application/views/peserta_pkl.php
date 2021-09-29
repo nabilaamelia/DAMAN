@@ -6,7 +6,8 @@
         <div style='width: 100px; float: left; margin-right: 10px; margin-top: 10px'>
             <img title='' src='http://pegawai.pnm.ac.id/assets/file/pegawai/foto/20170908104836.JPG' style='border-radius: 5px;'/>
         </div>
-        <div class="container">
+        <br><br><br><br>
+        <div class="container ">
         <h1 class="text-center">Daftar Peserta PKL</h1>
             <table table class="table table-bordered table-striped table-hover">
                 <tr>
