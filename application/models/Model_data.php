@@ -84,4 +84,25 @@ class Model_data extends CI_Model{
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
+
+	// CRUD DISKUSI PESERTA
+	public function tampil_forum_diskusi(){
+		return $this->db->get('tb_diskusi');
+	}
+
+	public function tambah_forum_diskusi($data,$table){
+		$this->db->insert($table,$data);
+	}
+	public function edit_forum_diskusi($data, $where, $table)
+	{
+		$this->db->where($where);
+		$this->db->update($table, $data);
+		
+	}
+	public function hapus_forum_diskusi($where,$table)
+	{
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+
 }

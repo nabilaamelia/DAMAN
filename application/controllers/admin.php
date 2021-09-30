@@ -359,5 +359,58 @@ class Admin extends CI_Controller{
 		redirect(base_url().'admin/presensi_peserta');
 	}
 
-} 
+	// tampilan DISKUSI PESERTA
+	public function forum_diskusi()
+	{
+		$data['forumdiskusi'] = $this->Model_data->tampil_forum_diskusi()->result();
+		// echo print_r($data);
+		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
+		$this->load->view("templates_admin/header");
+		$this->load->view("templates_admin/sidebar");
+		$this->load->view("admin/forum_diskusi", $data);
+		$this->load->view("templates_admin/footer");
+
+	}
+
+	public function tambah_forum_diskusi() {
+        $time		= $this->input->post('time');
+		$nama		= $this->input->post('nama');
+		$pesan		= $this->input->post('pesan');
+	
+        $data = array(
+			'time' 		=> $time, 
+			'nama' 		=> $nama,
+			'pesan' 	=> $pesan
+			    
+		);
+        $this->Model_data->tambah_data($data, 'tb_diskusi');
+		redirect('admin/forum_diskusi');
+    }
+
+	public function edit_forum_diskusi($id)
+	{
+		$time		= $this->input->post('time');
+		$nama		= $this->input->post('nama');
+		$pesan		= $this->input->post('pesan');
+		echo $time;
+			$data = array(
+				'time' 		=> $time, 
+				'nama' 		=> $nama,
+				'pesan' 	=> $pesan
+			);
+		$where = array(
+			'id_diskusi' => $id 
+		);
+		$this->Model_data->edit_forum_diskusi($data, $where, 'tb_diskusi');
+		redirect('admin/forum_diskusi');
+	}
+	public function hapus_forum_diskusi($id) {
+		$where = array(
+			'id_diskusi' => $id 
+		);
+		$this->Model_data->hapus_data($where, 'tb_diskusi');
+		redirect(base_url().'admin/forum_diskusi');
+	}
+
+}
 ?>
