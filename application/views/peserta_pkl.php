@@ -5,7 +5,7 @@
 			<?php foreach ($datapkl as $pkl) : ?>
 
 				<div class="card mb-4" style="width: 10rem; height: 20rem; margin-left: 2rem;" >
-					<img src="https://i.pinimg.com/736x/fa/25/1c/fa251c8aa5be7f9c7ba96a8372794d22.jpg" class="card-img-top" alt="..." width="120" height="150">
+					<img src="<?php echo base_url('assets/images/profile_anak_pkl/'.$pkl->foto) ?>" class="card-img-top" alt="..." width="120" height="150">
 					<div class="card-body">
 						<h5 class="card-title mb-1">
 							<small><?php echo $pkl->nama ?></small><br>
