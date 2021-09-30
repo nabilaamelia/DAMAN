@@ -22,6 +22,17 @@ class Model_data extends CI_Model{
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
+	public function detail_data($id_peserta)
+	{
+		$result = $this->db->where('id_peserta', $id_peserta)->get('tb_peserta');
+		if($result->num_rows() > 0){
+			return $result->result();
+		} else {
+			return false;
+		}
+
+	}
+
 
 	// CRUD pengurus
 	public function tampil_data_pengurus(){
@@ -42,6 +53,10 @@ class Model_data extends CI_Model{
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
+
+	
+
+
 
 
 	// CRUD INFO DAMAN
