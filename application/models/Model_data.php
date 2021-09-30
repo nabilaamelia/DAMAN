@@ -1,5 +1,5 @@
 <?php 
- 
+
 class Model_data extends CI_Model{
 
 	public function tampil_data(){
@@ -77,6 +77,11 @@ class Model_data extends CI_Model{
 	{
 		$this->db->where($where);
 		$this->db->delete($table);
+	}
+	public function detail_info_daman($where)
+	{
+		return $this->db->get_where('tb_info', $where);
+
 	}
 
 
