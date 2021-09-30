@@ -11,7 +11,8 @@
 							<small><?php echo $pkl->nama ?></small><br>
 						</h5>
 						<p class="mt-4">
-							<a class="btn btn-warning bg-dark"href="">Detail</a>
+
+                            <?php echo anchor('Peserta_pkl/Detail/'.$pkl->id_peserta, '<div class="btn btn-warning bg-dark">Detail</div>') ?>
                         </p>
 					</div>
 				</div> 

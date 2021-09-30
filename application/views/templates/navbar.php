@@ -37,7 +37,7 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
                             <li><a class="dropdown-item" href="<?php echo base_url('Info') ?>">INFO PKL</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl') ?>">DAFTAR ANAK PKL</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl/peserta') ?>">DAFTAR ANAK PKL</a></li>
                             <li><div class="dropdown-divider"></div></li>
                         
                         </ul>
