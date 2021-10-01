@@ -5,7 +5,15 @@
         <?php foreach($detailinfo as $detail) : ?>
             <div class="col-md-8">
                 <center>
-                    <img src="https://berita.mediacorp.sg/image/4660958/1632959164000/large16x9/768/432/ttsh.jpg" class="card-img-top" alt="..." width="150" height="300">
+                    <div class="mb-4" style="width: 600px; height: 300px;">
+                        <?php if($detail->foto !== "") : ?>                    
+                            <img src="<?= base_url('assets/images/info_pkl/'.$detail->foto) ?>" class="card-img-top" alt="..." width="150" height="300">
+                        <?php else : ?> 
+                            <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/09/22/3820270727.png" class="card-img-top" alt="..." width="150" height="300">
+                        <?php endif; ?>                   
+                    </div>
+                </center>
+                <center>
                     <h3 class="mt-3 mb-2"><?php echo $detail->judul ?></h3>
                 </center>
                 <p style="text-align: justify;"><?php echo $detail->isi ?></p>
