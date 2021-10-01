@@ -4,13 +4,14 @@
 		<div class="row text-center">
 			<?php foreach ($datapkl as $pkl) : ?>
 
-				<div class="card mb-4" style="width: 10rem; height: 20rem; margin-left: 2rem;" >
+				<div class="card mb-4" style="width: 12rem; height: 20rem; margin-left: 2rem;" >
 					<img src="<?php echo base_url('assets/images/profile_anak_pkl/'.$pkl->foto) ?>" class="card-img-top" alt="..." width="120" height="150">
 					<div class="card-body">
 						<h5 class="card-title mb-1">
 							<small><?php echo $pkl->nama ?></small><br>
 						</h5>
 						<p class="mt-4">
+							<center><?= $pkl->asal_instansi ?></center>
 
                             <?php echo anchor('Peserta_pkl/Detail/'.$pkl->id_peserta, '<div class="btn btn-warning bg-dark">Detail</div>') ?>
                         </p>
