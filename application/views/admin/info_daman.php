@@ -1,4 +1,5 @@
 <div class="container-fluid">
+<center><h3>INFO DATA MANAGEMENT TELKOM SIDOARJO</h3></center>
     <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_info_daman"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
 
     <table class="table table-bordered">

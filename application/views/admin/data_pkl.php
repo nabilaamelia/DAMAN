@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <center><h3>DATA PESERTA PKL TELKOM SIDOARJO</h3></center>
     <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_pkl"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
 
     <table class="table table-bordered">
@@ -7,8 +8,8 @@
         <th>NAMA</th>
         <th>ASAL INSTANSI</th>
         <th>NO HP</th>
-        <!-- <th>EMAIL</th> -->
-        <!-- <th>ALAMAT</th> -->
+        <th>EMAIL</th>
+        <th>ALAMAT</th>
         <th>MULAI</th>
         <th>SELESAI</th>
         <th>FOTO</th>
@@ -25,8 +26,8 @@
         <td><?php echo $pkl->nama ?></td>
         <td><?php echo $pkl->asal_instansi ?></td>
         <td><?php echo $pkl->no_hp ?></td>
-        <!-- <td><?php echo $pkl->email ?></td> -->
-        <!-- <td><?php echo $pkl->alamat ?></td> -->
+        <td><?php echo $pkl->email ?></td>
+        <td><?php echo $pkl->alamat ?></td>
         <td><?php echo $pkl->tgl_mulai ?></td>
         <td><?php echo $pkl->tgl_selesai ?></td>
         <td><?php echo $pkl->foto ?></td>
@@ -133,6 +134,14 @@
       </tr>
 
     <?php endforeach; ?>
+
+  </table>
+    <div class="row">
+      <div class="col">
+        <?php echo $pagination; ?>
+      </div>
+    </div>
+
 </div>
 
 <!-- Modal -->

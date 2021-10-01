@@ -12,7 +12,18 @@ class Admin extends CI_Controller{
 
     public function data_pkl()
 	{
-		$data['datapkl'] = $this->Model_data->tampil_data()->result();
+		$config['base_url'] 	= site_url('admin/data_pkl');
+		$config['total_rows']	= $this->db->count_all('tb_peserta');
+		$config['per_page']		= 10;
+		$config['uri_segment']	= 3;
+		$choice					= $config["total_rows"] / $config['per_page'];
+		$config["num_links"]	= floor($choice);
+
+		$this->pagination->initialize($config);
+		$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+		$data['datapkl'] = $this->Model_data->tampil_data($config["per_page"], $data['page'])->result();
+		$data ['pagination'] = $this->pagination->create_links();
 		// echo print_r($data);
 		// $data['barang'] = $this->model_barang->tampil_data()->result();
 		$this->load->view("templates_admin/header");

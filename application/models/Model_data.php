@@ -2,8 +2,8 @@
 
 class Model_data extends CI_Model{
 
-	public function tampil_data(){
-		return $this->db->get('tb_peserta');
+	public function tampil_data($limit, $start){
+		return $this->db->get('tb_peserta', $limit, $start);
 	}
 	// public function tampil_data(){
 	// 	return $this->db->get('tb_brg');
