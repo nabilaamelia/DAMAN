@@ -461,6 +461,6 @@ class Admin extends CI_Controller{
 		$this->Model_data->hapus_data($where, 'tb_admin');
 		redirect(base_url().'admin/data_admin');
 	}
-
+ 
 }
 ?>

@@ -8,7 +8,7 @@
         <th>Password</th>
         <th colspan="3">AKSI</th>
       </tr>
-
+ 
       <?php 
       $no=1;
       foreach($dataadmin as $admin) : ?>
