@@ -87,21 +87,20 @@
                                 
                                 <!-- Slide -->
                                 <div class="swiper-slide">
-                                    <div class="testimonial-card p-4">
-                                        
-                
-                                        <div class="d-flex pt-2 pb-4">
-                                            <div>
-                                                <img class="avatar" src="./assets/images/testimonial-1.jpg" alt="testimonial">
-                                            </div>
-                                            <div class="ms-3 pt-2">
-                                                <h6><?php echo $dtpgs->nama ?></h6>
-                                                <p><?php echo $dtpgs->jabatan ?></p>
+                                    <div class="testimonial-card p-4 text-center">
+
+                                        <div >
+                                            <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
+                                            
+                                            <div class="mt-3 mb-5">
+                                                <h5><?php echo $dtpgs->nama ?></h5>
+                                                <h6><?php echo $dtpgs->jabatan ?></h6>
                                                 
                                             </div>
-                                        </div>
 
-                                        <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
+                                            
+                                        </div>
+                                        
                                     </div>
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
