@@ -58,7 +58,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/admin') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/data_admin') ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>ADMIN</span></a>
             </li>

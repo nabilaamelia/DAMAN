@@ -412,5 +412,55 @@ class Admin extends CI_Controller{
 		redirect(base_url().'admin/forum_diskusi');
 	}
 
+
+	// tampilan DATA ADMIN
+	public function data_admin()
+	{
+		$data['dataadmin'] = $this->Model_data->tampil_data_admin()->result();
+		// echo print_r($data);
+		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
+		$this->load->view("templates_admin/header");
+		$this->load->view("templates_admin/sidebar");
+		$this->load->view("admin/data_admin", $data);
+		$this->load->view("templates_admin/footer");
+
+	}
+
+	public function tambah_data_admin() {
+        $username		= $this->input->post('username');
+		$password	= $this->input->post('password');
+	
+        $data = array(
+			'username' 	=> $username, 
+			'password' 	=> $password
+			    
+		);
+        $this->Model_data->tambah_data($data, 'tb_admin');
+		redirect('admin/data_admin');
+    }
+
+	public function edit_data_admin($id)
+	{
+		$username	= $this->input->post('username');
+		$password	= $this->input->post('password');
+		echo $username;
+			$data = array(
+				'username' 	=> $username, 
+				'password' 	=> $password
+			);
+		$where = array(
+			'id_admin' => $id 
+		);
+		$this->Model_data->edit_data_admin($data, $where, 'tb_admin');
+		redirect('admin/data_admin');
+	}
+	public function hapus_data_admin($id) {
+		$where = array(
+			'id_admin' => $id 
+		);
+		$this->Model_data->hapus_data($where, 'tb_admin');
+		redirect(base_url().'admin/data_admin');
+	}
+
 }
 ?>
