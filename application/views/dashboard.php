@@ -97,6 +97,8 @@
                                                 <h6><?php echo $dtpgs->jabatan ?></h6>
                                                 
                                             </div>
+
+                                            
                                         </div>
                                         
                                     </div>
