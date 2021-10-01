@@ -416,10 +416,6 @@ class Admin extends CI_Controller{
 					redirect(base_url().'admin/forum_diskusi');
 				}
 
-<<<<<<< HEAD
-			}
-		?>
-=======
 
 	// tampilan DATA ADMIN
 	public function data_admin()
@@ -472,4 +468,3 @@ class Admin extends CI_Controller{
  
 }
 ?>
->>>>>>> 367c2fceb8a5acbc0c5e78891353ece84e700453
