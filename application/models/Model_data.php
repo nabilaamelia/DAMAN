@@ -125,4 +125,25 @@ class Model_data extends CI_Model{
 		$this->db->delete($table);
 	}
 
+
+	// CRUD DATA ADMIN
+	public function tampil_data_admin(){
+		return $this->db->get('tb_admin');
+	}
+
+	public function tambah_data_admin($data,$table){
+		$this->db->insert($table,$data);
+	}
+	public function edit_data_admin($data, $where, $table)
+	{
+		$this->db->where($where);
+		$this->db->update($table, $data);
+		
+	}
+	public function hapus_data_admin($where,$table)
+	{
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+ 
 }

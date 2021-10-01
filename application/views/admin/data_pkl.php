@@ -11,8 +11,8 @@
         <!-- <th>ALAMAT</th> -->
         <th>MULAI</th>
         <th>SELESAI</th>
-        <!-- <th>FOTO</th>
-        <th>STATUS</th> -->
+        <th>FOTO</th>
+        <th>STATUS</th>
         <th colspan="3">AKSI</th>
       </tr>
 
@@ -29,8 +29,8 @@
         <!-- <td><?php echo $pkl->alamat ?></td> -->
         <td><?php echo $pkl->tgl_mulai ?></td>
         <td><?php echo $pkl->tgl_selesai ?></td>
-        <!-- <td><?php echo $pkl->foto ?></td>
-        <td><?php echo $pkl->status ?></td> -->
+        <td><?php echo $pkl->foto ?></td>
+        <td><?php echo $pkl->status ?></td>
         
         <td>
           <!-- <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#edit_data_pkl"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button> -->
