@@ -54,6 +54,9 @@
                                         <td><strong>Tanggal Selesai</strong></td>
                                         <td><?php echo $pkl->tgl_selesai?></td>
                                     </tr>
+
+
+                                    
                             </table>
                         </div>
                     </div>
