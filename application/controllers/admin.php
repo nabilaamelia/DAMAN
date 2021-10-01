@@ -28,7 +28,7 @@ class Admin extends CI_Controller{
 
 		$data['datapkl'] = $this->Model_data->tampil_data($config["per_page"], $data['page'])->result();
 		$data ['pagination'] = $this->pagination->create_links();
-		// echo print_r($data);
+		// echo print_r($data); 
 		// $data['barang'] = $this->model_barang->tampil_data()->result();
 		$this->load->view("templates_admin/header");
 		$this->load->view("templates_admin/sidebar");
