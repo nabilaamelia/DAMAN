@@ -348,42 +348,19 @@
     <!-- Contact -->
     <section class="contact d-flex align-items-center py-5" id="contact">
         <div class="container-fluid text-light">
+        <h3 class="text-center">Lokasi Telkom Sidoarjo</h3>
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
-                    <div style="width:90%">
-                        <div class="text-center text-lg-start py-4 pt-lg-0">
-                            <p>CONTACT</p>
-                            <h2 class="py-2">Send your query</h2>
-                            <p class="para-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos dicta mollitia totam explicabo obcaecati quia laudantium repudiandae.</p>
-                        </div>
-                        <div>
-                            <div class="row" >
-                                <div class="col-lg-6">
-                                    <div class="form-group py-2">
-                                        <input type="text" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Enter name">
-                                    </div>                                
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group py-2">
-                                        <input type="email" class="form-control form-control-input" id="exampleFormControlInput2" placeholder="Enter phone number">
-                                    </div>                                 
-                                </div>
-                            </div>
-                            <div class="form-group py-1">
-                                <input type="email" class="form-control form-control-input" id="exampleFormControlInput3" placeholder="Enter email">
-                            </div>  
-                            <div class="form-group py-2">
-                                <textarea class="form-control form-control-input" id="exampleFormControlTextarea1" rows="6" placeholder="Message"></textarea>
-                            </div>                            
-                        </div>
-                        <div class="my-3">
-                            <a class="btn form-control-submit-button" href="#your-link">Submit</a>
-                        </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63311.88474227055!2d112.69125121292902!3d-7.354702507019669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fcb4d62a5fbd%3A0x70252390c6cba9bc!2sMarkas%20Wifi%20Id%20Telkom%20Sepanjang!5e0!3m2!1sid!2sid!4v1633329809865!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div> <!-- end of div -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">
-                    <img class="img-fluid d-none d-lg-block" src="./assets/images/contact.jpg" alt="contact">        
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1468032163198!2d112.71575691478415!3d-7.449005875473939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e6b578568d99%3A0xb3a173d6433c2eab!2sPlasa%20Telkom%20Sidoarjo!5e0!3m2!1sid!2sid!4v1633330755985!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div> <!-- end of div -->         
                 </div> <!-- end of col -->
+                
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of contact -->
