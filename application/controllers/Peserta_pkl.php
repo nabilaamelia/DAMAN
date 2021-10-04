@@ -4,7 +4,7 @@ class Peserta_pkl extends CI_Controller{
 
 	public function peserta()
 	{
-		$data['datapkl'] = $this->Model_data->tampil_data()->result();
+		$data['datapkl'] = $this->Model_data->tampil_data1()->result();
 		$this->load->view('templates/header');
 		$this->load->view('templates/navbar');
 		$this->load->view('peserta_pkl', $data);
