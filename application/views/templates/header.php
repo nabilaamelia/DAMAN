@@ -29,5 +29,5 @@
     <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="<?php echo base_url() ?>assets/images/favicon.png">
+    <link rel="icon" href="<?php echo base_url() ?>assets/images/Telkom.png">
 </head>
