@@ -3,7 +3,7 @@
 class Admin extends CI_Controller{
 	public function index()
 	{
-		$data['datapkl'] = $this->Model_data->tampil_data()->result();
+		$data['datapkl'] = $this->Model_data->tampil_data1()->result();
 		$data['datapengurus'] = $this->Model_data->tampil_data_pengurus()->result();
 		$data['infodaman'] = $this->Model_data->tampil_info_daman()->result();
 		$data['presensi'] = $this->Model_data->tampil_presensi_peserta()->result();
