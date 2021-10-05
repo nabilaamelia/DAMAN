@@ -27,7 +27,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('dashboard/#services') ?>">PERFORMANCE</a>
-                    </li>
+                    </li> 
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('Admin/login') ?>">Login</a>
                     </li>

@@ -695,7 +695,7 @@ class Admin extends CI_Controller{
 				);
 
 				$this->session->set_userdata($sess_data);
-
+ 
 				redirect(base_url('Admin'));
 
 			}else{
