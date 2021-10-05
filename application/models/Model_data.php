@@ -38,10 +38,15 @@ class Model_data extends CI_Model{
 
 
 	// CRUD pengurus
+
 	public function tampil_data_pengurus(){
 		return $this->db->get('tb_pengurus');
 	}
 
+	public function tampil_data_pengurus2($limit, $start){
+		return $this->db->get('tb_pengurus', $limit, $start);
+	}
+	
 	public function tambah_data_pengurus($data,$table){
 		$this->db->insert($table,$data);
 	}
@@ -65,6 +70,9 @@ class Model_data extends CI_Model{
 	// CRUD INFO DAMAN
 	public function tampil_info_daman(){
 		return $this->db->get('tb_info');
+	}
+	public function tampil_info_daman2($limit, $start){
+		return $this->db->get('tb_info', $limit, $start);
 	}
 
 	public function tambah_info_daman($data,$table){
@@ -93,6 +101,10 @@ class Model_data extends CI_Model{
 		return $this->db->get('tb_presensi');
 	}
 
+	public function tampil_presensi_peserta2($limit, $start){
+		return $this->db->get('tb_presensi', $limit, $start);
+	}
+
 	public function tambah_presensi_peserta($data,$table){
 		$this->db->insert($table,$data);
 	}
@@ -111,6 +123,10 @@ class Model_data extends CI_Model{
 	// CRUD DISKUSI PESERTA
 	public function tampil_forum_diskusi(){
 		return $this->db->get('tb_diskusi');
+	}
+
+	public function tampil_forum_diskusi2($limit, $start){
+		return $this->db->get('tb_diskusi', $limit, $start);
 	}
 
 	public function tambah_forum_diskusi($data,$table){
@@ -132,6 +148,10 @@ class Model_data extends CI_Model{
 	// CRUD DATA ADMIN
 	public function tampil_data_admin(){
 		return $this->db->get('tb_admin');
+	}
+
+	public function tampil_data_admin2($limit, $start){
+		return $this->db->get('tb_admin', $limit, $start);
 	}
 
 	public function tambah_data_admin($data,$table){

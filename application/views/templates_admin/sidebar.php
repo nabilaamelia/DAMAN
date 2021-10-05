@@ -120,9 +120,9 @@
                         <ul class="na navbar-nav navbar-right">
                                 
                                     <li><div>Selamat Datang</div></li>
-                                    <li class="ml-2"><?php echo anchor('auth/logout','Logout') ?></li>
+                                    <li class="ml-2"><?php echo anchor('Admin/logout','Logout') ?></li>
                                 
-                                    <!-- <li><?php echo anchor('auth/login','Login'); ?></li> -->
+                                    <!-- <li><?php echo anchor('Admin/login','Login'); ?></li> -->
 
                                 
 

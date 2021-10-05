@@ -107,6 +107,12 @@
       </tr>
 
     <?php endforeach; ?>
+    </table>
+      <div class="row">
+        <div class="col">
+          <?php echo $pagination; ?>
+        </div>
+      </div>
 </div>
 
 <!-- Modal -->

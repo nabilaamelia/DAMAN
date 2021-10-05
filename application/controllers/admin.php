@@ -166,7 +166,37 @@ class Admin extends CI_Controller{
 	// tampilan PENGURUS
 		public function data_pengurus()
 		{
-			$data['datapengurus'] = $this->Model_data->tampil_data_pengurus()->result();
+			$config['base_url'] 	= (base_url().'admin/data_pengurus');
+			$config['total_rows']	= $this->db->count_all('tb_pengurus');
+			$config['per_page']		= 5;
+			$config['uri_segment']	= 3;
+			$choice					= $config["total_rows"] / $config['per_page'];
+			$config["num_links"]	= floor($choice);
+
+			$config['first_link']	= 'First';
+			$config['last_link']	= 'Last';
+			$config['next_link']	= 'Next';
+			$config['prev_link']	= 'Prev';
+			$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+			$config['full_tag_close']	= '</ul></nav></div>';
+			$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
+			$config['num_tag_close']	= '</span></li>';
+			$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
+			$config['cur_tag_close']	= '</span></li>';
+			$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
+			$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
+			$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
+			$config['prev_tagl_close']	= '</span>Next</li>';
+			$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
+			$config['first_tagl_close']	= '</span></li>';
+			$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
+			$config['last_tagl_close']	= '</span></li>';
+
+			$this->pagination->initialize($config);
+			$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+			$data['datapengurus'] = $this->Model_data->tampil_data_pengurus2($config["per_page"], $data['page'])->result();
+			$data ['pagination'] = $this->pagination->create_links();
 		// echo print_r($data);
 		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
 			$this->load->view("templates_admin/header");
@@ -263,7 +293,38 @@ class Admin extends CI_Controller{
 	// tampilan INFO DAMAN
 			public function info_daman()
 			{
-				$data['infodaman'] = $this->Model_data->tampil_info_daman()->result();
+				$config['base_url'] 	= (base_url().'admin/info_daman');
+				$config['total_rows']	= $this->db->count_all('tb_info');
+				$config['per_page']		= 5;
+				$config['uri_segment']	= 3;
+				$choice					= $config["total_rows"] / $config['per_page'];
+				$config["num_links"]	= floor($choice);
+
+				$config['first_link']	= 'First';
+				$config['last_link']	= 'Last';
+				$config['next_link']	= 'Next';
+				$config['prev_link']	= 'Prev';
+				$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+				$config['full_tag_close']	= '</ul></nav></div>';
+				$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
+				$config['num_tag_close']	= '</span></li>';
+				$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
+				$config['cur_tag_close']	= '</span></li>';
+				$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
+				$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
+				$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
+				$config['prev_tagl_close']	= '</span>Next</li>';
+				$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
+				$config['first_tagl_close']	= '</span></li>';
+				$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
+				$config['last_tagl_close']	= '</span></li>';
+
+
+				$this->pagination->initialize($config);
+				$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+				$data['infodaman'] = $this->Model_data->tampil_info_daman2($config["per_page"], $data['page'])->result();
+				$data ['pagination'] = $this->pagination->create_links();
 		// echo print_r($data);
 		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
 				$this->load->view("templates_admin/header");
@@ -351,7 +412,39 @@ class Admin extends CI_Controller{
 	// tampilan PRESENSI PESERTA
 				public function presensi_peserta()
 				{
-					$data['presensipeserta'] = $this->Model_data->tampil_presensi_peserta()->result();
+
+					$config['base_url'] 	= (base_url().'Admin/presensi_peserta');
+					$config['total_rows']	= $this->db->count_all('tb_presensi');
+					$config['per_page']		= 5;
+					$config['uri_segment']	= 3;
+					$choice					= $config["total_rows"] / $config['per_page'];
+					$config["num_links"]	= floor($choice);
+
+					$config['first_link']	= 'First';
+					$config['last_link']	= 'Last';
+					$config['next_link']	= 'Next';
+					$config['prev_link']	= 'Prev';
+					$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+					$config['full_tag_close']	= '</ul></nav></div>';
+					$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
+					$config['num_tag_close']	= '</span></li>';
+					$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
+					$config['cur_tag_close']	= '</span></li>';
+					$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
+					$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['prev_tagl_close']	= '</span>Next</li>';
+					$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['first_tagl_close']	= '</span></li>';
+					$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['last_tagl_close']	= '</span></li>';
+
+
+					$this->pagination->initialize($config);
+					$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+					
+					$data['presensipeserta'] = $this->Model_data->tampil_presensi_peserta2($config["per_page"], $data['page'])->result();
+					$data ['pagination'] = $this->pagination->create_links();
 		// echo print_r($data);
 		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
 					$this->load->view("templates_admin/header");
@@ -400,7 +493,39 @@ class Admin extends CI_Controller{
 	// tampilan DISKUSI PESERTA
 				public function forum_diskusi()
 				{
-					$data['forumdiskusi'] = $this->Model_data->tampil_forum_diskusi()->result();
+					$config['base_url'] 	= (base_url().'Admin/forum_diskusi');
+					$config['total_rows']	= $this->db->count_all('tb_diskusi');
+					$config['per_page']		= 5;
+					$config['uri_segment']	= 3;
+					$choice					= $config["total_rows"] / $config['per_page'];
+					$config["num_links"]	= floor($choice);
+
+					$config['first_link']	= 'First';
+					$config['last_link']	= 'Last';
+					$config['next_link']	= 'Next';
+					$config['prev_link']	= 'Prev';
+					$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+					$config['full_tag_close']	= '</ul></nav></div>';
+					$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
+					$config['num_tag_close']	= '</span></li>';
+					$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
+					$config['cur_tag_close']	= '</span></li>';
+					$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
+					$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['prev_tagl_close']	= '</span>Next</li>';
+					$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['first_tagl_close']	= '</span></li>';
+					$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
+					$config['last_tagl_close']	= '</span></li>';
+
+
+					$this->pagination->initialize($config);
+					$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+					
+
+					$data['forumdiskusi'] = $this->Model_data->tampil_forum_diskusi2($config["per_page"], $data['page'])->result();
+					$data ['pagination'] = $this->pagination->create_links();
 		// echo print_r($data);
 		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
 					$this->load->view("templates_admin/header");
@@ -453,8 +578,41 @@ class Admin extends CI_Controller{
 
 	// tampilan DATA ADMIN
 	public function data_admin()
-	{
-		$data['dataadmin'] = $this->Model_data->tampil_data_admin()->result();
+	{	
+
+		$config['base_url'] 	= (base_url().'Admin/data_admin');
+		$config['total_rows']	= $this->db->count_all('tb_admin');
+		$config['per_page']		= 5;
+		$config['uri_segment']	= 3;
+		$choice					= $config["total_rows"] / $config['per_page'];
+		$config["num_links"]	= floor($choice);
+
+		$config['first_link']	= 'First';
+		$config['last_link']	= 'Last';
+		$config['next_link']	= 'Next';
+		$config['prev_link']	= 'Prev';
+		$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+		$config['full_tag_close']	= '</ul></nav></div>';
+		$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
+		$config['num_tag_close']	= '</span></li>';
+		$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
+		$config['cur_tag_close']	= '</span></li>';
+		$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
+		$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
+		$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
+		$config['prev_tagl_close']	= '</span>Next</li>';
+		$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
+		$config['first_tagl_close']	= '</span></li>';
+		$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
+		$config['last_tagl_close']	= '</span></li>';
+
+
+		$this->pagination->initialize($config);
+		$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		
+		
+		$data['dataadmin'] = $this->Model_data->tampil_data_admin2($config["per_page"], $data['page'])->result();
+		$data ['pagination'] = $this->pagination->create_links();
 		// echo print_r($data);
 		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
 		$this->load->view("templates_admin/header");
@@ -499,6 +657,8 @@ class Admin extends CI_Controller{
 		$this->Model_data->hapus_data($where, 'tb_admin');
 		redirect(base_url().'admin/data_admin');
 	}
+
+	
  
 }
 ?>
