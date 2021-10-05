@@ -20,16 +20,16 @@
                         <a class="nav-link active" aria-current="page" href="<?php echo base_url('dashboard') ?>">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">PROFIL</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#about') ?>">PROFIL</a>
                     </li>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="#testimonial">STRUKTUR KEPENGURUSAN</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">STRUKTUR KEPENGURUSAN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">PERFORMANCE</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#services') ?>">PERFORMANCE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">Plans</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#plans') ?>">Plans</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">PKL</a>
@@ -43,7 +43,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#contact') ?>">CONTACT</a>
                     </li>
                 </ul>
                 <span class="nav-item social-icons">
