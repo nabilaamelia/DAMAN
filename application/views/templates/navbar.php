@@ -29,7 +29,7 @@
                         <a class="nav-link" href="<?php echo base_url('dashboard/#services') ?>">PERFORMANCE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('dashboard/#plans') ?>">Plans</a>
+                        <a class="nav-link" href="<?php echo base_url('Admin/login') ?>">Login</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">PKL</a>

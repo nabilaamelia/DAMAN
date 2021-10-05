@@ -168,5 +168,13 @@ class Model_data extends CI_Model{
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
+
+
+	//MODEL LOGINNN
+	function cek_login($where){
+		return $this->db->get_where('tb_admin', $where);
+	}
  
 }
+
+?>
