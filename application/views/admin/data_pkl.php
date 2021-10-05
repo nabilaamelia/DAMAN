@@ -92,7 +92,7 @@
 
                     <div class="form-group">
                       <label>Status</label>
-                      <input type="text" name="alamat" class="form-control" value="<?php echo $pkl->status ?>">
+                      <input type="text" name="status" class="form-control" value="<?php echo $pkl->status ?>">
                     </div>
 
                 </div>
