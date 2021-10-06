@@ -10,32 +10,51 @@
 
     <title>Login</title>
   </head>
-  <body>
+  <body class="bg-dark py-5 d-flex align-items-center" >
       
-  <div class="row" style="margin-top:40px">
-      <div class="col-md-4 offset-md-4">
-          <div class="card card-primary">
-            <div class="card-header">
-                Login
-            </div>
-            <div class="card-body">
-                <form method="post" action="<?= base_url('admin/login_aksi');?>">
-                <div class="form-group">
-                    <label for="">Username</label>
-                    <input type="text" name="username" class="form-control" autocomplete="off">
-                    <small><span class="text-danger"><?= form_error('username'); ?></span></small>
+  <div class="container "><br><br><br>
+   
+  
+
+  <!-- Outer Row -->
+    <div class="row justify-content-center  ">
+
+        <div class="col-xl-5 col-lg-12 col-md-9 ">
+
+            <div class="card o-hidden border-0 shadow-lg my-5 ">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4 ">Form Login</h1>
+                                </div>
+
+                                <form method="post" action="<?= base_url('admin/login_aksi');?>">
+                                  <div class="form-group mb-3 mt-3">
+                                      <input type="text" placeholder="Username" name="username" class="form-control " autocomplete="off">
+                                      <small><span class="text-danger"><?= form_error('username'); ?></span></small>
+                                  </div>
+                                  <div class="form-group mb-4 mt-4">
+                                      <input type="password" placeholder="Password" name="password" class="form-control" autocomplete="off">
+                                      <small><span class="text-danger"><?= form_error('password'); ?></span></small>
+                                  </div>
+                                  <center><button type="submit" class="btn btn-danger">Login</button></center>
+                              </form>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="">Password</label>
-                    <input type="password" name="password" class="form-control" autocomplete="off">
-                    <small><span class="text-danger"><?= form_error('password'); ?></span></small>
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-                </form>
             </div>
-          </div>
-      </div>
-  </div>
+
+        </div>
+
+    </div>
+
+</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
