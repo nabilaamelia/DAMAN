@@ -18,11 +18,11 @@
       </tr>
 
       <?php 
-      $no=1;
+      // $no=1;
       foreach($datapkl as $pkl) : ?>
 
       <tr>
-        <td><?php echo $no++ ?></td>
+        <td><?php echo ++$page ?></td>
         <td><?php echo $pkl->nama ?></td>
         <td><?php echo $pkl->asal_instansi ?></td>
         <td><?php echo $pkl->no_hp ?></td>

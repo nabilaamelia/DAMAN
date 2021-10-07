@@ -12,12 +12,12 @@
       </tr>
 
       <?php 
-      $no=1;
+      // $no=1;
       foreach($forumdiskusi as $diskusi) : ?>
 
       <tr>
       <tr>
-        <td><?php echo $no++ ?></td>
+        <td><?php echo ++$page ?></td>
         <td><?php echo $diskusi->time ?></td>
         <td><?php echo $diskusi->nama ?></td>
         <td><?php echo $diskusi->pesan ?></td>

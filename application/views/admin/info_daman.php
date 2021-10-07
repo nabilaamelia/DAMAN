@@ -12,12 +12,12 @@
       </tr>
 
       <?php 
-      $no=1;
+      // $no=1;
       foreach($infodaman as $info) : ?>
 
       <tr>
       <tr>
-        <td><?php echo $no++ ?></td>
+        <td><?php echo ++$page ?></td>
         <td><?php echo $info->judul ?></td>
         <td><?php echo $info->isi ?></td>
         <td><?php echo $info->foto ?></td>

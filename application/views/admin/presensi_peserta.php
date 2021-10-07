@@ -11,12 +11,12 @@
       </tr>
 
       <?php 
-      $no=1;
+      // $no=1;
       foreach($presensipeserta as $presensi) : ?>
 
       <tr>
       <tr>
-        <td><?php echo $no++ ?></td>
+        <td><?php echo ++$page ?></td>
         <td><?php echo $presensi->judul ?></td>
         <td><?php echo $presensi->keterangan ?></td>
         

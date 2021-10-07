@@ -11,12 +11,12 @@
       </tr>
  
       <?php 
-      $no=1;
+      // $no=1;
       foreach($dataadmin as $admin) : ?>
 
       <tr>
       <tr>
-        <td><?php echo $no++ ?></td>
+        <td><?php echo ++$page ?></td>
         <td><?php echo $admin->username ?></td>
         <td><?php echo $admin->password ?></td>
         

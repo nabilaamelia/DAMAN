@@ -14,12 +14,12 @@
       </tr>
 
       <?php 
-      $no=1;
+     // $no=1;
       foreach($datapengurus as $pengurus) : ?>
 
       <tr>
       <tr>
-        <td><?php echo $no++ ?></td>
+        <td><?php echo ++$page ?></td>
         <td><?php echo $pengurus->nama ?></td>
         <td><?php echo $pengurus->jabatan ?></td>
         <td><?php echo $pengurus->alamat ?></td>
