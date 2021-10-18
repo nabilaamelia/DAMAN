@@ -29,7 +29,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/data_pkl') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/cek_data_pkl') ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>DATA PESERTA</span>
                 </a>

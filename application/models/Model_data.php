@@ -2,9 +2,32 @@
 
 class Model_data extends CI_Model{
 
-	public function tampil_data($limit, $start){
-		return $this->db->get('tb_peserta', $limit, $start);
+	public function tampil_data($limit, $start, $keyword){
+		if($keyword == ""){
+			$this->db->select('*');
+			$this->db->from('tb_peserta');
+			$this->db->limit($limit, $start);
+
+		} else {
+			$this->db->select('*');
+			$this->db->from('tb_peserta');
+			$this->db->like('nama', $keyword);
+			$this->db->or_like('asal_instansi', $keyword);
+			$this->db->limit($limit, $start);
+		}
+		return $this->db->get();
 	}
+	public function jumlah_pkl($keyword){
+		$this->db->select('*');
+		$this->db->from('tb_peserta');
+		$this->db->like('nama', $keyword);
+		$this->db->or_like('asal_instansi', $keyword);
+		return $this->db->count_all_results();
+		// $this->db->like('nama', $keyword);
+		
+		// return $this->db->get('tb_peserta', $limit, $start);
+	}
+	
 	public function tampil_data1(){
 		return $this->db->get('tb_peserta');
 	}
