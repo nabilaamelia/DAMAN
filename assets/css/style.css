@@ -67,7 +67,7 @@ a {
 }
 
 li {
-  	list-style-type: none;
+	list-style-type: none;
 }
 
 /* Section Background */
@@ -86,7 +86,7 @@ li {
 .contact,
 
 .footer {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .testimonial {
@@ -98,11 +98,11 @@ li {
 .company,
 .newsletter,
 .location {
-  	background-color: var(--primary-light);
+	background-color: var(--primary-light);
 }
 
 .bottom {
-  	background-color: black;
+	background-color: black;
 }
 
 /* Gradient Border And Background On Icons */
@@ -121,7 +121,7 @@ li {
 		left bottom,
 		from(#ffffff),
 		to(#ffffff)
-	);
+		);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -135,7 +135,7 @@ li {
 		left bottom,
 		from(#ff2c06),
 		to(#ff6347)
-	);
+		);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -225,7 +225,7 @@ li {
 }
 
 .navbar .dropdown-item:hover {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .navbar .dropdown-divider {
@@ -257,7 +257,7 @@ li {
 		left bottom,
 		from(#ff2c06),
 		to(#ff6347)
-	);
+		);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -270,11 +270,11 @@ li {
 }
 
 .navbar .fa-stack:hover .fa-stack-2x {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .navbar .fa-stack:hover .fa-stack-1x {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .navbar .navbar-toggler {
@@ -296,11 +296,11 @@ li {
 }
 
 .para {
-  	width: 50%;
+	width: 50%;
 }
 
 .para-light {
-  	opacity: 0.7;
+	opacity: 0.7;
 }
 
 
@@ -308,15 +308,15 @@ li {
 /*     Information     */
 /***********************/
 .information .container-fluid .row div:first-child {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .information .container-fluid .row div:last-child {
-  	background-color: white;
+	background-color: white;
 }
 
 .information .container-fluid .row div:nth-child(2) {
-  	background-color: var(--primary-light);
+	background-color: var(--primary-light);
 }
 
 
@@ -419,7 +419,7 @@ li {
 }
 
 .slider-1 .section-title {
-  	text-align: center;
+	text-align: center;
 }
 
 .slider-1 .h2-heading {
@@ -436,7 +436,7 @@ li {
 }
 
 .slider-1 .slider-container {
-  	position: relative;
+	position: relative;
 }
 
 .slider-1 .swiper-container {
@@ -446,7 +446,7 @@ li {
 
 .slider-1 .swiper-button-prev,
 .slider-1 .swiper-button-next {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .slider-1 .swiper-button-prev:focus,
@@ -483,11 +483,11 @@ li {
 }
 
 .slider-1 .card-body {
-  	padding: 0;
+	padding: 0;
 }
 
 .slider-1 .testimonial-text {
-  	margin-bottom: 0.75rem;
+	margin-bottom: 0.75rem;
 }
 
 .slider-1 .testimonial-author {
@@ -503,7 +503,7 @@ li {
 
 /* Dropdown Menu */
 .navbar .dropdown .dropdown-menu {
-  	animation: fadeDropdown 0.2s; /* required for the fade animation */
+	animation: fadeDropdown 0.2s; /* required for the fade animation */
 }
 
 @-webkit-keyframes fadeDropdown {
@@ -562,7 +562,7 @@ li {
 }
 
 #myBtn:hover {
-  	background-color: #0f0f11;
+	background-color: #0f0f11;
 }
 
 #myBtn img {
@@ -582,7 +582,7 @@ li {
 }
 
 .ex-header h1 {
-  	color: #fff;
+	color: #fff;
 }
 
 .ex-basic-1 .list-unstyled .fas {
@@ -591,7 +591,7 @@ li {
 }
 
 .ex-basic-1 .list-unstyled .flex-grow-1 {
-  	margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .ex-basic-1 .text-box {
@@ -610,7 +610,7 @@ li {
 }
 
 .ex-cards-1 .card .fa-stack-2x {
-  	color: var(--secondary);
+	color: var(--secondary);
 }
 
 .ex-cards-1 .card .fa-stack-1x {
@@ -621,7 +621,7 @@ li {
 }
 
 .ex-cards-1 .card .list-unstyled .flex-grow-1 {
-  	margin-left: 2.25rem;
+	margin-left: 2.25rem;
 }
 
 .ex-cards-1 .card .list-unstyled .flex-grow-1 h5 {

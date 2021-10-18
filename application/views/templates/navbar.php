@@ -29,7 +29,7 @@
                         <a class="nav-link" href="<?php echo base_url('dashboard/#services') ?>">PERFORMANCE</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('Admin/login') ?>">Login</a>
+                        <a class="nav-link" href="<?php echo base_url('Login') ?>">Login</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">PKL</a>
@@ -39,7 +39,7 @@
                             <li><div class="dropdown-divider"></div></li>
                             <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl/peserta') ?>">DAFTAR ANAK PKL</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                        
+                            
                         </ul>
                     </li>
                     <li class="nav-item">

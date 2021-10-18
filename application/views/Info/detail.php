@@ -1,4 +1,5 @@
 <div class="p-3 mb-2 bg-dark text-white" style="height: 70px;"></div>
+
 <div class="container" >
     <center><h2>Detail Informasi</h2></center>
     <div class="mt-4 mb-4 row">
@@ -13,10 +14,11 @@
                         <?php endif; ?>                   
                     </div>
                 </center>
-                <center>
+                <center class="mt-4">
                     <h3 class="mt-3 mb-2"><?php echo $detail->judul ?></h3>
                 </center>
                 <p style="text-align: justify;"><?php echo $detail->isi ?></p>
+                
             </div>
         <?php endforeach; ?>
         <div class="col-md-4 mt-4" style="border:solid 1px">

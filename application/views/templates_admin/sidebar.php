@@ -23,44 +23,44 @@
             <li class="nav-item active">
                 <a class="nav-link" href="<?php echo base_url('admin') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                </a>
             </li>
- 
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/data_pkl') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>DATA PESERTA</span></a>
+                    <span>DATA PESERTA</span>
+                </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/data_pengurus') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>DATA PENGURUS</span></a>
+                    <span>DATA PENGURUS</span>
+                </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/info_daman') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>INFO DAMAN</span></a>
+                    <span>INFO DAMAN</span>
+                </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/presensi_peserta') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>PRESENSI PESERTA</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/forum_diskusi') ?>">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>FORUM DISKUSI</span></a>
+                    <span>PRESENSI PESERTA</span>
+                </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/data_admin') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>ADMIN</span></a>
+                    <span>ADMIN</span>
+                </a>
             </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
@@ -68,7 +68,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-             
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -86,7 +86,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -94,42 +94,41 @@
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button> 
-                                        </div>
-                                    </div>
-                                </form>
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                        aria-labelledby="searchDropdown">
+                        <form class="form-inline mr-auto w-100 navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small"
+                                placeholder="Search for..." aria-label="Search"
+                                aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button> 
+                                </div>
                             </div>
-                        </li>
+                        </form>
+                    </div>
+                </li>
 
-                        <div class="topbar-divider d-none d-sm-block"></div>  
+                <div class="topbar-divider d-none d-sm-block"></div>  
 
-                        <ul class="na navbar-nav navbar-right">
-                                
-                                    <li><div>Selamat Datang</div></li>
-                                    <li class="ml-2"><?php echo anchor('Admin/login','Logout') ?></li>
-                                
-                                    <!-- <li><?php echo anchor('Admin/login','Login'); ?></li> -->
+                <ul class="na navbar-nav navbar-right">
 
-                                
+                    <li><div>Selamat Datang</div></li>
+                    <li class="ml-2"><?php echo anchor('Login/logout','Logout') ?></li>
 
-                            </ul> 
+                    <!-- <li><?php echo anchor('Admin/login','Login'); ?></li> -->
 
-                    </ul>
 
-                </nav> 
 
-            
+                </ul> 
+
+            </ul>
+
+        </nav> 
+
