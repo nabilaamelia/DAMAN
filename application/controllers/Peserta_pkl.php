@@ -20,6 +20,14 @@ class Peserta_pkl extends CI_Controller{
 		$this->load->view('templates/footer');
 	}
 
+	public function Detail_Admin($id_peserta)
+	{
+		$data['datapkl'] = $this->Model_data->detail_data($id_peserta);
+		$this->load->view('templates_admin/header');
+		$this->load->view('admin/Detail_Pes', $data);
+		$this->load->view('templates_admin/footer');
+	}
+
 }
 
 ?>

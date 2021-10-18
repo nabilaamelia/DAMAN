@@ -49,14 +49,14 @@
         <!-- <td><?php echo $pkl->foto ?></td> -->
         <!-- <td><?php echo $pkl->status ?></td> -->
         <td>
-          <a href="">
-            <button class="btn btn-primary btn-sm" style="cursor:pointer;border:none" data-toggle="tooltip" data-placement="top" title="Simpan Pertanyaan"><i class="fa fa-info-circle"></i></button>
+          <a href="<?php echo base_url('Peserta_pkl/Detail_Admin/'.$pkl->id_peserta ) ?>">
+            <button class="btn btn-primary btn-sm" style="cursor:pointer;border:none" data-toggle="tooltip" data-placement="top" title="Detail"><i class="fa fa-info-circle"></i></button>
           </a>
         </td>
         
         <td>         
 
-          <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_data_pkl<?php echo $pkl->id_peserta; ?>"><i class="fa fa-edit"></i></button>
+          <button class="btn btn-primary btn-sm" data-toggle="modal"title="Edit Data" data-target="#edit_data_pkl<?php echo $pkl->id_peserta; ?>"><i class="fa fa-edit"></i></button>
 
           <!-- Ubah Data -->
           <div class="modal fade" id="edit_data_pkl<?php echo $pkl->id_peserta; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -131,7 +131,7 @@
           
         </td> 
         <td>
-          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_data_pkl<?php echo $pkl->id_peserta; ?>"><i class="fa fa-trash"></i></i></button>
+          <button class="btn btn-danger btn-sm" data-toggle="modal" title="Hapus Data" data-target="#hapus_data_pkl<?php echo $pkl->id_peserta; ?>"><i class="fa fa-trash"></i></i></button>
           <!-- <?php echo anchor('admin/data_barang/hapus/' .$pkl->id_peserta, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?> -->
         </td>
         <!-- Modal Popup untuk delete-->
