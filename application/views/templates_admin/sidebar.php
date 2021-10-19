@@ -43,7 +43,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/info_daman') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/cek_info_daman') ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>INFO DAMAN</span>
                 </a>

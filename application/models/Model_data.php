@@ -98,10 +98,9 @@ class Model_data extends CI_Model{
 
 		return $this->db->get();
 	}
-
-	public function tampil_data_pengurus2($limit, $start){
-		return $this->db->get('tb_pengurus', $limit, $start);
-	}
+	// public function tampil_data_pengurus2($limit, $start){
+	// 	return $this->db->get('tb_pengurus', $limit, $start);
+	// }
 	
 	public function tambah_data_pengurus($data,$table){
 		$this->db->insert($table,$data);
@@ -122,8 +121,30 @@ class Model_data extends CI_Model{
 	public function tampil_info_daman(){
 		return $this->db->get('tb_info');
 	}
-	public function tampil_info_daman2($limit, $start){
-		return $this->db->get('tb_info', $limit, $start);
+	// public function tampil_info_daman2($limit, $start){
+	// 	return $this->db->get('tb_info', $limit, $start);
+	// }
+	public function tampil_info_daman2($limit, $start, $keyword){
+		if($keyword == ""){
+			$this->db->select('*');
+			$this->db->from('tb_info');
+			$this->db->limit($limit, $start);
+
+		} else {
+			$this->db->select('*');
+			$this->db->from('tb_info');
+			$this->db->like('judul', $keyword);
+			// $this->db->or_like('alamat', $keyword);
+			$this->db->limit($limit, $start);
+		}
+		return $this->db->get();
+	}
+	public function jumlah_info($keyword){
+		$this->db->select('*');
+		$this->db->from('tb_info');
+		$this->db->like('judul', $keyword);
+		// $this->db->or_like('alamat', $keyword);
+		return $this->db->count_all_results();
 	}
 
 	public function tambah_info_daman($data,$table){

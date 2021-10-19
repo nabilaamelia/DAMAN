@@ -206,7 +206,7 @@ class Admin extends CI_Controller{
 	public function data_pengurus()
 	{
 		$data['keyword'] = $this->input->post('keyword');
-		echo $data['keyword'];
+		// echo $data['keyword'];
 		if($data['keyword'] != ""){
 			$this->session->set_userdata('keyword', $data['keyword']);
 		}
@@ -224,7 +224,7 @@ class Admin extends CI_Controller{
 		
 		$config['base_url'] 	= (base_url().'admin/data_pengurus');
 		$config['num_links']	= 1;
-		$config['per_page']		= 2;
+		$config['per_page']		= 4;
 		$data['keyword'] = $this->session->userdata('keyword');
 
 			//styling
@@ -266,44 +266,7 @@ class Admin extends CI_Controller{
 		$this->load->view("templates_admin/sidebar");
 		$this->load->view("admin/data_pengurus", $data);
 		$this->load->view("templates_admin/footer");
-		// $config['base_url'] 	= (base_url().'admin/data_pengurus');
-		// $config['total_rows']	= $this->db->count_all('tb_pengurus');
-		// $config['per_page']		= 5;
-		// $config['uri_segment']	= 3;
-		// $choice					= $config["total_rows"] / $config['per_page'];
-		// $config["num_links"]	= floor($choice);
-
-		// $config['first_link']	= 'First';
-		// $config['last_link']	= 'Last';
-		// $config['next_link']	= 'Next';
-		// $config['prev_link']	= 'Prev';
-		// $config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
-		// $config['full_tag_close']	= '</ul></nav></div>';
-		// $config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
-		// $config['num_tag_close']	= '</span></li>';
-		// $config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
-		// $config['cur_tag_close']	= '</span></li>';
-		// $config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
-		// $config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
-		// $config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
-		// $config['prev_tagl_close']	= '</span>Next</li>';
-		// $config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
-		// $config['first_tagl_close']	= '</span></li>';
-		// $config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
-		// $config['last_tagl_close']	= '</span></li>';
-
-		// $this->pagination->initialize($config);
-		// $data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-
-		// $data['datapengurus'] = $this->Model_data->tampil_data_pengurus2($config["per_page"], $data['page'])->result();
-		// $data ['pagination'] = $this->pagination->create_links();
-		// // echo print_r($data);
-		// // $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
-		// $this->load->view("templates_admin/header");
-		// $this->load->view("templates_admin/sidebar");
-		// $this->load->view("admin/data_pengurus", $data);
-		// $this->load->view("templates_admin/footer");
-
+		
 	}
 
 	public function tambah_data_pengurus() {
@@ -393,40 +356,66 @@ class Admin extends CI_Controller{
 
 
 	// tampilan INFO DAMAN
-	public function info_daman()
-	{
-		$config['base_url'] 	= (base_url().'admin/info_daman');
-		$config['total_rows']	= $this->db->count_all('tb_info');
-		$config['per_page']		= 5;
-		$config['uri_segment']	= 3;
-		$choice					= $config["total_rows"] / $config['per_page'];
-		$config["num_links"]	= floor($choice);
+	public function cek_info_daman(){
+		$this->session->unset_userdata('keyword');
+		redirect(base_url('Admin/info_daman'));
+	}
+	public function info_daman(){
+		$data['keyword'] = $this->input->post('keyword');
+		if($data['keyword'] != ""){
+			$this->session->set_userdata('keyword', $data['keyword']);
+		}
+		
+		$key = $this->session->userdata('keyword');
+		
+		// if($data['keyword'] == "") {
+			$this->load->library('pagination');
+			if($key == null){
+				$config['total_rows']	= $this->db->count_all_results('tb_info');
+			} else {
+				$config['total_rows']	= $this->Model_data->jumlah_info($key);
+			}
+			// echo $key;
+			
+			//config
+			$config['base_url'] 	= (base_url().'admin/info_daman');
+			$config['num_links']	= 1;
+			$config['per_page']		= 2;
+			$data['keyword'] = $this->session->userdata('keyword');
 
-		$config['first_link']	= 'First';
-		$config['last_link']	= 'Last';
-		$config['next_link']	= 'Next';
-		$config['prev_link']	= 'Prev';
-		$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
-		$config['full_tag_close']	= '</ul></nav></div>';
-		$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
-		$config['num_tag_close']	= '</span></li>';
-		$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
-		$config['cur_tag_close']	= '</span></li>';
-		$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
-		$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['prev_tagl_close']	= '</span>Next</li>';
-		$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['first_tagl_close']	= '</span></li>';
-		$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['last_tagl_close']	= '</span></li>';
+			//styling
+			$config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
+			$config['full_tag_close'] = '</ul></nav>';
 
+			$config['first_link'] = 'First';
+			$config['first_tag_open'] = '<li class="page-item">';
+			$config['first_tag_close'] = '</li>';
 
+			$config['last_link'] = 'Last';
+			$config['last_tag_open'] = '<li class="page-item">';
+			$config['last_tag_close'] = '</li>';
+
+			$config['next_link'] = '&raquo';
+			$config['next_tag_open'] = '<li class="page-item">';
+			$config['next_tag_close'] = '</li>';
+
+			$config['prev_link'] = '&laquo';
+			$config['prev_tag_open'] = '<li class="page-item">';
+			$config['prev_tag_close'] = '</li>';
+
+			$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
+			$config['cur_tag_close'] = '</a></li>';
+
+			$config['num_tag_open'] = '<li class="page-item">';
+			$config['num_tag_close'] = '</li>';
+
+			$config['attributes'] = array('class' => 'page-link');
+
+		// //initialize
 		$this->pagination->initialize($config);
-		$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-		$data['infodaman'] = $this->Model_data->tampil_info_daman2($config["per_page"], $data['page'])->result();
-		$data ['pagination'] = $this->pagination->create_links();
+		$data['start'] 	= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data['infodaman'] = $this->Model_data->tampil_info_daman2($config["per_page"], $data['start'], $key)->result();
 		// echo print_r($data);
 		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
 		$this->load->view("templates_admin/header");

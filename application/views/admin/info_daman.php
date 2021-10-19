@@ -3,6 +3,21 @@
 <div class="container-fluid">
   <center><h3>INFO DATA MANAGEMENT TELKOM SIDOARJO</h3></center>
   <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_info_daman"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
+  <!--search -->
+  <div class="row mb-4">
+        <div class="col-md-8"></div>
+            <div class="col-md-4">
+              <form action="<?= base_url('admin/info_daman'); ?>" method="post">
+                <div class="input-group mb 3">
+                  <input type="text" class="form-control" placeholder="Search" name="keyword" autocomplete="off">
+                  <div class="input-group-append">
+                    <!-- <input class="btn btn-primary" type="submit" name="CARI"> -->
+                    <button class="btn btn-primary" type="submit" name="">Cari</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
 
   <table class="table table-bordered">
     <tr>
@@ -19,7 +34,7 @@
 
       <tr>
         <tr>
-          <td><?php echo ++$page ?></td>
+          <td><?php echo ++$start ?></td>
           <td><?php echo $info->judul ?></td>
           <td><?php echo $info->isi ?></td>
           <td><?php echo $info->foto ?></td>
@@ -95,6 +110,12 @@
         </tr>
 
       <?php endforeach; ?>
+      </table>
+      <div class="row">
+        <div class="col">
+          <?= $this->pagination->create_links(); ?>
+        </div>
+      </div>
     </div>
 
     <!-- Modal -->
