@@ -1,5 +1,5 @@
 <body>
-    
+
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
         <div class="container">
@@ -29,15 +29,15 @@
                         <a class="nav-link" href="<?php echo base_url('dashboard/#services') ?>">PERFORMANCE</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('Login') ?>">Login</a>
+                        <a class="nav-link" href="<?php echo base_url('Info') ?>">INFORMATION</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">PKL</a>
                         
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="<?php echo base_url('Info') ?>">INFO PKL</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl/presensi') ?>">PRESENSI</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl/peserta') ?>">DAFTAR ANAK PKL</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl') ?>">DAFTAR ANAK PKL</a></li>
                             <li><div class="dropdown-divider"></div></li>
                             
                         </ul>

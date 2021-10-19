@@ -6,12 +6,14 @@ class Model_data extends CI_Model{
 		if($keyword == ""){
 			$this->db->select('*');
 			$this->db->from('tb_peserta');
+			$this->db->order_by('nama', 'ASC');
 			$this->db->limit($limit, $start);
 
 		} else {
 			$this->db->select('*');
 			$this->db->from('tb_peserta');
 			$this->db->like('nama', $keyword);
+			$this->db->order_by('nama', 'ASC');
 			$this->db->or_like('asal_instansi', $keyword);
 			$this->db->limit($limit, $start);
 		}
@@ -23,17 +25,15 @@ class Model_data extends CI_Model{
 		$this->db->like('nama', $keyword);
 		$this->db->or_like('asal_instansi', $keyword);
 		return $this->db->count_all_results();
-		// $this->db->like('nama', $keyword);
 		
-		// return $this->db->get('tb_peserta', $limit, $start);
 	}
 	
 	public function tampil_data1(){
-		return $this->db->get('tb_peserta');
+		$this->db->select('*');
+		$this->db->from('tb_peserta');
+		$this->db->order_by('nama', 'ASC');
+		return $this->db->get();
 	}
-	// public function tampil_data(){
-	// return $this->db->get('tb_brg');
-	// } 
 	public function tambah_data($data,$table){
 		$this->db->insert($table,$data);
 	}
@@ -62,8 +62,41 @@ class Model_data extends CI_Model{
 
 	// CRUD pengurus
 
-	public function tampil_data_pengurus(){
-		return $this->db->get('tb_pengurus');
+	public function tampil_data_pengurus($limit, $start, $keyword){
+		if($keyword == ""){
+			$this->db->select('*');
+			$this->db->from('tb_pengurus');
+			$this->db->order_by('nama', 'ASC');
+			$this->db->limit($limit, $start);
+
+		} else {
+			$this->db->select('*');
+			$this->db->from('tb_pengurus');
+			$this->db->like('nama', $keyword);
+			$this->db->or_like('jabatan', $keyword);
+			$this->db->or_like('alamat', $keyword);
+			$this->db->or_like('keterangan', $keyword);
+			$this->db->order_by('nama', 'ASC');
+			$this->db->limit($limit, $start);
+		}
+		return $this->db->get();
+	}
+	public function jumlah_data_pengurus($keyword){
+		$this->db->select('*');
+		$this->db->from('tb_pengurus');
+		$this->db->like('nama', $keyword);
+		$this->db->or_like('jabatan', $keyword);
+		$this->db->or_like('alamat', $keyword);
+		$this->db->or_like('keterangan', $keyword);
+		return $this->db->count_all_results();
+		
+	}
+	public function tampil_data_pengurus1(){
+		$this->db->select('*');
+		$this->db->from('tb_pengurus');
+		$this->db->order_by('id_pengurus', 'DESC');
+
+		return $this->db->get();
 	}
 
 	public function tampil_data_pengurus2($limit, $start){
@@ -84,11 +117,6 @@ class Model_data extends CI_Model{
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
-
-	
-
-
-
 
 	// CRUD INFO DAMAN
 	public function tampil_info_daman(){
@@ -121,7 +149,10 @@ class Model_data extends CI_Model{
 
 	// CRUD PRESENSI PESERTA
 	public function tampil_presensi_peserta(){
-		return $this->db->get('tb_presensi');
+		$this->db->select('*');
+		$this->db->from('tb_presensi');
+		$this->db->order_by('id_presensi', 'DESC');
+		return $this->db->get();
 	}
 
 	public function tampil_presensi_peserta2($limit, $start){
@@ -144,28 +175,28 @@ class Model_data extends CI_Model{
 	}
 
 	// CRUD DISKUSI PESERTA
-	public function tampil_forum_diskusi(){
-		return $this->db->get('tb_diskusi');
-	}
+	// public function tampil_forum_diskusi(){
+	// 	return $this->db->get('tb_diskusi');
+	// }
 
-	public function tampil_forum_diskusi2($limit, $start){
-		return $this->db->get('tb_diskusi', $limit, $start);
-	}
+	// public function tampil_forum_diskusi2($limit, $start){
+	// 	return $this->db->get('tb_diskusi', $limit, $start);
+	// }
 
-	public function tambah_forum_diskusi($data,$table){
-		$this->db->insert($table,$data);
-	}
-	public function edit_forum_diskusi($data, $where, $table)
-	{
-		$this->db->where($where);
-		$this->db->update($table, $data);
-		
-	}
-	public function hapus_forum_diskusi($where,$table)
-	{
-		$this->db->where($where);
-		$this->db->delete($table);
-	}
+	// public function tambah_forum_diskusi($data,$table){
+	// 	$this->db->insert($table,$data);
+	// }
+	// public function edit_forum_diskusi($data, $where, $table)
+	// {
+	// 	$this->db->where($where);
+	// 	$this->db->update($table, $data);
+
+	// }
+	// public function hapus_forum_diskusi($where,$table)
+	// {
+	// 	$this->db->where($where);
+	// 	$this->db->delete($table);
+	// }
 
 
 	// CRUD DATA ADMIN

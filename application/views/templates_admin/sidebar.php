@@ -36,7 +36,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/data_pengurus') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/cek_data_pengurus') ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>DATA PENGURUS</span>
                 </a>

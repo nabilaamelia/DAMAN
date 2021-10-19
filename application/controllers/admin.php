@@ -12,9 +12,10 @@ class Admin extends CI_Controller{
 	public function index()
 	{
 		$data['datapkl'] = $this->Model_data->tampil_data1()->result();
-		$data['datapengurus'] = $this->Model_data->tampil_data_pengurus()->result();
+		$data['datapengurus'] = $this->Model_data->tampil_data_pengurus1()->result();
 		$data['infodaman'] = $this->Model_data->tampil_info_daman()->result();
 		$data['presensi'] = $this->Model_data->tampil_presensi_peserta()->result();
+		$this->session->unset_userdata('keyword');
 		$this->load->view("templates_admin/header");
 		$this->load->view("templates_admin/sidebar");
 		$this->load->view("admin/dashboard", $data);
@@ -35,60 +36,60 @@ class Admin extends CI_Controller{
 		$key = $this->session->userdata('keyword');
 		
 		// if($data['keyword'] == "") {
-			$this->load->library('pagination');
-			if($key == null){
-				$config['total_rows']	= $this->db->count_all_results('tb_peserta');
-			} else {
-				$config['total_rows']	= $this->Model_data->jumlah_pkl($key);
-			}
+		$this->load->library('pagination');
+		if($key == null){
+			$config['total_rows']	= $this->db->count_all_results('tb_peserta');
+		} else {
+			$config['total_rows']	= $this->Model_data->jumlah_pkl($key);
+		}
 			// echo $key;
-			
+
 			//config
-			$config['base_url'] 	= (base_url().'admin/data_pkl');
-			$config['num_links']	= 1;
-			$config['per_page']		= 4;
-			$data['keyword'] = $this->session->userdata('keyword');
+		$config['base_url'] 	= (base_url().'admin/data_pkl');
+		$config['num_links']	= 1;
+		$config['per_page']		= 4;
+		$data['keyword'] = $this->session->userdata('keyword');
 
 			//styling
-			$config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
-			$config['full_tag_close'] = '</ul></nav>';
+		$config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
+		$config['full_tag_close'] = '</ul></nav>';
 
-			$config['first_link'] = 'First';
-			$config['first_tag_open'] = '<li class="page-item">';
-			$config['first_tag_close'] = '</li>';
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li class="page-item">';
+		$config['first_tag_close'] = '</li>';
 
-			$config['last_link'] = 'Last';
-			$config['last_tag_open'] = '<li class="page-item">';
-			$config['last_tag_close'] = '</li>';
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li class="page-item">';
+		$config['last_tag_close'] = '</li>';
 
-			$config['next_link'] = '&raquo';
-			$config['next_tag_open'] = '<li class="page-item">';
-			$config['next_tag_close'] = '</li>';
+		$config['next_link'] = '&raquo';
+		$config['next_tag_open'] = '<li class="page-item">';
+		$config['next_tag_close'] = '</li>';
 
-			$config['prev_link'] = '&laquo';
-			$config['prev_tag_open'] = '<li class="page-item">';
-			$config['prev_tag_close'] = '</li>';
+		$config['prev_link'] = '&laquo';
+		$config['prev_tag_open'] = '<li class="page-item">';
+		$config['prev_tag_close'] = '</li>';
 
-			$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
-			$config['cur_tag_close'] = '</a></li>';
+		$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
+		$config['cur_tag_close'] = '</a></li>';
 
-			$config['num_tag_open'] = '<li class="page-item">';
-			$config['num_tag_close'] = '</li>';
+		$config['num_tag_open'] = '<li class="page-item">';
+		$config['num_tag_close'] = '</li>';
 
-			$config['attributes'] = array('class' => 'page-link');
+		$config['attributes'] = array('class' => 'page-link');
 
 
-			// //initialize
-			$this->pagination->initialize($config);
+		//initialize
+		$this->pagination->initialize($config);
 
-			$data['start'] 	= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-			$data['datapkl'] = $this->Model_data->tampil_data($config["per_page"], $data['start'], $key)->result();
-			
+		$data['start'] 	= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data['datapkl'] = $this->Model_data->tampil_data($config["per_page"], $data['start'], $key)->result();
 
-			$this->load->view("templates_admin/header");
-			$this->load->view("templates_admin/sidebar");
-			$this->load->view("admin/data_pkl", $data);
-			$this->load->view("templates_admin/footer");
+
+		$this->load->view("templates_admin/header");
+		$this->load->view("templates_admin/sidebar");
+		$this->load->view("admin/data_pkl", $data);
+		$this->load->view("templates_admin/footer");
 	}
 
 
@@ -130,7 +131,7 @@ class Admin extends CI_Controller{
 			'status' 		=> $status     
 		);
 		$this->Model_data->tambah_data($data, 'tb_peserta');
-		redirect('admin/data_pkl');
+		redirect('admin/cek_data_pkl');
 	}
 
 	public function edit_data_pkl($id)
@@ -193,50 +194,115 @@ class Admin extends CI_Controller{
 			'id_peserta' => $id 
 		);
 		$this->Model_data->hapus_data($where, 'tb_peserta');
-		redirect(base_url().'admin/data_pkl');
+		redirect(base_url().'admin/cek_data_pkl');
 	}
 
 
 	// tampilan PENGURUS
+	public function cek_data_pengurus(){
+		$this->session->unset_userdata('keyword');
+		redirect(base_url('admin/data_pengurus'));
+	}
 	public function data_pengurus()
 	{
+		$data['keyword'] = $this->input->post('keyword');
+		echo $data['keyword'];
+		if($data['keyword'] != ""){
+			$this->session->set_userdata('keyword', $data['keyword']);
+		}
+		
+		$key = $this->session->userdata('keyword');
+		
+		
+		$this->load->library('pagination');
+		if($key == null){
+			$config['total_rows']	= $this->db->count_all_results('tb_pengurus');
+		} else {
+			$config['total_rows']	= $this->Model_data->jumlah_data_pengurus($key);
+		}
+
+		
 		$config['base_url'] 	= (base_url().'admin/data_pengurus');
-		$config['total_rows']	= $this->db->count_all('tb_pengurus');
-		$config['per_page']		= 5;
-		$config['uri_segment']	= 3;
-		$choice					= $config["total_rows"] / $config['per_page'];
-		$config["num_links"]	= floor($choice);
+		$config['num_links']	= 1;
+		$config['per_page']		= 2;
+		$data['keyword'] = $this->session->userdata('keyword');
 
-		$config['first_link']	= 'First';
-		$config['last_link']	= 'Last';
-		$config['next_link']	= 'Next';
-		$config['prev_link']	= 'Prev';
-		$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
-		$config['full_tag_close']	= '</ul></nav></div>';
-		$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
-		$config['num_tag_close']	= '</span></li>';
-		$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
-		$config['cur_tag_close']	= '</span></li>';
-		$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
-		$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['prev_tagl_close']	= '</span>Next</li>';
-		$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['first_tagl_close']	= '</span></li>';
-		$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['last_tagl_close']	= '</span></li>';
+			//styling
+		$config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
+		$config['full_tag_close'] = '</ul></nav>';
 
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li class="page-item">';
+		$config['first_tag_close'] = '</li>';
+
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li class="page-item">';
+		$config['last_tag_close'] = '</li>';
+
+		$config['next_link'] = '&raquo';
+		$config['next_tag_open'] = '<li class="page-item">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['prev_link'] = '&laquo';
+		$config['prev_tag_open'] = '<li class="page-item">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['num_tag_open'] = '<li class="page-item">';
+		$config['num_tag_close'] = '</li>';
+
+		$config['attributes'] = array('class' => 'page-link');
+
+		
 		$this->pagination->initialize($config);
-		$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-		$data['datapengurus'] = $this->Model_data->tampil_data_pengurus2($config["per_page"], $data['page'])->result();
-		$data ['pagination'] = $this->pagination->create_links();
-		// echo print_r($data);
-		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
+		$data['start'] 	= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data['datapengurus'] = $this->Model_data->tampil_data_pengurus($config["per_page"], $data['start'], $key)->result();
+		
+
 		$this->load->view("templates_admin/header");
 		$this->load->view("templates_admin/sidebar");
 		$this->load->view("admin/data_pengurus", $data);
 		$this->load->view("templates_admin/footer");
+		// $config['base_url'] 	= (base_url().'admin/data_pengurus');
+		// $config['total_rows']	= $this->db->count_all('tb_pengurus');
+		// $config['per_page']		= 5;
+		// $config['uri_segment']	= 3;
+		// $choice					= $config["total_rows"] / $config['per_page'];
+		// $config["num_links"]	= floor($choice);
+
+		// $config['first_link']	= 'First';
+		// $config['last_link']	= 'Last';
+		// $config['next_link']	= 'Next';
+		// $config['prev_link']	= 'Prev';
+		// $config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+		// $config['full_tag_close']	= '</ul></nav></div>';
+		// $config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
+		// $config['num_tag_close']	= '</span></li>';
+		// $config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
+		// $config['cur_tag_close']	= '</span></li>';
+		// $config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
+		// $config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
+		// $config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
+		// $config['prev_tagl_close']	= '</span>Next</li>';
+		// $config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
+		// $config['first_tagl_close']	= '</span></li>';
+		// $config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
+		// $config['last_tagl_close']	= '</span></li>';
+
+		// $this->pagination->initialize($config);
+		// $data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+		// $data['datapengurus'] = $this->Model_data->tampil_data_pengurus2($config["per_page"], $data['page'])->result();
+		// $data ['pagination'] = $this->pagination->create_links();
+		// // echo print_r($data);
+		// // $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
+		// $this->load->view("templates_admin/header");
+		// $this->load->view("templates_admin/sidebar");
+		// $this->load->view("admin/data_pengurus", $data);
+		// $this->load->view("templates_admin/footer");
 
 	}
 
@@ -494,32 +560,34 @@ class Admin extends CI_Controller{
 
 	public function tambah_presensi_peserta() {
 		$judul		= $this->input->post('judul');
-		$keterangan	= $this->input->post('keterangan');
+		$absen		= $this->input->post('absen');
+		$tampil		= $this->input->post('tampil');
 
 		$data = array(
 			'judul' 		=> $judul, 
-			'keterangan' 	=> $keterangan
+			'absen' 		=> $absen,
+			'tampil' 		=> $tampil
 
 		);
 		$this->Model_data->tambah_data($data, 'tb_presensi');
 		redirect('admin/presensi_peserta');
 	}
 
-	public function edit_presensi_peserta($id)
-	{
-		$judul		= $this->input->post('judul');
-		$keterangan	= $this->input->post('keterangan');
-		echo $judul;
-		$data = array(
-			'judul' 		=> $judul, 
-			'keterangan' 	=> $keterangan
-		);
-		$where = array(
-			'id_presensi' => $id 
-		);
-		$this->Model_data->edit_presensi_peserta($data, $where, 'tb_presensi');
-		redirect('admin/presensi_peserta');
-	}
+	// public function edit_presensi_peserta($id)
+	// {
+	// 	$judul		= $this->input->post('judul');
+	// 	$keterangan	= $this->input->post('keterangan');
+	// 	echo $judul;
+	// 	$data = array(
+	// 		'judul' 		=> $judul, 
+	// 		'keterangan' 	=> $keterangan
+	// 	);
+	// 	$where = array(
+	// 		'id_presensi' => $id 
+	// 	);
+	// 	$this->Model_data->edit_presensi_peserta($data, $where, 'tb_presensi');
+	// 	redirect('admin/presensi_peserta');
+	// }
 	public function hapus_presensi_peserta($id) {
 		$where = array(
 			'id_presensi' => $id 

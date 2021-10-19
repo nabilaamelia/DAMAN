@@ -1,74 +1,74 @@
 
 
 
-    <!-- Home -->
-    <section class="home py-5 d-flex align-items-center" id="header">
-        <div class="container text-light py-5"  data-aos="fade-right"> 
-            <h1 class="headline">DATA <span class="home_text">MANAGEMENT</span></h1>
-            <p class="para  py-3"><b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus tempore accusamus quis magnam doloremque itaque ad modi, pariatur iste labore similique officiis impedit aspernatur aperiam facere architecto. Eligendi, repellendus inventore!</b></p>
-            <div class="d-flex align-items-center">
-                <p class="p-2"><i class="fas fa-laptop-house fa-lg" style="color: white;"></i></p>
-                <p><b>Lorem ipsum dolor sit amet.</b></p>  
+<!-- Home -->
+<section class="home py-5 d-flex align-items-center" id="header">
+    <div class="container text-light py-5"  data-aos="fade-right"> 
+        <h1 class="headline">DATA <span class="home_text">MANAGEMENT</span></h1>
+        <p class="para  py-3"><b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus tempore accusamus quis magnam doloremque itaque ad modi, pariatur iste labore similique officiis impedit aspernatur aperiam facere architecto. Eligendi, repellendus inventore!</b></p>
+        <div class="d-flex align-items-center">
+            <p class="p-2"><i class="fas fa-laptop-house fa-lg" style="color: white;"></i></p>
+            <p><b>Lorem ipsum dolor sit amet.</b></p>  
+        </div>
+        <div class="d-flex align-items-center">
+            <p class="p-2"><i class="fas fa-wifi fa-lg"></i></p>
+            <p><b>Lorem ipsum dolor sit amet.</b></p>  
+        </div>
+        
+    </div> <!-- end of container -->
+</section> <!-- end of home -->
+
+
+<!-- Information -->
+<section class="information">
+    <div class="container-fluid">  
+        <div class="row text-light">
+            <div class="col-lg-4 text-center p-5" data-aos="zoom-in">
+                <i class="fas fa-tachometer-alt fa-3x p-2"></i>
+                <h4 class="py-3">Download 1 GBPS</h4>
+                <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
             </div>
-            <div class="d-flex align-items-center">
-                <p class="p-2"><i class="fas fa-wifi fa-lg"></i></p>
-                <p><b>Lorem ipsum dolor sit amet.</b></p>  
+            <div class="col-lg-4 text-center p-5"  data-aos="zoom-in">
+                <i class="fas fa-clock fa-3x p-2"></i>
+                <h4 class="py-3">99% Internet Uptime</h4>
+                <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
             </div>
-            
-        </div> <!-- end of container -->
-    </section> <!-- end of home -->
-
-
-    <!-- Information -->
-    <section class="information">
-        <div class="container-fluid">  
-            <div class="row text-light">
-                <div class="col-lg-4 text-center p-5" data-aos="zoom-in">
-                    <i class="fas fa-tachometer-alt fa-3x p-2"></i>
-                    <h4 class="py-3">Download 1 GBPS</h4>
-                    <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
-                </div>
-                <div class="col-lg-4 text-center p-5"  data-aos="zoom-in">
-                    <i class="fas fa-clock fa-3x p-2"></i>
-                    <h4 class="py-3">99% Internet Uptime</h4>
-                    <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
-                </div>
-                <div class="col-lg-4 text-center p-5 text-dark"  data-aos="zoom-in"> 
-                    <i class="fas fa-headset fa-3x p-2"></i>
-                    <h4 class="py-3">24/7 Support </h4>
-                    <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
-                </div>
+            <div class="col-lg-4 text-center p-5 text-dark"  data-aos="zoom-in"> 
+                <i class="fas fa-headset fa-3x p-2"></i>
+                <h4 class="py-3">24/7 Support </h4>
+                <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
             </div>
-        </div> <!-- end of container -->
-    </section> <!-- end of information -->
-    
+        </div>
+    </div> <!-- end of container -->
+</section> <!-- end of information -->
 
-    <!-- PROFIL -->
-    <section class="about d-flex align-items-center text-light py-5" id="about">
-        <div class="container" >
-            <div class="row d-flex align-items-center">
-                <div class="col-lg-7" data-aos="fade-right">
-                    <p>PROFIL DAMAN</p>
-                    <h1>We are top internet <br> service company</h1>
-                    <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
-                    <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
 
-                    
-                </div>
-                <div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down"> 
-                    <img class="img-fluid" src="./assets/images/about.jpg" alt="about" >
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of about -->
+<!-- PROFIL -->
+<section class="about d-flex align-items-center text-light py-5" id="about">
+    <div class="container" >
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-7" data-aos="fade-right">
+                <p>PROFIL DAMAN</p>
+                <h1>We are top internet <br> service company</h1>
+                <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
+                <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
 
-    <!-- Testimonials -->
-    
-    <div class="slider-1 testimonial text-light d-flex align-items-center " id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="text-center w-lg-75 m-auto pb-4">
-                    <h12 >STRUKTUR KEPENGURUSAN</h1>
+                
+            </div>
+            <div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down"> 
+                <img class="img-fluid" src="./assets/images/about.jpg" alt="about" >
+            </div>
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</section> <!-- end of about -->
+
+<!-- Testimonials -->
+
+<div class="slider-1 testimonial text-light d-flex align-items-center " id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="text-center w-lg-75 m-auto pb-4">
+                <h12 >STRUKTUR KEPENGURUSAN</h1>
                     <h2 class="py-2">DIVISI DATA MANAGEMENT</h2>
                     
                 </div>
@@ -77,43 +77,47 @@
             <div class="row p-2" data-aos="zoom-in">
                 <div class="col-lg-12">
 
-                
+                    
                     <!-- Card Slider -->
                     <div class="slider-container">
                         <div class="swiper-container card-slider">
                             <div class="swiper-wrapper">
 
-                            <?php foreach ($datapengurus as $dtpgs) : ?>
-                                
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card p-4 text-center">
+                                <?php foreach ($datapengurus as $dtpgs) : ?>
+                                    
+                                    <!-- Slide -->
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card p-4 text-center">
 
-                                        <div >
-                                            <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
-                                            
-                                            <div class="mt-3 mb-5">
-                                                <h5><?php echo $dtpgs->nama ?></h5>
-                                                <h6><?php echo $dtpgs->jabatan ?></h6>
+                                            <div >
+                                                <?php if ($dtpgs->foto == "") : ?>
+                                                    <img class="avatar " src="https://icons-for-free.com/iconfiles/png/512/profile+profile+page+user+icon-1320186864367220794.png">
+                                                <?php else : ?>
+                                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
+                                                <?php endif; ?>
+                                                
+                                                <div class="mt-3 mb-5">
+                                                    <h5><?php echo $dtpgs->nama ?></h5>
+                                                    <h6><?php echo $dtpgs->jabatan ?></h6>
+                                                    
+                                                </div>
+
                                                 
                                             </div>
-
                                             
                                         </div>
-                                        
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
+                                    </div> <!-- end of swiper-slide -->
+                                    <!-- end of slide -->
 
                                 <?php endforeach ?>
 
                             </div> <!-- end of swiper-wrapper -->
-        
+                            
                             <!-- Add Arrows -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                             <!-- end of add arrows -->
-        
+                            
                         </div> <!-- end of swiper-container -->
                     </div> <!-- end of slider-container -->
                     <!-- end of card slider -->
@@ -348,7 +352,7 @@
     <!-- Contact -->
     <section class="contact d-flex align-items-center py-5" id="contact">
         <div class="container-fluid text-light">
-        <h3 class="text-center">Lokasi Telkom Sidoarjo</h3>
+            <h3 class="text-center">Lokasi Telkom Sidoarjo</h3>
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                     <div class="embed-responsive embed-responsive-16by9">
