@@ -121,9 +121,17 @@ class Model_data extends CI_Model{
 	public function tampil_info_daman(){
 		return $this->db->get('tb_info');
 	}
-	// public function tampil_info_daman2($limit, $start){
-	// 	return $this->db->get('tb_info', $limit, $start);
+	public function tampil_info_daman3($limit, $start){
+		return $this->db->get('tb_info', $limit, $start);
+	}
+
+	// public function tampil_info_daman3($limit, $start){
+	// 	$query = $this->db->get('tb_info', $limit, $start);
+	// 	return $query;
+
 	// }
+
+
 	public function tampil_info_daman2($limit, $start, $keyword){
 		if($keyword == ""){
 			$this->db->select('*');
