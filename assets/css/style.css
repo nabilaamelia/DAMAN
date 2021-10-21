@@ -23,7 +23,7 @@ Table Of Contents:
 :root {
 	--primary: #1c262f;
 	--primary-light: #212d37;
-	--secondary: #0ee951;
+	--secondary: #808080;
 	--tertiary: #00dabf;
 	--gradient: linear-gradient(to right, #ff2c06, #ff6347);
 }
@@ -331,8 +331,8 @@ li {
 	border-image-slice: 1;
 	background-image: none;
 	background: transparent;
-	border-image-source: var(--gradient);
-	box-shadow: 5px 5px 0px 0px var(--secondary);
+	border-image-source: var(--secondary);
+	box-shadow: 5px 5px 0px 0px var(--gradient);
 }
 
 .btn:hover {
@@ -397,7 +397,7 @@ li {
 	border-image-slice: 1;
 	border-width: 2px;
 	border-image-source: var(--gradient);
-	box-shadow: 5px 5px 0px 0px #0ee951;
+	box-shadow: 5px 5px 0px 0px #808080;
 }
 
 
