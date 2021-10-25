@@ -75,9 +75,56 @@
             </div> <!-- end of row -->
             
             <div class="row p-2" data-aos="zoom-in">
-                <div class="col-lg-12">
+                <?php foreach ($datapengurus as $dtpgs) : ?>
+                    <?php if ($dtpgs->jabatan =="MANAGER") { ?>
+                        <center>
+                            <div class="col-lg-3 mb-5">
+                                <div class="testimonial-card p-4 text-center">
 
-                    
+                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
+                                    <h5><?php echo $dtpgs->nama ?></h5>
+                                    <h6><?php echo $dtpgs->jabatan ?></h6>
+                                    
+                                </div>
+                            </div>
+                        </center>
+                <?php } ?>
+                <?php endforeach  ?>
+
+                <?php foreach ($datapengurus as $dtpgs) : ?>
+                    <?php if ($dtpgs->jabatan =="ASSISTANT MANAGER") { ?>
+                        <center>
+                            <div class="col-lg-3 mb-5">
+                                <div class="testimonial-card p-4 text-center">
+
+                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
+                                    <h5><?php echo $dtpgs->nama ?></h5>
+                                    <h6><?php echo $dtpgs->jabatan ?></h6>
+                                    
+                                </div>
+                            </div>
+                        </center>
+                <?php } ?>
+                <?php endforeach  ?>
+
+                <?php foreach ($datapengurus as $dtpgs) : ?>
+                    <?php if ($dtpgs->jabatan =="OFFICER") { ?>
+                        <center>
+                            <div class="col-lg-3 mb-5">
+                                <div class="testimonial-card p-4 text-center">
+
+                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
+                                    <h5><?php echo $dtpgs->nama ?></h5>
+                                    <h6><?php echo $dtpgs->jabatan ?></h6>
+                                    
+                                </div>
+                            </div>
+                        </center>
+                <?php } ?>
+                <?php endforeach  ?>
+
+
+                <div class="col-lg-12">
                     <!-- Card Slider -->
                     <div class="slider-container">
                         <div class="swiper-container card-slider">
