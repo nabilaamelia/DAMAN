@@ -3,7 +3,7 @@
 class Admin extends CI_Controller{
 	public function __construct() {
 		parent::__construct();
-		if ($this->session->userdata('user') != TRUE) {
+		if ($this->session->userdata('user') == NULL) {
 			$this->session->set_flashdata('failed','Anda Belum login, silahkan login terlebih dahulu !');
 			redirect(base_url('login'));
 		}
@@ -11,10 +11,12 @@ class Admin extends CI_Controller{
 	}
 	public function index()
 	{
+
 		$data['datapkl'] = $this->Model_data->tampil_data1()->result();
 		$data['datapengurus'] = $this->Model_data->tampil_data_pengurus1()->result();
 		$data['infodaman'] = $this->Model_data->tampil_info_daman()->result();
 		$data['presensi'] = $this->Model_data->tampil_presensi_peserta()->result();
+		echo $this->session->userdata('role_id');
 		$this->session->unset_userdata('keyword');
 		$this->load->view("templates_admin/header");
 		$this->load->view("templates_admin/sidebar");
@@ -203,6 +205,14 @@ class Admin extends CI_Controller{
 		$this->session->unset_userdata('keyword');
 		redirect(base_url('admin/data_pengurus'));
 	}
+	public function Detail_pengurus($id){
+		$data['pengurus'] = $this->Model_data->detail_pengurus($id)->result();
+		echo print_r($data);
+		$this->load->view("templates_admin/header");
+		$this->load->view("templates_admin/sidebar");
+		$this->load->view("admin/detail_pengurus", $data);
+		$this->load->view("templates_admin/footer");
+	}
 	public function data_pengurus()
 	{
 		$data['keyword'] = $this->input->post('keyword');
@@ -273,7 +283,7 @@ class Admin extends CI_Controller{
 		$nama		= $this->input->post('nama');
 		$jabatan	= $this->input->post('jabatan');
 		$alamat		= $this->input->post('alamat');
-		$keterangan	= $this->input->post('keterangan');
+		$motto	= $this->input->post('motto');
 		$foto		= $_FILES['foto']['name'];
 
 		if ($foto	='') {
@@ -295,7 +305,7 @@ class Admin extends CI_Controller{
 			'nama' 		=> $nama, 
 			'jabatan' 	=> $jabatan,
 			'alamat' 	=> $alamat,
-			'keterangan'=> $keterangan, 
+			'motto'=> $motto, 
 			'foto' 		=> $foto
 
 		);
@@ -308,9 +318,11 @@ class Admin extends CI_Controller{
 		$nama		= $this->input->post('nama');
 		$jabatan	= $this->input->post('jabatan');
 		$alamat		= $this->input->post('alamat');
-		$keterangan	= $this->input->post('keterangan');
+		$motto		= $this->input->post('motto');
+		$no_hp		= $this->input->post('no_hp');
 		$foto_awal	= $this->input->post('foto_awal');
-		$foto			= $_FILES['foto']['name'];
+		$foto		= $_FILES['foto']['name'];
+
 		echo $foto_awal .'<br>';
 		echo $foto;
 		echo $nama;
@@ -318,8 +330,9 @@ class Admin extends CI_Controller{
 			$data = array(
 				'nama' 		=> $nama, 
 				'jabatan' 	=> $jabatan,
+				'no_hp' 	=> $no_hp,
 				'alamat' 	=> $alamat,
-				'keterangan'=> $keterangan   
+				'motto'		=> $motto   
 			);
 		}
 		else{
@@ -335,8 +348,9 @@ class Admin extends CI_Controller{
 			$data = array(
 				'nama' 		=> $nama, 
 				'jabatan' 	=> $jabatan,
+				'no_hp' 	=> $no_hp,
 				'alamat' 	=> $alamat,
-				'keterangan'=> $keterangan,
+				'motto'		=> $motto,
 				'foto' 		=> $foto
 			);
 		}
@@ -369,47 +383,47 @@ class Admin extends CI_Controller{
 		$key = $this->session->userdata('keyword');
 		
 		// if($data['keyword'] == "") {
-			$this->load->library('pagination');
-			if($key == null){
-				$config['total_rows']	= $this->db->count_all_results('tb_info');
-			} else {
-				$config['total_rows']	= $this->Model_data->jumlah_info($key);
-			}
+		$this->load->library('pagination');
+		if($key == null){
+			$config['total_rows']	= $this->db->count_all_results('tb_info');
+		} else {
+			$config['total_rows']	= $this->Model_data->jumlah_info($key);
+		}
 			// echo $key;
-			
+
 			//config
-			$config['base_url'] 	= (base_url().'admin/info_daman');
-			$config['num_links']	= 1;
-			$config['per_page']		= 2;
-			$data['keyword'] = $this->session->userdata('keyword');
+		$config['base_url'] 	= (base_url().'admin/info_daman');
+		$config['num_links']	= 1;
+		$config['per_page']		= 2;
+		$data['keyword'] = $this->session->userdata('keyword');
 
 			//styling
-			$config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
-			$config['full_tag_close'] = '</ul></nav>';
+		$config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
+		$config['full_tag_close'] = '</ul></nav>';
 
-			$config['first_link'] = 'First';
-			$config['first_tag_open'] = '<li class="page-item">';
-			$config['first_tag_close'] = '</li>';
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li class="page-item">';
+		$config['first_tag_close'] = '</li>';
 
-			$config['last_link'] = 'Last';
-			$config['last_tag_open'] = '<li class="page-item">';
-			$config['last_tag_close'] = '</li>';
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li class="page-item">';
+		$config['last_tag_close'] = '</li>';
 
-			$config['next_link'] = '&raquo';
-			$config['next_tag_open'] = '<li class="page-item">';
-			$config['next_tag_close'] = '</li>';
+		$config['next_link'] = '&raquo';
+		$config['next_tag_open'] = '<li class="page-item">';
+		$config['next_tag_close'] = '</li>';
 
-			$config['prev_link'] = '&laquo';
-			$config['prev_tag_open'] = '<li class="page-item">';
-			$config['prev_tag_close'] = '</li>';
+		$config['prev_link'] = '&laquo';
+		$config['prev_tag_open'] = '<li class="page-item">';
+		$config['prev_tag_close'] = '</li>';
 
-			$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
-			$config['cur_tag_close'] = '</a></li>';
+		$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
+		$config['cur_tag_close'] = '</a></li>';
 
-			$config['num_tag_open'] = '<li class="page-item">';
-			$config['num_tag_close'] = '</li>';
+		$config['num_tag_open'] = '<li class="page-item">';
+		$config['num_tag_close'] = '</li>';
 
-			$config['attributes'] = array('class' => 'page-link');
+		$config['attributes'] = array('class' => 'page-link');
 
 		// //initialize
 		$this->pagination->initialize($config);
@@ -585,91 +599,6 @@ class Admin extends CI_Controller{
 		redirect(base_url().'admin/presensi_peserta');
 	}
 
-	// tampilan DISKUSI PESERTA
-	public function forum_diskusi()
-	{
-		$config['base_url'] 	= (base_url().'Admin/forum_diskusi');
-		$config['total_rows']	= $this->db->count_all('tb_diskusi');
-		$config['per_page']		= 5;
-		$config['uri_segment']	= 3;
-		$choice					= $config["total_rows"] / $config['per_page'];
-		$config["num_links"]	= floor($choice);
-
-		$config['first_link']	= 'First';
-		$config['last_link']	= 'Last';
-		$config['next_link']	= 'Next';
-		$config['prev_link']	= 'Prev';
-		$config['full_tag_open']	= '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
-		$config['full_tag_close']	= '</ul></nav></div>';
-		$config['num_tag_open']		= '<li class="page-item"><span class="page-link">';
-		$config['num_tag_close']	= '</span></li>';
-		$config['cur_tag_open']		= '<li class="page-item active"><span class="page-link">';
-		$config['cur_tag_close']	= '</span></li>';
-		$config['next_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['next_tagl_close']	= '<span aria-hidden="true">&raquo</span></span></li>';
-		$config['prev_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['prev_tagl_close']	= '</span>Next</li>';
-		$config['first_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['first_tagl_close']	= '</span></li>';
-		$config['last_tag_open']	= '<li class="page-item "><span class="page-link">';
-		$config['last_tagl_close']	= '</span></li>';
-
-
-		$this->pagination->initialize($config);
-		$data['page'] 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-
-
-		$data['forumdiskusi'] = $this->Model_data->tampil_forum_diskusi2($config["per_page"], $data['page'])->result();
-		$data ['pagination'] = $this->pagination->create_links();
-		// echo print_r($data);
-		// $data['barang'] = $this->model_barang->tampil_data_pengurus()->result();
-		$this->load->view("templates_admin/header");
-		$this->load->view("templates_admin/sidebar");
-		$this->load->view("admin/forum_diskusi", $data);
-		$this->load->view("templates_admin/footer");
-
-	}
-
-	public function tambah_forum_diskusi() {
-		$time		= $this->input->post('time');
-		$nama		= $this->input->post('nama');
-		$pesan		= $this->input->post('pesan');
-
-		$data = array(
-			'time' 		=> $time, 
-			'nama' 		=> $nama,
-			'pesan' 	=> $pesan
-
-		);
-		$this->Model_data->tambah_data($data, 'tb_diskusi');
-		redirect('admin/forum_diskusi');
-	}
-
-	public function edit_forum_diskusi($id)
-	{
-		$time		= $this->input->post('time');
-		$nama		= $this->input->post('nama');
-		$pesan		= $this->input->post('pesan');
-		
-		$data = array(
-			'time' 		=> $time, 
-			'nama' 		=> $nama,
-			'pesan' 	=> $pesan
-		);
-		$where = array(
-			'id_diskusi' => $id 
-		);
-		$this->Model_data->edit_forum_diskusi($data, $where, 'tb_diskusi');
-		redirect('admin/forum_diskusi');
-	}
-	public function hapus_forum_diskusi($id) {
-		$where = array(
-			'id_diskusi' => $id 
-		);
-		$this->Model_data->hapus_data($where, 'tb_diskusi');
-		redirect(base_url().'admin/forum_diskusi');
-	}
-
 
 	// tampilan DATA ADMIN
 	public function data_admin()
@@ -720,22 +649,33 @@ class Admin extends CI_Controller{
 	public function tambah_data_admin() {
 		$username	= $this->input->post('username');
 		$password	= md5($this->input->post('password'));
-
-		$data = array(
-			'username' 	=> $username, 
-			'password' 	=> $password
-
+		$akses	= $this->input->post('akses');
+		$where  = array(
+			'username' 	=> $username,
 		);
-		$this->Model_data->tambah_data($data, 'tb_admin');
-		redirect('admin/data_admin');
+		$cekuser = $this->db->get_where('tb_admin', $where);
+		echo $cekuser->num_rows();
+		if($cekuser->num_rows() > 0) {
+			$this->session->set_flashdata('faileduser','User sudah ada');
+			redirect('admin/data_admin');
+		} else {
+
+			$data = array(
+				'username' 	=> $username, 
+				'password' 	=> $password,
+				'role_id' 	=> $akses
+
+			);
+			$this->Model_data->tambah_data($data, 'tb_admin');
+			redirect('admin/data_admin');
+		}
 	}
 
 	public function edit_data_admin($id)
 	{
-		$username	= $this->input->post('username');
-		$password	= $this->input->post('password');
-		$data = array(
-			'username' 	=> $username, 
+		$password	= md5($this->input->post('password',true));
+
+		$data = array( 
 			'password' 	=> $password
 		);
 		$where = array(

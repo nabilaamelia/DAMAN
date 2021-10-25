@@ -5,19 +5,19 @@
   <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_info_daman"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
   <!--search -->
   <div class="row mb-4">
-        <div class="col-md-8"></div>
-            <div class="col-md-4">
-              <form action="<?= base_url('admin/info_daman'); ?>" method="post">
-                <div class="input-group mb 3">
-                  <input type="text" class="form-control" placeholder="Search" name="keyword" autocomplete="off">
-                  <div class="input-group-append">
-                    <!-- <input class="btn btn-primary" type="submit" name="CARI"> -->
-                    <button class="btn btn-primary" type="submit" name="">Cari</button>
-                  </div>
-                </div>
-              </form>
-            </div>
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+      <form action="<?= base_url('admin/info_daman'); ?>" method="post">
+        <div class="input-group mb 3">
+          <input type="text" class="form-control" placeholder="Search" name="keyword" autocomplete="off">
+          <div class="input-group-append">
+            <!-- <input class="btn btn-primary" type="submit" name="CARI"> -->
+            <button class="btn btn-primary" type="submit" name="">Cari</button>
+          </div>
         </div>
+      </form>
+    </div>
+  </div>
 
   <table class="table table-bordered">
     <tr>
@@ -37,7 +37,15 @@
           <td><?php echo ++$start ?></td>
           <td><?php echo $info->judul ?></td>
           <td><?php echo $info->isi ?></td>
-          <td><?php echo $info->foto ?></td>
+          <?php if($info->foto == "") : ?>
+            <td>
+              <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/09/22/3820270727.png" class="card-img-top" alt="..." width="100" height="60">
+            </td>
+          <?php else: ?>
+            <td>
+              <img src="<?php echo base_url('assets/images/info_pkl/'.$pengurus->foto) ?>" class="card-img-top" alt="..." width="150" height="300>
+            </td>
+          <?php endif; ?>
 
           <td>
             <!-- <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#edit_info_daman"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button> -->
@@ -110,48 +118,48 @@
         </tr>
 
       <?php endforeach; ?>
-      </table>
-      <div class="row">
-        <div class="col">
-          <?= $this->pagination->create_links(); ?>
-        </div>
+    </table>
+    <div class="row">
+      <div class="col">
+        <?= $this->pagination->create_links(); ?>
       </div>
     </div>
+  </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="tambah_info_daman" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl" >
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">FORM INFO DAMAN</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <!-- Modal -->
+  <div class="modal fade" id="tambah_info_daman" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">FORM INFO DAMAN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="<?php echo base_url().'admin/tambah_info_daman'; ?>" method="post" enctype="multipart/form-data" >
+
+            <div class="form-group">
+              <label>Judul</label>
+              <input type="text" name="judul" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Isi</label>
+              <textarea class="ckeditor" name="isi" id="ckeditor" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Foto</label><br>
+              <input type="file" name="foto" class="form-control">
+            </div>
+
           </div>
-          <div class="modal-body">
-            <form action="<?php echo base_url().'admin/tambah_info_daman'; ?>" method="post" enctype="multipart/form-data" >
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="button" class="btn  btn-success" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
 
-              <div class="form-group">
-                <label>Judul</label>
-                <input type="text" name="judul" class="form-control">
-              </div>
+        </form>
 
-              <div class="form-group">
-                <label>Isi</label>
-                <textarea class="ckeditor" name="isi" id="ckeditor" cols="30" rows="10"></textarea>
-              </div>
-
-              <div class="form-group">
-                <label>Foto</label><br>
-                <input type="file" name="foto" class="form-control">
-              </div>
-
-            </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Simpan</button>
-              <button type="button" class="btn  btn-success" data-dismiss="modal" aria-label="Close">Close</button>
-            </div>
-
-          </form>
-
-        </div>
       </div>
     </div>
+  </div>

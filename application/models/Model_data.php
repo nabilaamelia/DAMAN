@@ -58,6 +58,9 @@ class Model_data extends CI_Model{
 		}
 
 	}
+	public function detail_pengurus($id) {
+		return $this->db->where('id_pengurus', $id)->get('tb_pengurus');
+	}
 
 
 	// CRUD pengurus
@@ -265,13 +268,13 @@ class Model_data extends CI_Model{
 		return $this->db->get_where('tb_admin', $where);
 	}
 
-	function hitung(){
-		// $this->db->select('tb_peserta');
-		$this->db->select('*');
-		$this->db->from('tb_peserta');
-		$this->db->where('nama', 'Alif');
-		return $this->db->count_all_results();
-	}
+	// function hitung(){
+	// 	// $this->db->select('tb_peserta');
+	// 	$this->db->select('*');
+	// 	$this->db->from('tb_peserta');
+	// 	$this->db->where('nama', 'Alif');
+	// 	return $this->db->count_all_results();
+	// }
 
 }
 
