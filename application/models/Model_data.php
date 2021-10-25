@@ -122,7 +122,12 @@ class Model_data extends CI_Model{
 		return $this->db->get('tb_info');
 	}
 	public function tampil_info_daman3($limit, $start){
-		return $this->db->get('tb_info', $limit, $start);
+
+		$this->db->select('*');
+		$this->db->from('tb_info');
+		$this->db->order_by('waktu', 'DESC');
+		$this->db->limit($limit, $start);
+		return $this->db->get();
 	}
 
 	// public function tampil_info_daman3($limit, $start){
@@ -136,11 +141,13 @@ class Model_data extends CI_Model{
 		if($keyword == ""){
 			$this->db->select('*');
 			$this->db->from('tb_info');
+			$this->db->order_by('waktu', 'ASC');
 			$this->db->limit($limit, $start);
 
 		} else {
 			$this->db->select('*');
 			$this->db->from('tb_info');
+			$this->db->order_by('waktu', 'ASC');
 			$this->db->like('judul', $keyword);
 			// $this->db->or_like('alamat', $keyword);
 			$this->db->limit($limit, $start);
