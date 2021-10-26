@@ -78,7 +78,7 @@ class Model_data extends CI_Model{
 			$this->db->like('nama', $keyword);
 			$this->db->or_like('jabatan', $keyword);
 			$this->db->or_like('alamat', $keyword);
-			$this->db->or_like('keterangan', $keyword);
+			$this->db->or_like('motto', $keyword);
 			$this->db->order_by('nama', 'ASC');
 			$this->db->limit($limit, $start);
 		}
@@ -90,7 +90,7 @@ class Model_data extends CI_Model{
 		$this->db->like('nama', $keyword);
 		$this->db->or_like('jabatan', $keyword);
 		$this->db->or_like('alamat', $keyword);
-		$this->db->or_like('keterangan', $keyword);
+		$this->db->or_like('motto', $keyword);
 		return $this->db->count_all_results();
 		
 	}
