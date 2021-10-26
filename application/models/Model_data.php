@@ -6,14 +6,14 @@ class Model_data extends CI_Model{
 		if($keyword == ""){
 			$this->db->select('*');
 			$this->db->from('tb_peserta');
-			$this->db->order_by('nama', 'ASC');
+			// $this->db->order_by('nama', 'ASC');
 			$this->db->limit($limit, $start);
 
 		} else {
 			$this->db->select('*');
 			$this->db->from('tb_peserta');
 			$this->db->like('nama', $keyword);
-			$this->db->order_by('nama', 'ASC');
+			// $this->db->order_by('nama', 'ASC');
 			$this->db->or_like('asal_instansi', $keyword);
 			$this->db->limit($limit, $start);
 		}
@@ -69,7 +69,7 @@ class Model_data extends CI_Model{
 		if($keyword == ""){
 			$this->db->select('*');
 			$this->db->from('tb_pengurus');
-			$this->db->order_by('nama', 'ASC');
+			// $this->db->order_by('nama', 'ASC');
 			$this->db->limit($limit, $start);
 
 		} else {
@@ -79,7 +79,7 @@ class Model_data extends CI_Model{
 			$this->db->or_like('jabatan', $keyword);
 			$this->db->or_like('alamat', $keyword);
 			$this->db->or_like('motto', $keyword);
-			$this->db->order_by('nama', 'ASC');
+			// $this->db->order_by('nama', 'ASC');
 			$this->db->limit($limit, $start);
 		}
 		return $this->db->get();
