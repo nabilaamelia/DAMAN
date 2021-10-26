@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row">
             <div class="text-center w-lg-75 m-auto pb-4">
-                <h12 >STRUKTUR KEPENGURUSAN</h1>
+                <h12 >STRUKTUR ORGANISASI</h1>
                     <h2 class="py-2">DIVISI DATA MANAGEMENT</h2>
                     
                 </div>
