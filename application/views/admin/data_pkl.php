@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <center><h3>DATA PESERTA PKL TELKOM SIDOARJO</h3></center>
   <?php if($role_id == 1): ?>
-    <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_pkl"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
+    <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_pkl"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
   <?php endif; ?>
   
   <!--search -->
@@ -59,7 +59,7 @@
               <!-- Ubah Data -->
               <div class="modal fade" id="edit_data_pkl<?php echo $pkl->id_peserta; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                  <div class="modal-content">
+                  <div class="modal-content modal-xl">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLabel">EDIT DATA PKL</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -69,17 +69,17 @@
 
                         <div class="form-group">
                           <label>Nama</label>
-                          <input type="text" name="nama" class="form-control" value="<?php echo $pkl->nama ?>">
+                          <input type="text" name="nama" class="form-control" value="<?php echo $pkl->nama ?>" required>
                         </div>
 
                         <div class="form-group">
                           <label>Asal Instansi</label>
-                          <input type="text" name="asal_instansi" class="form-control" value="<?php echo $pkl->asal_instansi ?>">
+                          <input type="text" name="asal_instansi" class="form-control" value="<?php echo $pkl->asal_instansi ?>" required>
                         </div>
 
                         <div class="form-group">
                           <label>No Hp</label>
-                          <input type="number" name="no_hp" class="form-control" value="<?php echo $pkl->no_hp ?>">
+                          <input type="number" name="no_hp" class="form-control" value="<?php echo $pkl->no_hp ?>" required>
                         </div>
 
                         <div class="form-group">
@@ -89,17 +89,17 @@
 
                         <div class="form-group">
                           <label>Alamat</label>
-                          <textarea class="form-control" name="alamat" id="" cols="30" rows="10"><?php echo $pkl->alamat ?></textarea>
+                          <textarea class="form-control" name="alamat" id="" cols="30" rows="2" required><?php echo $pkl->alamat ?></textarea>
                         </div>
 
                         <div class="form-group">
                           <label>Tanggal Mulai</label>
-                          <input type="date" name="tgl_mulai" class="form-control" value="<?php echo $pkl->tgl_mulai ?>">
+                          <input type="date" name="tgl_mulai" class="form-control" value="<?php echo $pkl->tgl_mulai ?>" required>
                         </div>
 
                         <div class="form-group">
                           <label>Tanggal Selesai</label>
-                          <input type="date" name="tgl_selesai" class="form-control" value="<?php echo $pkl->tgl_selesai ?>">
+                          <input type="date" name="tgl_selesai" class="form-control" value="<?php echo $pkl->tgl_selesai ?>" required>
                         </div>
 
                         <div class="form-group">
@@ -110,7 +110,7 @@
 
                         <div class="form-group">
                           <label>Status</label>
-                          <input type="text" name="status" class="form-control" value="<?php echo $pkl->status ?>">
+                          <input type="text" name="status" class="form-control" value="<?php echo $pkl->status ?>" required>
                         </div>
 
                       </div>
@@ -163,12 +163,12 @@
 
   </div>
 
-  <!-- Modal -->
+  <!-- Modal Tambah -->
   <div class="modal fade" id="tambah_data_pkl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content modal-xl">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FORM DATA PKL</h5>
+          <h5 class="modal-title" id="exampleModalLabel">FORM TAMBAH DATA PKL</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
@@ -176,17 +176,17 @@
 
             <div class="form-group">
               <label>Nama</label>
-              <input type="text" name="nama" class="form-control">
+              <input type="text" name="nama" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label>Asal Instansi</label>
-              <input type="text" name="asal_instansi" class="form-control">
+              <input type="text" name="asal_instansi" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label>No Hp</label>
-              <input type="number" name="no_hp" class="form-control">
+              <input type="number" name="no_hp" class="form-control" required>
             </div>
 
             <div class="form-group">
@@ -196,17 +196,17 @@
 
             <div class="form-group">
               <label>Alamat</label>
-              <textarea class="form-control" name="alamat" id="" cols="30" rows="10"></textarea>
+              <textarea class="form-control" name="alamat" id="" cols="30" rows="3" required></textarea>
             </div>
 
             <div class="form-group">
               <label>Tanggal Mulai</label>
-              <input type="date" name="tgl_mulai" class="form-control">
+              <input type="date" name="tgl_mulai" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label>Tanggal Selesai</label>
-              <input type="date" name="tgl_selesai" class="form-control">
+              <input type="date" name="tgl_selesai" class="form-control" required>
             </div>
 
             <div class="form-group">
@@ -216,7 +216,7 @@
 
             <div class="form-group">
               <label>Status</label>
-              <input type="text" name="status" class="form-control">
+              <input type="text" name="status" class="form-control" required>
             </div>
 
           </div>

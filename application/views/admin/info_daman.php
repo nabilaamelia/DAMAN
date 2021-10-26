@@ -2,7 +2,7 @@
 <script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
 <div class="container-fluid">
   <center><h3>INFO DATA MANAGEMENT TELKOM SIDOARJO</h3></center>
-  <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_info_daman"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
+  <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_info_daman"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
   <!--search -->
   <div class="row mb-4">
     <div class="col-md-8"></div>
@@ -25,7 +25,7 @@
       <th>Judul</th>
       <th>Isi</th>
       <th>Foto</th>
-      <th colspan="3">AKSI</th>
+      <th colspan="3" class="text-center">AKSI</th>
     </tr>
 
     <?php 
@@ -55,7 +55,7 @@
             <!-- Ubah Data -->
             <div class="modal fade" id="edit_info_daman<?php echo $info->id_info; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-xl">
-                <div class="modal-content">
+                <div class="modal-content modal-xl">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">EDIT INFO DAMAN</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -65,17 +65,17 @@
 
                       <div class="form-group">
                         <label>Judul</label>
-                        <input type="text" name="judul" class="form-control" value="<?php echo $info->judul ?>">
+                        <input type="text" name="judul" class="form-control" value="<?php echo $info->judul ?>" required>
                       </div>
 
                       <div class="form-group">
                         <label>Isi</label>
-                        <textarea class="ckeditor" id="ckeditor" name="isi" cols="30" rows="10"><?php echo $info->isi ?></textarea>
+                        <textarea class="ckeditor" id="ckeditor" name="isi" cols="30" rows="10" required><?php echo $info->isi ?></textarea>
                       </div>
 
                       <div class="form-group">
                         <label>Foto</label><br>
-                        <input type="hidden" name="foto_awal" class="form-control" value="<?php echo $info->foto ?>">
+                        <input type="hidden" name="foto_awal" class="form-control" value="<?php echo $info->foto ?>" required>
                         <input type="file" name="foto" class="form-control">
                       </div>
 
@@ -126,12 +126,12 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal Tambah -->
   <div class="modal fade" id="tambah_info_daman" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl" >
-      <div class="modal-content">
+      <div class="modal-content modal-xl">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FORM INFO DAMAN</h5>
+          <h5 class="modal-title" id="exampleModalLabel">FORM TAMBAH INFO DAMAN</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
@@ -139,17 +139,17 @@
 
             <div class="form-group">
               <label>Judul</label>
-              <input type="text" name="judul" class="form-control">
+              <input type="text" name="judul" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label>Isi</label>
-              <textarea class="ckeditor" name="isi" id="ckeditor" cols="30" rows="10"></textarea>
+              <textarea class="ckeditor" name="isi" id="ckeditor" cols="30" rows="10" required></textarea>
             </div>
 
             <div class="form-group">
               <label>Foto</label><br>
-              <input type="file" name="foto" class="form-control">
+              <input type="file" name="foto" class="form-control" required>
             </div>
 
           </div>

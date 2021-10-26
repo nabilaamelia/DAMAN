@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <center><h3>PRESENSI PESERTA PKL TELKOM SIDOARJO</h3></center>
-  <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_presensi_peserta"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
+  <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_presensi_peserta"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
 
   <table class="table table-bordered">
     <tr>
@@ -8,7 +8,7 @@
       <th>Judul</th>
       <th>FORM</th>
       <th>TAMPIL</th>
-      <th colspan="3">AKSI</th>
+      <th colspan="3" class="text-center">AKSI</th>
     </tr>
 
     <?php 
@@ -95,12 +95,12 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal Tambah -->
   <div class="modal fade" id="tambah_presensi_peserta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FORM PRESENSI PESERTA</h5>
+          <h5 class="modal-title" id="exampleModalLabel">FORM TAMBAH PRESENSI PESERTA</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">

@@ -11,7 +11,7 @@
     </div>
   <?php }?>
   <?php if ($role_id == 1) : ?>
-    <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_admin"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
+    <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_admin"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
   <?php endif; ?>
 
   <table class="table table-bordered">
@@ -19,7 +19,7 @@
       <th>No</th>
       <th>Username</th>
       <th>Password</th>
-      <th colspan="3">AKSI</th>
+      <th colspan="3" class="text-center">AKSI</th>
     </tr>
 
     <?php 
@@ -54,7 +54,7 @@
 
                       <div class="form-group">
                         <label>Password</label>
-                        <input type="text" name="password" class="form-control" value="<?php echo $admin->password ?>">
+                        <input type="text" name="password" class="form-control" value="<?php echo $admin->password ?>" required>
                       </div>
 
                     </div>
@@ -110,12 +110,12 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal Tambah -->
   <div class="modal fade" id="tambah_data_admin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content modal-xl">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FORM DATA ADMIN</h5>
+          <h5 class="modal-title" id="exampleModalLabel">FORM TAMBAH DATA ADMIN</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
@@ -123,20 +123,20 @@
 
             <div class="form-group">
               <label>Username</label>
-              <input type="text" name="username" class="form-control">
+              <input type="text" name="username" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label>Password</label>
-              <input type="text" name="password" class="form-control">
+              <input type="text" name="password" class="form-control" required>
             </div>
             <div class="form-group">
               <label>Password</label>
-              <input type="text" name="password" class="form-control">
+              <input type="text" name="password" class="form-control" required>
             </div>
             <div class="form-group">
               <label>Akses</label>
-              <select class="form-control" title="Choose Plan" name="akses">
+              <select class="form-control" title="Choose Plan" name="akses" required>
                 <option value="0">User</option>
                 <option value="1">Admin</option>
               </select>

@@ -1,8 +1,8 @@
 <?php $role_id = $this->session->userdata('role_id'); ?>
 <div class="container-fluid">
-  <center><h3>Struktur Organisasi Daman Telkom Sidoarjo</h3></center>
+  <center><h3>STRUKTUR ORGANISASI DAMAN TELKOM SIDOARJO</h3></center>
   <?php if ($role_id == 1) : ?>
-    <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_pengurus"><i class="fas fa-plus fa-sm"></i>Tambah Data</button>
+    <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_pengurus"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
   <?php endif ?>
 
   <!--search -->
@@ -23,13 +23,13 @@
 
   <table class="table table-bordered">
     <tr>
-      <th>NO</th>
+      <th>No</th>
       <th>Nama</th>
       <th>Jabatan</th>
       <th>Alamat</th>
       <!-- <th>Foto</th> -->
       <th>Motto</th>
-      <th colspan="3">AKSI</th>
+      <th colspan="3" class="text-center">AKSI</th>
     </tr>
 
     <?php 
@@ -59,9 +59,9 @@
               <!-- Ubah Data -->
               <div class="modal fade" id="edit_data_pengurus<?php echo $pengurus->id_pengurus; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                  <div class="modal-content">
+                  <div class="modal-content modal-xl">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">EDIT DATA PENGURUS</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">EDIT DATA STRUKTUR ORGANISASI</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
@@ -69,12 +69,12 @@
 
                         <div class="form-group">
                           <label>Nama</label>
-                          <input type="text" name="nama" class="form-control" value="<?php echo $pengurus->nama ?>">
+                          <input type="text" name="nama" class="form-control" value="<?php echo $pengurus->nama ?>" required>
                         </div>
 
                         <div class="form-group">
                           <label>Jabatan</label>
-                          <select class="form-control"  name="jabatan">
+                          <select class="form-control"  name="jabatan" required>
                             <option value="<?php echo $pengurus->jabatan ?>"><?php echo $pengurus->jabatan ?></option>
                             <option value="MANAGER">MANAGER</option>
                             <option value="ASSISTANT MANAGER">ASSISTANT MANAGER</option>
@@ -86,7 +86,7 @@
 
                         <div class="form-group">
                           <label>Alamat</label>
-                          <textarea class="form-control" name="alamat" id="" cols="30" rows="10"><?php echo $pengurus->alamat ?></textarea>
+                          <textarea class="form-control" name="alamat" id="" cols="30" rows="2" required><?php echo $pengurus->alamat ?></textarea>
                         </div>
 
                         <div class="form-group">
@@ -100,8 +100,8 @@
                           <input type="text" name="motto" class="form-control" value="<?php echo $pengurus->motto ?>">
                         </div>
                         <div class="form-group">
-                          <label>No_Hp</label>
-                          <input type="text" name="no_hp" class="form-control" value="<?php echo $pengurus->no_hp ?>">
+                          <label>No Hp</label>
+                          <input type="text" name="no_hp" class="form-control" value="<?php echo $pengurus->no_hp ?>" required>
                         </div>
 
                       </div>
@@ -153,12 +153,12 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal TAMBAH-->
   <div class="modal fade" id="tambah_data_pengurus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content modal-xl">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FORM DATA PENGURUS</h5>
+          <h5 class="modal-title" id="exampleModalLabel">FORM TAMBAH DATA</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
@@ -166,12 +166,12 @@
 
             <div class="form-group">
               <label>Nama</label>
-              <input type="text" name="nama" class="form-control">
+              <input type="text" name="nama" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label>Jabatan</label>
-              <select class="form-control" title="Choose Plan" name="jabatan">
+              <select class="form-control" title="Choose Plan" name="jabatan" required>
                   <option selected></option>
                   <option value="MANAGER">MANAGER</option>
                   <option value="ASSISTANT MANAGER">ASSISTANT MANAGER</option>
@@ -184,7 +184,7 @@
 
             <div class="form-group">
               <label>Alamat</label>
-              <textarea class="form-control" name="alamat" id="" cols="30" rows="10"></textarea>
+              <textarea class="form-control" name="alamat" id="" cols="30" rows="2" required></textarea>
             </div>
 
             <div class="form-group">
@@ -194,7 +194,7 @@
 
             <div class="form-group">
               <label>No Hp</label>
-              <input type="text" name="no_hp" class="form-control">
+              <input type="text" name="no_hp" class="form-control" required>
             </div>
 
             <div class="form-group">
