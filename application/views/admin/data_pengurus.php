@@ -74,13 +74,13 @@
 
                         <div class="form-group">
                           <label>Jabatan</label>
-                          <select class="form-control" title="Choose Plan" name="jabatan">
+                          <select class="form-control"  name="jabatan">
                             <option value="<?php echo $pengurus->jabatan ?>"><?php echo $pengurus->jabatan ?></option>
-                            <option value="Manager">Manager</option>
-                            <option value="Assistant Manager">Assistant Manager</option>
-                            <option value="Officer">Officer</option>
-                            <option value="Staff - Helpdesk">Staff - Helpdesk</option>
-                            <option value="Staff - Teknisi">Staff - Teknisi</option>
+                            <option value="MANAGER">MANAGER</option>
+                            <option value="ASSISTANT MANAGER">ASSISTANT MANAGER</option>
+                            <option value="OFFICER">OFFICER</option>
+                            <option value="STAFF - HELPDESK">STAFF - HELPDESK</option>
+                            <option value="STAFF - TEKNISI">STAFF - TEKNISI</option>
                           </select>
                         </div>
 
@@ -172,11 +172,12 @@
             <div class="form-group">
               <label>Jabatan</label>
               <select class="form-control" title="Choose Plan" name="jabatan">
-                <option value="Manager">Manager</option>
-                <option value="Assistant Manager">Assistant Manager</option>
-                <option value="Officer">Officer</option>
-                <option value="Staff - Helpdesk">Staff - Helpdesk</option>
-                <option value="Staff - Teknisi">Staff - Teknisi</option>
+                  <option selected></option>
+                  <option value="MANAGER">MANAGER</option>
+                  <option value="ASSISTANT MANAGER">ASSISTANT MANAGER</option>
+                  <option value="OFFICER">OFFICER</option>
+                  <option value="STAFF - HELPDESK">STAFF - HELPDESK</option>
+                  <option value="STAFF - TEKNISI">STAFF - TEKNISI</option>
               </select>
             </div>
 

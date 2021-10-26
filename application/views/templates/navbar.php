@@ -45,6 +45,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('dashboard/#contact') ?>">CONTACT</a>
                     </li>
+                    
                 </ul>
                 <span class="nav-item social-icons">
                     <span class="fa-stack">

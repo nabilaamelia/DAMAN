@@ -124,37 +124,95 @@
                 <?php endforeach  ?>
 
 
-                <div class="col-lg-12">
+                <!-- SLIDER STAFF HELPDESK -->
+                <div class="col-lg-12 mt-1 mb-3">
                     <!-- Card Slider -->
                     <div class="slider-container">
                         <div class="swiper-container card-slider">
                             <div class="swiper-wrapper">
 
                                 <?php foreach ($datapengurus as $dtpgs) : ?>
-                                    
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-card p-4 text-center">
 
-                                            <div >
-                                                <?php if ($dtpgs->foto == "") : ?>
-                                                    <img class="avatar " src="https://icons-for-free.com/iconfiles/png/512/profile+profile+page+user+icon-1320186864367220794.png">
-                                                <?php else : ?>
-                                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
-                                                <?php endif; ?>
-                                                
-                                                <div class="mt-3 mb-5">
-                                                    <h5><?php echo $dtpgs->nama ?></h5>
-                                                    <h6><?php echo $dtpgs->jabatan ?></h6>
+                                    <?php if ($dtpgs->jabatan =="STAFF - HELPDESK") { ?>
+                                    
+                                        <!-- Slide -->
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card p-4 text-center">
+
+                                                <div >
+                                                    <?php if ($dtpgs->foto == "") : ?>
+                                                        <img class="avatar " src="https://icons-for-free.com/iconfiles/png/512/profile+profile+page+user+icon-1320186864367220794.png">
+                                                    <?php else : ?>
+                                                        <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
+                                                    <?php endif; ?>
+                                                    
+                                                    <div class="mt-3 mb-5">
+                                                        <h5><?php echo $dtpgs->nama ?></h5>
+                                                        <h6><?php echo $dtpgs->jabatan ?></h6>
+                                                        
+                                                    </div>
+
                                                     
                                                 </div>
-
                                                 
                                             </div>
-                                            
-                                        </div>
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
+                                        </div> <!-- end of swiper-slide -->
+                                        <!-- end of slide -->
+
+                                    <?php } ?>
+
+                                <?php endforeach ?>
+
+                            </div> <!-- end of swiper-wrapper -->
+                            
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
+                            
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of card slider -->
+
+                </div> <!-- SLIDER STAFF HELPDESK -->
+
+
+                <!-- SLIDER STAFF TEKNISI -->
+                <div class="col-lg-12 mt-5 mb-3">
+                    <!-- Card Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+
+                                <?php foreach ($datapengurus as $dtpgs) : ?>
+
+                                    <?php if ($dtpgs->jabatan =="STAFF - TEKNISI") { ?>
+                                    
+                                        <!-- Slide -->
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card p-4 text-center">
+
+                                                <div >
+                                                    <?php if ($dtpgs->foto == "") : ?>
+                                                        <img class="avatar " src="https://icons-for-free.com/iconfiles/png/512/profile+profile+page+user+icon-1320186864367220794.png">
+                                                    <?php else : ?>
+                                                        <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
+                                                    <?php endif; ?>
+                                                    
+                                                    <div class="mt-3 mb-5">
+                                                        <h5><?php echo $dtpgs->nama ?></h5>
+                                                        <h6><?php echo $dtpgs->jabatan ?></h6>
+                                                        
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div> <!-- end of swiper-slide -->
+                                        <!-- end of slide -->
+
+                                    <?php } ?>
 
                                 <?php endforeach ?>
 
@@ -170,7 +228,7 @@
                     <!-- end of card slider -->
 
                 </div> <!-- end of col -->
-                
+
             </div> <!-- end of row -->
             
         </div> <!-- end of container -->

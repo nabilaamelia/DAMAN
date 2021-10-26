@@ -18,7 +18,7 @@
 					<p class="">
 						<center><?= $pkl->asal_instansi ?></center>
 						<br>
-						<?php echo anchor('Peserta_pkl/Detail/'.$pkl->id_peserta, '<div class="btn btn-warning bg-dark">Detail</div>') ?>
+						<?php echo anchor('Peserta_pkl/Detail/'.$pkl->id_peserta, '<div class="btn bg-dark">Detail</div>') ?>
 					</p>
 				</div>
 			</div> 

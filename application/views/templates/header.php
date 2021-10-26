@@ -27,6 +27,7 @@
     <link href="<?php echo base_url() ?>assets/css/aos.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>assets/css/swiper.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>assets/css/stlyle-asset.css" rel="stylesheet">
+    
 
     <!-- Favicon -->
     <link rel="icon" href="<?php echo base_url() ?>assets/images/Telkom.png">

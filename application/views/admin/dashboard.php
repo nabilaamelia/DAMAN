@@ -18,7 +18,7 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data Peserta 2 <?php echo $this->session->userdata('role_id'); ?></div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data Peserta</div>
                         <?php
                         $jumlah = 0;
                         foreach($datapkl as $pkl) {
@@ -42,7 +42,7 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Data Pengurus</div>
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Struktur Organisasi</div>
                         <?php
                         $jumlah = 0;
                         foreach($datapengurus as $peng) {

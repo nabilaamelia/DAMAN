@@ -16,7 +16,6 @@ class Admin extends CI_Controller{
 		$data['datapengurus'] = $this->Model_data->tampil_data_pengurus1()->result();
 		$data['infodaman'] = $this->Model_data->tampil_info_daman()->result();
 		$data['presensi'] = $this->Model_data->tampil_presensi_peserta()->result();
-		echo $this->session->userdata('role_id');
 		$this->session->unset_userdata('keyword');
 		$this->load->view("templates_admin/header");
 		$this->load->view("templates_admin/sidebar");

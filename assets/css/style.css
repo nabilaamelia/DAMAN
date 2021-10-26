@@ -24,7 +24,7 @@ Table Of Contents:
 	--primary: #1c262f;
 	--primary-light: #212d37;
 	--secondary: #808080;
-	--tertiary: #00dabf;
+	--tertiary: #808080;
 	--gradient: linear-gradient(to right, #ff2c06, #ff6347);
 }
 
@@ -44,11 +44,7 @@ h1 {
 	
 }
 
-h12{
-	font-size: 60px;
-	font-weight: 500;
-	color: #ff6347;
-}
+
 
 button {
 	font-family: sans-serif;
@@ -89,14 +85,13 @@ li {
 	background-color: var(--primary);
 }
 
-.testimonial {
-	background-color: white;
-}
+
 
 .about,
 .plans,
 .company,
 .newsletter,
+.testimonial
 .location {
 	background-color: var(--primary-light);
 }
@@ -288,7 +283,7 @@ li {
 /*     Home     */
 /****************/
 .home {
-	background-image: url(../images/home.jpg);
+	background-image: url(../images/aaa.jpeg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -323,17 +318,7 @@ li {
 /******************/
 /*     Button     */
 /******************/
-.btn {
-	color: white;
-	border-radius: 0;
-	border-width: 2px;
-	padding: 10px 30px;
-	border-image-slice: 1;
-	background-image: none;
-	background: transparent;
-	border-image-source: var(--secondary);
-	box-shadow: 5px 5px 0px 0px var(--gradient);
-}
+
 
 .btn:hover {
 	color: white;
