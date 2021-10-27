@@ -27,4 +27,10 @@
 		</div> <br><br>     
 	</div>
 
+	<div class="row">
+            <div class="col">
+            <?= $this->pagination->create_links(); ?>
+            </div>
+        </div>
+
 </div>
