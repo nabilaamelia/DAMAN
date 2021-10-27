@@ -1,9 +1,9 @@
-<div class="p-3 mb-2 bg-dark text-white" style="height: 70px;"></div>
-<div class= "mt-4 mb-4">
+<div class="p-3  bg-dark text-white" style="height: 70px;"></div>
+<div class= " plans ">
 	<!-- <a href=""> -->
 		<div class="container">
 			<?php foreach($presensi as $pres): ?>
-				<div class="card mt-2 md-2" >            
+				<div class="card " >            
 					<div class="row no-gutters col-md-12">
 						<div class="col-md-4">
 

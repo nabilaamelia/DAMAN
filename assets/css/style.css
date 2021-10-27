@@ -79,22 +79,27 @@ li {
 
 .services,
 .work,
+.about,
 .contact,
-
 .footer {
 	background-color: var(--primary);
 }
 
 
 
-.about,
+
 .plans,
 .company,
 .newsletter,
-.testimonial
 .location {
 	background-color: var(--primary-light);
 }
+
+.testimonial{
+	background-color: var(--primary-light);
+}
+
+
 
 .bottom {
 	background-color: black;

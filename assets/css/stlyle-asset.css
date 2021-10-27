@@ -33,7 +33,8 @@ h2,
 h3,
 h4,
 h5,
-h12
+h12,
+h10,
 h6 {
 	font-family: "Poppins", sans-serif;
 }
@@ -41,14 +42,20 @@ h6 {
 h1 {
 	font-size: 60px;
 	font-weight: 500;
-	
 }
 
 h12{
 	font-size: 60px;
 	font-weight: 500;
-	color: #000000;
+	color: #ffffff;
 }
+
+h10{
+	font-size: 40px;
+	font-weight: 500;
+	color: #ffffff;
+}
+
 
 button {
 	font-family: sans-serif;
@@ -84,17 +91,22 @@ li {
 .services,
 .work,
 .contact,
-
+.about,
 .footer {
 	background-color: var(--primary);
 }
 
-.about,
+
 .plans,
 .company,
-.testimonial
+.presensi,
+.info,
 .newsletter,
 .location {
+	background-color: var(--primary-light);
+}
+
+.testimonial{
 	background-color: var(--primary-light);
 }
 

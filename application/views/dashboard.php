@@ -56,7 +56,7 @@
                 
             </div>
             <div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down"> 
-                <img class="img-fluid" src="./assets/images/about.jpg" alt="about" >
+                <img class="img-fluid" src="<?php echo base_url('assets/images/about.jpg') ?>" alt="about" >
             </div>
         </div> <!-- end of row -->
     </div> <!-- end of container -->

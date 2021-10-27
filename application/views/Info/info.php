@@ -1,10 +1,10 @@
-<div class="p-3 mb-2 bg-dark text-white" style="height: 70px;"></div>
-<div class= "mt-4">
+<div class="p-3  bg-dark text-white" style="height: 80px;"></div>
+<div class= " plans ">
     <!-- <a href=""> -->
-        <div class="container">
+        <div class="container ">
             <?php foreach($infodaman as $info) : ?>
-                <div class="card mt-2 md-2" >            
-                    <div class="row no-gutters col-md-12">
+                <div class="card mb-4" >            
+                    <div class="row no-gutters col-md-12 mt-1">
                         <div class="col-md-4">
                             <?php if($info->foto !== "") : ?>
                                 <center>
@@ -49,9 +49,9 @@
         </div>
 
         <div class="row">
-        <div class="col">
-          <?= $this->pagination->create_links(); ?>
+            <div class="col">
+            <?= $this->pagination->create_links(); ?>
+            </div>
         </div>
-      </div>
 
-    </div>
+</div>
