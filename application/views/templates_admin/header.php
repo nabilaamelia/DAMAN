@@ -9,7 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ADMIN DAMAN</title>
+    <!-- Webpage Title -->
+    <title>ADMIN DATA MANAGEMENT</title>
+
+    <link rel="icon" href="<?php echo base_url() ?>assets/images/Telkom.png">
+
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url() ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

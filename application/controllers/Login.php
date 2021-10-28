@@ -9,6 +9,7 @@ class Login extends CI_Controller{
 
 	public function index(){
 		// echo $this->session->set_userdata($is_login);
+		$this->load->view('templates_admin/header');
 		$this->load->view('login');
 
 
