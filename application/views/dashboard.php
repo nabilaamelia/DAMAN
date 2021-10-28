@@ -97,30 +97,31 @@
                             </div>
                         </center>
 
-                        <div class="row">
+                        <div class="container">
+                            <!-- <center> -->
+                                <div class="row justify-content-center ">
                             
-                                <div class="col-lg-3 mb-5">
-                                    <div class="testimonial-card p-4 text-center">
+                                    <div class="col-lg-3 mb-5">
+                                        <div class="testimonial-card p-4 text-center">
 
-                                        <img class="avatar " src="assets/images/ALIEF.JPG" alt="testimonial">
-                                        <h5>AHDYN ALIEF ARLINGGA</h5>
-                                        <h6>OFF 2 Access Performance</h6>
-                                        
+                                            <img class="avatar " src="assets/images/ALIEF.JPG" alt="testimonial">
+                                            <h5>AHADYN ALIEF ARLINGGA</h5>
+                                            <h6>OFF 2 Access Performance</h6>
+                                            
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-lg-3 mb-5">
-                                    <div class="testimonial-card p-4 text-center">
+                                    <div class="col-lg-3 mb-5">
+                                        <div class="testimonial-card p-4 text-center">
 
-                                        <img class="avatar " src="assets/images/MBRIRI.JPG" alt="testimonial">
-                                        <h5>RIZKI RODHIA MARDHATILLAH</h5>
-                                        <h6>OFF 3 Advaljar Operation</h6>
-                                        
+                                            <img class="avatar " src="assets/images/MBRIRI.JPG" alt="testimonial">
+                                            <h5>RIZKI RODHIA MARDHATILLAH</h5>
+                                            <h6>OFF 3 Advaljar <br>Operation</h6>
+                                            
+                                        </div>
                                     </div>
+
                                 </div>
-                            
-                                
-                         
 
                         </div>
 
@@ -273,41 +274,6 @@
 
     
 
-    <!-- Location -->
-    <section class="location text-light py-5">
-        <div class="container" data-aos="zoom-in">
-            <div class="row">
-                <div class="col-lg-3 d-flex align-items-center">
-                    <div class="p-2"><i class="far fa-map fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>ADDRESS</h6>
-                        <p>Teuku Umar ST. 1919</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex align-items-center" >
-                    <div class="p-2"><i class="fas fa-mobile-alt fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>CALL FOR QUERY</h6>
-                        <p>(800) 265  216 2020</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex align-items-center" >
-                    <div class="p-2"><i class="far fa-envelope fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>SEND US MESSAGE</h6>
-                        <p>infodemofile@example.com</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex align-items-center" >
-                    <div class="p-2"><i class="far fa-clock fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>OPENING HOURS</h6>
-                        <p>09:00 AM - 18:00 PM</p>
-                    </div>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of location -->
-
+   
 
     
