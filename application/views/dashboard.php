@@ -5,7 +5,7 @@
 <div class="p-3  bg-dark text-white" style="height: 70px;"></div>
 <section class="home py-5 d-flex align-items-center" id="header">
     <div class="container text-light py-5"  data-aos="fade-right"> 
-        <h1 class="headline">Hello!</h1>
+        <h1 class="headline ">Hello!</h1>
         <h3 class="para  py-3"><b>Welcome to Unit Access Data Management Witel Sidoarjo</b></h3>
         <h3 class="para  py-3"><b>Telkom  Regional 5</b></h3>
         
@@ -70,53 +70,62 @@
             </div> <!-- end of row -->
             
             <div class="row p-2" data-aos="zoom-in">
-                <?php foreach ($datapengurus as $dtpgs) : ?>
-                    <?php if ($dtpgs->jabatan =="MANAGER") { ?>
+                
                         <center>
                             <div class="col-lg-3 mb-5">
                                 <div class="testimonial-card p-4 text-center">
 
-                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
-                                    <h5><?php echo $dtpgs->nama ?></h5>
-                                    <h6><?php echo $dtpgs->jabatan ?></h6>
+                                    <img class="avatar " src="assets/images/PAKBARID.JPG " alt="testimonial">
+                                    <h5>BAHTIAR BARID</h5>
+                                    <h6>Mgr Access Data Management</h6>
                                     
                                 </div>
                             </div>
                         </center>
-                <?php } ?>
-                <?php endforeach  ?>
+               
 
-                <?php foreach ($datapengurus as $dtpgs) : ?>
-                    <?php if ($dtpgs->jabatan =="ASSISTANT MANAGER") { ?>
+                
                         <center>
                             <div class="col-lg-3 mb-5">
                                 <div class="testimonial-card p-4 text-center">
 
-                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
-                                    <h5><?php echo $dtpgs->nama ?></h5>
-                                    <h6><?php echo $dtpgs->jabatan ?></h6>
+                                    <img class="avatar " src="assets/images/PAKEKO.JPG " alt="testimonial">
+                                    <h5>DWI EKO TRI SAPTONO</h5>
+                                    <h6>SR STAFF REHIRE IV ADVALIAR OPERATION </h6>
                                     
                                 </div>
                             </div>
                         </center>
-                <?php } ?>
-                <?php endforeach  ?>
 
-                <?php foreach ($datapengurus as $dtpgs) : ?>
-                    <?php if ($dtpgs->jabatan =="OFFICER") { ?>
-                        <center>
-                            <div class="col-lg-3 mb-5">
-                                <div class="testimonial-card p-4 text-center">
+                        <div class="row">
+                            
+                                <div class="col-lg-3 mb-5">
+                                    <div class="testimonial-card p-4 text-center">
 
-                                    <img class="avatar " src="<?php echo base_url('assets/images/profile_pengurus/'.$dtpgs->foto) ?>" alt="testimonial">
-                                    <h5><?php echo $dtpgs->nama ?></h5>
-                                    <h6><?php echo $dtpgs->jabatan ?></h6>
-                                    
+                                        <img class="avatar " src="assets/images/ALIEF.JPG" alt="testimonial">
+                                        <h5>AHDYN ALIEF ARLINGGA</h5>
+                                        <h6>OFF 2 Access Performance</h6>
+                                        
+                                    </div>
                                 </div>
-                            </div>
-                        </center>
-                <?php } ?>
-                <?php endforeach  ?>
+
+                                <div class="col-lg-3 mb-5">
+                                    <div class="testimonial-card p-4 text-center">
+
+                                        <img class="avatar " src="assets/images/MBRIRI.JPG" alt="testimonial">
+                                        <h5>RIZKI RODHIA MARDHATILLAH</h5>
+                                        <h6>OFF 3 Advaljar Operation</h6>
+                                        
+                                    </div>
+                                </div>
+                            
+                                
+                         
+
+                        </div>
+
+               
+                
 
 
                 <!-- SLIDER STAFF HELPDESK -->
@@ -232,7 +241,7 @@
     <!-- Contact -->
     <section class="contact d-flex align-items-center py-5" id="contact">
         <div class="container-fluid text-light">
-            <h3 class="text-center">Lokasi Kerja Unit Daman </h3>
+            <h2 class="text-center mb-5">Lokasi Kerja Unit Daman </h2>
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                     <div class="embed-responsive embed-responsive-16by9">
@@ -249,13 +258,13 @@
                 
             </div> <!-- end of row -->
             <div class="row">
-                <div class="col-lg-6 d-flex   align-items-center " data-aos="fade-right">
-                   <h6 class="text-center">Lokasi Daman Center</h6>
+                <div class="col-lg-6 align-items-center " data-aos="fade-right">
+                   <h5 class="text-center">Lokasi Daman Center</h5>
                     
                 </div> <!-- end of col -->
-                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">
+                <div class="col-lg-6 align-items-center" data-aos="fade-down">
                       
-                    <h6 class="text-center">Lokasi Daman Operasional</h6>
+                    <h5 class="text-center">Lokasi Daman Operasional</h5>
                 </div> <!-- end of col -->
                 
             </div> <!-- end of row -->
