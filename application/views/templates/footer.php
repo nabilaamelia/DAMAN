@@ -13,7 +13,7 @@
                 <div class="col-lg-4 d-flex align-items-center" >
                     <div class="p-2"><i class="far fa-envelope fa-3x"></i></div>
                     <div class="ms-2">
-                        <h6>SEND US MESSAGE</h6>
+                        <h6>EMAIL</h6>
                         <p>daman.sda@gmail.com</p>
                     </div>
                 </div>

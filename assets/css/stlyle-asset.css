@@ -90,11 +90,12 @@ li {
 .work,
 .contact,
 .about,
+.plans,
 .footer {
 	background-color: var(--primary);
 }
 
-.plans,
+
 .company,
 .presensi,
 .info,
@@ -290,7 +291,7 @@ li {
 /*     Home     */
 /****************/
 .home {
-	background-image: url(../images/bg.jpg);
+	background-image: url(../images/home.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

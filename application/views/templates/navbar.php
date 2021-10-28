@@ -20,13 +20,13 @@
                         <a class="nav-link active" aria-current="page" href="<?php echo base_url('dashboard') ?>">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('dashboard/#about') ?>">PROFIL</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#about') ?>">PROFILE</a>
                     </li>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">STRUKTUR ORGANISASI</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">STRUCTURE ORGANIZATION</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://access-quality.telkom.co.id/validasi_data_inventory/login.php">PERFORMANCE</a>
+                    <a class="nav-link" onclick="window.open(this.href); return false;" href="https://access-quality.telkom.co.id/validasi_data_inventory/login.php">PERFORMANCE</a>
                     </li> 
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('Info') ?>">INFORMATION</a>
@@ -37,7 +37,7 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
                             <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl/presensi') ?>">PRESENSI</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl/cek_data_pkl') ?>">DAFTAR ANAK PKL</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('Peserta_pkl/cek_data_pkl') ?>">DAFTAR PESERTA PKL</a></li>
                             <li><div class="dropdown-divider"></div></li>
                             
                         </ul>

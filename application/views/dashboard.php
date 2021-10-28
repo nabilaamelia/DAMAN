@@ -7,7 +7,7 @@
     <div class="container text-light py-5"  data-aos="fade-right"> 
         <h1 class="headline ">Hello!</h1>
         <h3 class="para  py-3"><b>Welcome to Unit Access Data Management Witel Sidoarjo</b></h3>
-        <h3 class="para  py-3"><b>Telkom  Regional 5</b></h3>
+        <h3 class="para  py-3"><b>Telkom  Regional V</b></h3>
         
         
     </div> <!-- end of container -->
@@ -75,7 +75,7 @@
                             <div class="col-lg-3 mb-5">
                                 <div class="testimonial-card p-4 text-center">
 
-                                    <img class="avatar " src="assets/images/PAKBARID.JPG " alt="testimonial">
+                                    <img class="avatar " src="<?= base_url() ?>assets/images/PAKBARID.JPG " alt="testimonial">
                                     <h5>BAHTIAR BARID</h5>
                                     <h6>Mgr Access Data Management</h6>
                                     
@@ -89,9 +89,9 @@
                             <div class="col-lg-3 mb-5">
                                 <div class="testimonial-card p-4 text-center">
 
-                                    <img class="avatar " src="assets/images/PAKEKO.JPG " alt="testimonial">
+                                    <img class="avatar " src="<?= base_url() ?>assets/images/PAKEKO.JPG " alt="testimonial">
                                     <h5>DWI EKO TRI SAPTONO</h5>
-                                    <h6>SR STAFF REHIRE IV ADVALIAR OPERATION </h6>
+                                    <h6>SR STAFF REHIRE IV ADVALJAR OPERATION </h6>
                                     
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                     <div class="col-lg-3 mb-5">
                                         <div class="testimonial-card p-4 text-center">
 
-                                            <img class="avatar " src="assets/images/ALIEF.JPG" alt="testimonial">
+                                            <img class="avatar " src="<?= base_url() ?>assets/images/ALIEF.JPG " alt="testimonial">
                                             <h5>AHADYN ALIEF ARLINGGA</h5>
                                             <h6>OFF 2 Access Performance</h6>
                                             
@@ -114,7 +114,7 @@
                                     <div class="col-lg-3 mb-5">
                                         <div class="testimonial-card p-4 text-center">
 
-                                            <img class="avatar " src="assets/images/MBRIRI.JPG" alt="testimonial">
+                                            <img class="avatar " src="<?= base_url() ?>assets/images/MBRIRI.JPG " alt="testimonial">
                                             <h5>RIZKI RODHIA MARDHATILLAH</h5>
                                             <h6>OFF 3 Advaljar <br>Operation</h6>
                                             

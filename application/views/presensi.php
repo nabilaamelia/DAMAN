@@ -13,7 +13,8 @@
 						</div>
 						<div class="col-md-8">
 							<div class="card-body mt-5">
-								<a href="<?php echo $pres->absen ?>"><h5 class="text-dark"><?php echo $pres->judul ?></h5></a>
+								<a onclick="window.open(this.href); return false;" href="<?php echo $pres->absen ?>"><h5 class="text-dark"><?php echo $pres->judul ?></h5></a>
+								<!-- <a class="nav-link" onclick="window.open(this.href); return false;" href="https://access-quality.telkom.co.id/validasi_data_inventory/login.php">PERFORMANCE</a> -->
 							</div>
 						</div>
 					</div>
