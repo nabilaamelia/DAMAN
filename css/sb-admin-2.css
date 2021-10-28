@@ -6466,6 +6466,17 @@ button.bg-warning:focus {
   background-color: #212d37 !important;
 }
 
+.bg-primaryDark {
+  background-color: #1c262f !important;
+}
+
+
+.bg-primaryMid {
+  background-color: #335470 !important;
+}
+
+
+
 .bg-danger {
   background-color: #e74a3b !important;
 }
