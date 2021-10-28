@@ -12,7 +12,7 @@
 					<div class="input-group mb 3">
 					<input type="text" class="form-control" placeholder="Search" name="keyword" autocomplete="off">
 					<div class="input-group-append">
-						<button class="btn btn-primary" type="submit" name="">Cari</button>
+						<button class="btn1 btn-primary" type="submit" name="">Cari</button>
 					</div>
 					</div>
 				</form>

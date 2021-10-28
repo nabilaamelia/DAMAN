@@ -16,7 +16,6 @@ Table Of Contents:
 - Media Queries
 ******************************************/
 
-
 /**************************/
 /*     General Styles     */
 /**************************/
@@ -44,18 +43,17 @@ h1 {
 	font-weight: 500;
 }
 
-h12{
+h12 {
 	font-size: 60px;
 	font-weight: 500;
 	color: #ffffff;
 }
 
-h10{
+h10 {
 	font-size: 40px;
 	font-weight: 500;
 	color: #ffffff;
 }
-
 
 button {
 	font-family: sans-serif;
@@ -96,7 +94,6 @@ li {
 	background-color: var(--primary);
 }
 
-
 .plans,
 .company,
 .presensi,
@@ -106,7 +103,7 @@ li {
 	background-color: var(--primary-light);
 }
 
-.testimonial{
+.testimonial {
 	background-color: var(--primary-light);
 }
 
@@ -130,7 +127,7 @@ li {
 		left bottom,
 		from(#ffffff),
 		to(#ffffff)
-		);
+	);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -144,13 +141,11 @@ li {
 		left bottom,
 		from(#ff2c06),
 		to(#ff6347)
-		);
+	);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
-
 
 .navbar-nav a:hover,
 .footer a:hover,
@@ -161,7 +156,6 @@ li {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
 
 /**********************/
 /*     Navigation     */
@@ -266,7 +260,7 @@ li {
 		left bottom,
 		from(#ff2c06),
 		to(#ff6347)
-		);
+	);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -292,7 +286,6 @@ li {
 	font-size: 1.25rem;
 }
 
-
 /****************/
 /*     Home     */
 /****************/
@@ -312,7 +305,6 @@ li {
 	opacity: 0.7;
 }
 
-
 /***********************/
 /*     Information     */
 /***********************/
@@ -328,11 +320,18 @@ li {
 	background-color: var(--primary-light);
 }
 
-
 /******************/
 /*     Button     */
 /******************/
 
+.btn1 {
+	color: white;
+	border-radius: 0;
+	border-width: 2px;
+	padding: 10px 30px;
+	border-image-slice: 1;
+	background-image: none;
+}
 
 .btn {
 	color: white;
@@ -392,7 +391,6 @@ li {
 	transform: translate(5px, 5px);
 }
 
-
 /********************/
 /*     Services     */
 /********************/
@@ -411,7 +409,6 @@ li {
 	box-shadow: 5px 5px 0px 0px #808080;
 }
 
-
 /*****************/
 /*     Plans     */
 /*****************/
@@ -419,7 +416,6 @@ li {
 	padding: 20px;
 	border: 2px solid white;
 }
-
 
 /************************/
 /*     Testimonials     */
@@ -442,7 +438,7 @@ li {
 	border: 10px solid;
 	border-image-slice: 1;
 	border-width: 3px;
-	Background: #335470;
+	background: #335470;
 	border-image-source: white;
 }
 
@@ -537,7 +533,6 @@ li {
 	}
 }
 
-
 /**********************/
 /*     Newsletter     */
 /**********************/
@@ -552,7 +547,6 @@ li {
 	padding-top: 0.775rem;
 	padding-bottom: 0.775rem;
 }
-
 
 /******************************/
 /*     Back To Top Button     */
@@ -581,7 +575,6 @@ li {
 	margin-left: 0.125rem;
 	margin-bottom: 0.25rem;
 }
-
 
 /***********************/
 /*     Extra Pages     */
@@ -639,7 +632,6 @@ li {
 	margin-top: 0.125rem;
 	margin-bottom: 0.5rem;
 }
-
 
 /*************************/
 /*     Media Queries     */
