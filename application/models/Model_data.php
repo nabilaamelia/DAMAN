@@ -34,6 +34,17 @@ class Model_data extends CI_Model{
 		$this->db->order_by('nama', 'ASC');
 		return $this->db->get();
 	}
+
+	public function tampil_data3($limit, $start){
+
+		$this->db->select('*');
+		$this->db->from('tb_peserta');
+		// $this->db->order_by('waktu', 'DESC');
+		$this->db->limit($limit, $start);
+		return $this->db->get();
+	}
+
+
 	public function tambah_data($data,$table){
 		$this->db->insert($table,$data);
 	}
