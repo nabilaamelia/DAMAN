@@ -23,7 +23,7 @@
                         <a class="nav-link" href="<?php echo base_url('dashboard/#about') ?>">PROFIL</a>
                     </li>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">STRUKTUR KEPENGURUSAN</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">STRUKTUR ORGANISASI</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('dashboard/#services') ?>">PERFORMANCE</a>
