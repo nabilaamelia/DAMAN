@@ -6,7 +6,7 @@
                     <div class="d-flex align-items-center">
                         <h4 class="">Mirko</h4>
                     </div>
-                    <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo esse maxime, impedit rem voluptatibus amet error quas.</p>
+                    <img src="<?php base_url('assets/images/telkom1.png') ?>" alt="">
                     <div class="d-flex">
                         <div class="me-3">
                             <a href="#your-link">

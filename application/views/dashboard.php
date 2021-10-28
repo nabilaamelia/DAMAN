@@ -2,62 +2,57 @@
 
 
 <!-- Home -->
+<div class="p-3  bg-dark text-white" style="height: 70px;"></div>
 <section class="home py-5 d-flex align-items-center" id="header">
     <div class="container text-light py-5"  data-aos="fade-right"> 
-        <h1 class="headline">DATA <span class="home_text">MANAGEMENT</span></h1>
-        <p class="para  py-3"><b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus tempore accusamus quis magnam doloremque itaque ad modi, pariatur iste labore similique officiis impedit aspernatur aperiam facere architecto. Eligendi, repellendus inventore!</b></p>
-        <div class="d-flex align-items-center">
-            <p class="p-2"><i class="fas fa-laptop-house fa-lg" style="color: white;"></i></p>
-            <p><b>Lorem ipsum dolor sit amet.</b></p>  
-        </div>
-        <div class="d-flex align-items-center">
-            <p class="p-2"><i class="fas fa-wifi fa-lg"></i></p>
-            <p><b>Lorem ipsum dolor sit amet.</b></p>  
-        </div>
+        <h1 class="headline">Hello!</h1>
+        <h3 class="para  py-3"><b>Welcome to Unit Access Data Management Witel Sidoarjo</b></h3>
+        <h3 class="para  py-3"><b>Telkom  Regional 5</b></h3>
+        
         
     </div> <!-- end of container -->
 </section> <!-- end of home -->
 
 
-<!-- Information -->
-<section class="information">
-    <div class="container-fluid">  
-        <div class="row text-light">
-            <div class="col-lg-4 text-center p-5" data-aos="zoom-in">
-                <i class="fas fa-tachometer-alt fa-3x p-2"></i>
-                <h4 class="py-3">Download 1 GBPS</h4>
-                <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
-            </div>
-            <div class="col-lg-4 text-center p-5"  data-aos="zoom-in">
-                <i class="fas fa-clock fa-3x p-2"></i>
-                <h4 class="py-3">99% Internet Uptime</h4>
-                <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
-            </div>
-            <div class="col-lg-4 text-center p-5 text-dark"  data-aos="zoom-in"> 
-                <i class="fas fa-headset fa-3x p-2"></i>
-                <h4 class="py-3">24/7 Support </h4>
-                <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
-            </div>
-        </div>
-    </div> <!-- end of container -->
-</section> <!-- end of information -->
+
 
 
 <!-- PROFIL -->
 <section class="about d-flex align-items-center text-light py-5" id="about">
     <div class="container" >
         <div class="row d-flex align-items-center">
-            <div class="col-lg-7" data-aos="fade-right">
-                <p>PROFIL DAMAN</p>
-                <h1>We are top internet <br> service company</h1>
-                <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
-                <p class="py-2 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed accusantium aut dolores inventore architecto modi cupiditate eligendi corporis, illum illo culpa. Reiciendis, molestias. Illum voluptatum quisquam ad veritatis dolorem.</p>
+            <div class="col-lg-12" data-aos="fade-right">
+                <h2>PROFIL DAMAN</h2>
+                <p class="py-2 para-light">Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
+
+                <h6>ADVALJAR OPERATION</h6>
+                <p class="py-2 para-light">- Melakukan fungsi Helpdesk Daman ( omzet ) yaitu update data teknis setiap perubahan data teknis atas kegiatan PSB, gangguan, migrasi dan maintenance<br>
+                                            - Melakukan fungsi update data teknis atas kegiatan tim validasi data dan labeling data existing, survey UN, survey lokasi dan survey doployer<br>
+                                            - Melakukan fungsi handling fallout data
+                </p>
+
+                <h6>INTEGRATION SYSTEM SITE ADVALJAR</h6>
+                <p class="py-2 para-light">- Melakukan Add inventory/ New Inventory atas hasil pembangunan<br>
+                - Melakukan update terhadap data inventory yang belum lengkap (re-drawing, rute dll)<br>
+                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
+                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
+                - Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja
+                </p>
+
+                <h6>ACCESS ASSET MANAGEMENT</h6>
+                <p class="py-2 para-light">- Melakukan inventarisasi dan validasi asset access secara fisik<br>
+                - Memberikan order dan evaluasi validasi data alat produksi ke pihak ketiga<br>
+                - Menjadi bagian dari tim uji terima setiap pengadaan atau pembangunan jaringan access<br>
+                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
+                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
+                - Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja
+                </p>
+                
+                
 
                 
             </div>
-            <div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down"> 
-                <img class="img-fluid" src="<?php echo base_url('assets/images/about.jpg') ?>" alt="about" >
-            </div>
+            
         </div> <!-- end of row -->
     </div> <!-- end of container -->
 </section> <!-- end of about -->
@@ -69,7 +64,7 @@
         <div class="row">
             <div class="text-center w-lg-75 m-auto pb-4">
                 <h12 >STRUKTUR ORGANISASI</h1>
-                    <h2 class="py-2">Unit Access Data Management Telkom Witel Sidoarjo </h2>
+                    <h2 class="py-2">Unit Access Data Management  Witel Sidoarjo </h2>
                     
                 </div>
             </div> <!-- end of row -->
@@ -237,17 +232,30 @@
     <!-- Contact -->
     <section class="contact d-flex align-items-center py-5" id="contact">
         <div class="container-fluid text-light">
-            <h3 class="text-center">Lokasi Telkom Sidoarjo</h3>
+            <h3 class="text-center">Lokasi Kerja Unit Daman </h3>
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63311.88474227055!2d112.69125121292902!3d-7.354702507019669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fcb4d62a5fbd%3A0x70252390c6cba9bc!2sMarkas%20Wifi%20Id%20Telkom%20Sepanjang!5e0!3m2!1sid!2sid!4v1633329809865!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div> <!-- end of div -->
+                  
                 </div> <!-- end of col -->
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1468032163198!2d112.71575691478415!3d-7.449005875473939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e6b578568d99%3A0xb3a173d6433c2eab!2sPlasa%20Telkom%20Sidoarjo!5e0!3m2!1sid!2sid!4v1633330755985!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div> <!-- end of div -->         
+                    </div> <!-- end of div -->     
+                   
+                </div> <!-- end of col -->
+                
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-6 d-flex   align-items-center " data-aos="fade-right">
+                   <h6 class="text-center">Lokasi Daman Center</h6>
+                    
+                </div> <!-- end of col -->
+                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">
+                      
+                    <h6 class="text-center">Lokasi Daman Operasional</h6>
                 </div> <!-- end of col -->
                 
             </div> <!-- end of row -->
