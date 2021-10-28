@@ -2,11 +2,30 @@
 
 class Peserta_pkl extends CI_Controller{
 
-	public function index()
-	{
+	public function cek_data_pkl(){
+		$this->session->unset_userdata('keyword');
+		redirect(base_url('Peserta_pkl/index'));
+	}
+	public function index(){
+		$data['keyword'] = $this->input->post('keyword');
+		if($data['keyword'] != ""){
+			$this->session->set_userdata('keyword', $data['keyword']);
+		}
+		
+		$key = $this->session->userdata('keyword');
+		
+		// if($data['keyword'] == "") {
+		$this->load->library('pagination');
+		if($key == null){
+			$config['total_rows']	= $this->db->count_all_results('tb_peserta');
+		} else {
+			$config['total_rows']	= $this->Model_data->jumlah_pkl($key);
+		}
+			// echo $key;
+
 		$this->load->library('pagination');
 
-		$config['base_url'] 	= (base_url().'Peserta_pkl/index');
+		$config['base_url'] 	= (base_url().'peserta_pkl/index');
 		$config['total_rows']	= $this->db->count_all_results('tb_peserta');
 		$config['num_links']	= 1;
 		$config['per_page']		= 10;
@@ -43,7 +62,7 @@ class Peserta_pkl extends CI_Controller{
 		$this->pagination->initialize($config);
 
 		$data['start'] 	= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-		$data['datapkl'] = $this->Model_data->tampil_data3($config["per_page"], $data['start'])->result();
+		$data['datapkl'] = $this->Model_data->tampil_data($config["per_page"], $data['start'], $key)->result();
 		
 
 		$this->load->view('templates/header');

@@ -3,6 +3,22 @@
 	<div class="container ">
 		<div class="row text-center">
 			<center class="mb-5 mt-3"><h10>DATA PESERTA PKL TELKOM SIDOARJO</h10></center>
+
+			<!--search -->
+			<div class="row mb-4">
+				<div class="col-md-8"></div>
+				<div class="col-md-4">
+				<form action="<?= base_url('peserta_pkl/index'); ?>" method="post">
+					<div class="input-group mb 3">
+					<input type="text" class="form-control" placeholder="Search" name="keyword" autocomplete="off">
+					<div class="input-group-append">
+						<button class="btn btn-primary" type="submit" name="">Cari</button>
+					</div>
+					</div>
+				</form>
+				</div>
+			</div>
+
 			<?php foreach ($datapkl as $pkl) : ?>
 
 				<div class="card mb-4" style="width: 12rem; height: 25rem; margin-left: 2rem;" >
@@ -19,7 +35,7 @@
 						<p class="">
 							<center><?= $pkl->asal_instansi ?></center>
 							<br>
-							<?php echo anchor('Peserta_pkl/Detail/'.$pkl->id_peserta, '<div class="btn bg-dark">Detail</div>') ?>
+							<?php echo anchor(base_url('Peserta_pkl/detail/'.$pkl->id_peserta), '<div class="btn bg-dark">Detail</div>') ?>
 						</p>
 					</div>
 				</div> 
