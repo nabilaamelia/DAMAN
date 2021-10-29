@@ -24,13 +24,13 @@
     <div class="container" >
         <div class="row d-flex align-items-center">
             <div class="col-lg-12" data-aos="fade-right">
-                <h1 class="mb-5"><center>PROFIL DAMAN</center></h1>
+                <h1 class="mb-5"><center>DAMAN PROFILE</center></h1>
                 <p>Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
                 
 
 
                 <center >
-                <video  width="600" height="500" controls autoplay >
+                <video  width="1000" height="500" controls autoplay >
                     <source src="<?php echo base_url()?>assets/images/profile.mp4" type="video/mp4">
                 </video>
                 </center>
@@ -38,7 +38,7 @@
                 
 
                 <h2>ADVALJAR OPERATION</h2>
-                <div class="container">
+                <div class="container" style="justify">
                     <ul>
                     <li>Melakukan fungsi Helpdesk Daman ( omzet ) yaitu update data teknis setiap perubahan data teknis atas kegiatan PSB, gangguan, migrasi dan maintenance</li>
                     <li>Melakukan fungsi update data teknis atas kegiatan tim validasi data dan labeling data existing, survey UN, survey lokasi dan survey doployer</li>
@@ -48,7 +48,7 @@
 
                 
                 <h2>INTEGRATION SYSTEM SITE ADVALJAR</h2>
-                <div class="container">
+                <div class="container" style="justify">
                     <ul>
                     <li>Melakukan Add inventory/ New Inventory atas hasil pembangunan</li>
                     <li>Melakukan update terhadap data inventory yang belum lengkap (re-drawing, rute dll)</li>
@@ -59,7 +59,7 @@
                 </div>
 
                 <h2>ACCESS ASSET MANAGEMENT</h2>
-                <div class="container">
+                <div class="container" style="justify">
                     <ul>
                     <li>Melakukan inventarisasi dan validasi asset access secara fisik</li>
                     <li>Memberikan order dan evaluasi validasi data alat produksi ke pihak ketiga</li>
@@ -71,7 +71,7 @@
                 </div>
 
                 <h2>NTE MANAGEMENT</h2>
-                <div class="container">
+                <div class="container" style="justify">
                     <ul>
                     <li>Menerima dan menginput data NTE ke sistem inventory (SCMT)</li>
                     <li>Mendistibusi NTE untuk keperluan operasional (ONT, STB, Access Point)</li>
@@ -84,7 +84,7 @@
                 </div>
 
                 <h2>ACCESS PERFORMANCE</h2>
-                <div class="container">
+                <div class="container" style="justify">
                     <ul>
                     <li>Memastikan pencapaian sasaran kinerja individu yang selaras dengan pekerjaan, dengan menyusun program kerja dan indikatornya, memahami perannya, mengumpulkan data /informasi, menjadwalkan dan menata prioritas kegiatan, melaksanakan program kerja-program kerja, dan melaporkan hasil kerja kepada atasan secara periodik</li>
                     <li>Menyajikan data realisasi Rencana Kerja Anggaran (RKA) yang akurat, dengan melakukan evaluasi atas realisasi dan pencapaian RKM</li>
@@ -109,7 +109,7 @@
     <div class="container">
         <div class="row">
             <div class="text-center w-lg-75 m-auto pb-4">
-                <h12 >STRUKTUR ORGANISASI</h1>
+                <h12 >ORGANIZATION STRUCTURE</h1>
                     <h2 class="py-2">Unit Access Data Management  Witel Sidoarjo </h2>
                     
                 </div>

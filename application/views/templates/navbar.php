@@ -23,10 +23,10 @@
                         <a class="nav-link" href="<?php echo base_url('dashboard/#about') ?>">PROFILE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('Info') ?>">GALLERI</a>
+                        <a class="nav-link" href="<?php echo base_url('Info') ?>">GALLERY</a>
                     </li>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">ORGANIZATIONAL STRUCTURE</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">ORGANIZATION STRUCTURE</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" onclick="window.open(this.href); return false;" href="https://access-quality.telkom.co.id/validasi_data_inventory/login.php">PERFORMANCE</a>
