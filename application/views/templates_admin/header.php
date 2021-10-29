@@ -24,5 +24,6 @@
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url() ?>css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>css/sb-admin-2.css" rel="stylesheet">
+    <link rel="icon" href="<?php echo base_url() ?>assets/images/Telkom.png">
 
 </head>
