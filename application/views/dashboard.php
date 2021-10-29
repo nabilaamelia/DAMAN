@@ -23,11 +23,20 @@
         <div class="row d-flex align-items-center">
             <div class="col-lg-12" data-aos="fade-right">
                 <h2>PROFIL DAMAN</h2>
-                <p class="py-2 para-light">Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
+
+
+                <center >
+                <video  width="600" height="500" controls autoplay >
+                    <source src="<?php echo base_url()?>assets/images/profile.mp4" type="video/mp4">
+                </video>
+                </center>
+
+                <p class=" para-light">Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
 
                 
+                
 
-                <h6>ADVALJAR OPERATION</h6>
+                <h6 >ADVALJAR OPERATION</h6>
                 <p class="py-2 para-light">- Melakukan fungsi Helpdesk Daman ( omzet ) yaitu update data teknis setiap perubahan data teknis atas kegiatan PSB, gangguan, migrasi dan maintenance<br>
                                             - Melakukan fungsi update data teknis atas kegiatan tim validasi data dan labeling data existing, survey UN, survey lokasi dan survey doployer<br>
                                             - Melakukan fungsi handling fallout data
