@@ -1,5 +1,5 @@
 <div class="p-3  bg-dark text-white" style="height: 70px;"></div>
-<div class="testimonial ">
+<div class="about">
 	<div class="container ">
 		<div class="row text-center">
 			<center class="mb-5 mt-3"><h10>DATA PESERTA PKL TELKOM SIDOARJO</h10></center>

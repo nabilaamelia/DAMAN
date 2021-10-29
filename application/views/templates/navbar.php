@@ -22,15 +22,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('dashboard/#about') ?>">PROFILE</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('Info') ?>">GALLERI</a>
+                    </li>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">STRUCTURE ORGANIZATION</a>
+                        <a class="nav-link" href="<?php echo base_url('dashboard/#testimonial') ?>">ORGANIZATIONAL STRUCTURE</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" onclick="window.open(this.href); return false;" href="https://access-quality.telkom.co.id/validasi_data_inventory/login.php">PERFORMANCE</a>
                     </li> 
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('Info') ?>">INFORMATION</a>
-                    </li> -->
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">PKL</a>
                         

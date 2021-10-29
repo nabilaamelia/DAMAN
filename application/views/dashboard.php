@@ -24,7 +24,9 @@
     <div class="container" >
         <div class="row d-flex align-items-center">
             <div class="col-lg-12" data-aos="fade-right">
-                <h2>PROFIL DAMAN</h2>
+                <h1><center>PROFIL DAMAN</center></h1>
+                <p>Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
+                
 
 
                 <center >
@@ -33,54 +35,66 @@
                 </video>
                 </center>
 
-                <p class=" para-light">Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
-
-                
                 
 
-                <h6 >ADVALJAR OPERATION</h6>
-                <p class="py-2 para-light">- Melakukan fungsi Helpdesk Daman ( omzet ) yaitu update data teknis setiap perubahan data teknis atas kegiatan PSB, gangguan, migrasi dan maintenance<br>
-                                            - Melakukan fungsi update data teknis atas kegiatan tim validasi data dan labeling data existing, survey UN, survey lokasi dan survey doployer<br>
-                                            - Melakukan fungsi handling fallout data
-                </p>
+                <h2>ADVALJAR OPERATION</h2>
+                <div class="container">
+                    <ul>
+                    <li>Melakukan fungsi Helpdesk Daman ( omzet ) yaitu update data teknis setiap perubahan data teknis atas kegiatan PSB, gangguan, migrasi dan maintenance</li>
+                    <li>Melakukan fungsi update data teknis atas kegiatan tim validasi data dan labeling data existing, survey UN, survey lokasi dan survey doployer</li>
+                    <li>Melakukan fungsi handling fallout data</li>
+                    </ul>
+                </div>
 
-                <h6>INTEGRATION SYSTEM SITE ADVALJAR</h6>
-                <p class="py-2 para-light">- Melakukan Add inventory/ New Inventory atas hasil pembangunan<br>
-                - Melakukan update terhadap data inventory yang belum lengkap (re-drawing, rute dll)<br>
-                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
-                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
-                - Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja
-                </p>
-
-                <h6>ACCESS ASSET MANAGEMENT</h6>
-                <p class="py-2 para-light">- Melakukan inventarisasi dan validasi asset access secara fisik<br>
-                - Memberikan order dan evaluasi validasi data alat produksi ke pihak ketiga<br>
-                - Menjadi bagian dari tim uji terima setiap pengadaan atau pembangunan jaringan access<br>
-                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
-                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
-                - Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja
-                </p>
                 
-                <h6>NTE MANAGEMENT</h6>
-                <p class="py-2 para-light">- Menerima dan menginput data NTE ke sistem inventory (SCMT)<br>
-                - Mendistibusi NTE untuk keperluan operasional (ONT, STB, Access Point)<br>
-                - Memvalidasi dan menginventarisasi status NTE<br>
-                - Melakukan stock opname ketersediaan NTE di gudang<br>
-                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
-                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
-                -  Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja<br>
-                </p>
+                <h2>INTEGRATION SYSTEM SITE ADVALJAR</h2>
+                <div class="container">
+                    <ul>
+                    <li>Melakukan Add inventory/ New Inventory atas hasil pembangunan</li>
+                    <li>Melakukan update terhadap data inventory yang belum lengkap (re-drawing, rute dll)</li>
+                    <li>Melaksanakan implementasi aktivitas-aktivitas budaya organisasi</li>
+                    <li>Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan</li>
+                    <li>Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja</li>
+                    </ul>
+                </div>
 
-                <h6>ACCESS PERFORMANCE</h6>
-                <p class="py-2 para-light">- Memastikan pencapaian sasaran kinerja individu yang selaras dengan pekerjaan, dengan menyusun program kerja dan indikatornya, memahami perannya, mengumpulkan data /informasi, menjadwalkan dan menata prioritas kegiatan, melaksanakan program kerja-program kerja, dan melaporkan hasil kerja kepada atasan secara periodik<br>
-                - Menyajikan data realisasi Rencana Kerja Anggaran (RKA) yang akurat, dengan melakukan evaluasi atas realisasi dan pencapaian RKM<br>
-                - Menyajikan hasil analisa pelaksanaan kemitraan, dengan mengidentifikasikan parameter kontrol yang diperlukan untuk mengukur pelaksanaan kemitraan dan melakukan analisa berkala terhadap realisasi pelaksanaan kemitraan terhadap SLA yang ditetapkan<br>
-                - Menyajikan hasil evaluasi pelaksaaan maintenance oleh mitra akses, dengan membandingkan dan mengidentifikasi kondisi perangkat sebelum dan sesudah dilaksanakannya maintenance secara berkala, serta mengolah data progres dan hasil pekerjaan mitra<br>
-                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
-                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
-                - Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja
-                </p>
-                
+                <h2>ACCESS ASSET MANAGEMENT</h2>
+                <div class="container">
+                    <ul>
+                    <li>Melakukan inventarisasi dan validasi asset access secara fisik</li>
+                    <li>Memberikan order dan evaluasi validasi data alat produksi ke pihak ketiga</li>
+                    <li>Menjadi bagian dari tim uji terima setiap pengadaan atau pembangunan jaringan access</li>
+                    <li>Melaksanakan implementasi aktivitas-aktivitas budaya organisasi</li>
+                    <li>Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan</li>
+                    <li>Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja</li>
+                    </ul>
+                </div>
+
+                <h2>NTE MANAGEMENT</h2>
+                <div class="container">
+                    <ul>
+                    <li>Menerima dan menginput data NTE ke sistem inventory (SCMT)</li>
+                    <li>Mendistibusi NTE untuk keperluan operasional (ONT, STB, Access Point)</li>
+                    <li>Memvalidasi dan menginventarisasi status NTE</li>
+                    <li>Melakukan stock opname ketersediaan NTE di gudang</li>
+                    <li>Melaksanakan implementasi aktivitas-aktivitas budaya organisasi</li>
+                    <li>Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan</li>
+                    <li>Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja</li>
+                    </ul>
+                </div>
+
+                <h2>ACCESS PERFORMANCE</h2>
+                <div class="container">
+                    <ul>
+                    <li>Memastikan pencapaian sasaran kinerja individu yang selaras dengan pekerjaan, dengan menyusun program kerja dan indikatornya, memahami perannya, mengumpulkan data /informasi, menjadwalkan dan menata prioritas kegiatan, melaksanakan program kerja-program kerja, dan melaporkan hasil kerja kepada atasan secara periodik</li>
+                    <li>Menyajikan data realisasi Rencana Kerja Anggaran (RKA) yang akurat, dengan melakukan evaluasi atas realisasi dan pencapaian RKM</li>
+                    <li>Menyajikan hasil analisa pelaksanaan kemitraan, dengan mengidentifikasikan parameter kontrol yang diperlukan untuk mengukur pelaksanaan kemitraan dan melakukan analisa berkala terhadap realisasi pelaksanaan kemitraan terhadap SLA yang ditetapkan</li>
+                    <li>Menyajikan hasil evaluasi pelaksaaan maintenance oleh mitra akses, dengan membandingkan dan mengidentifikasi kondisi perangkat sebelum dan sesudah dilaksanakannya maintenance secara berkala, serta mengolah data progres dan hasil pekerjaan mitra</li>
+                    <li>Melaksanakan implementasi aktivitas-aktivitas budaya organisasi</li>
+                    <li>Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan</li>
+                    <li>Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja</li>
+                    </ul>
+                </div>
 
                 
             </div>
