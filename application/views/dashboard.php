@@ -25,6 +25,8 @@
                 <h2>PROFIL DAMAN</h2>
                 <p class="py-2 para-light">Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
 
+                
+
                 <h6>ADVALJAR OPERATION</h6>
                 <p class="py-2 para-light">- Melakukan fungsi Helpdesk Daman ( omzet ) yaitu update data teknis setiap perubahan data teknis atas kegiatan PSB, gangguan, migrasi dan maintenance<br>
                                             - Melakukan fungsi update data teknis atas kegiatan tim validasi data dan labeling data existing, survey UN, survey lokasi dan survey doployer<br>
@@ -48,6 +50,25 @@
                 - Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja
                 </p>
                 
+                <h6>NTE MANAGEMENT</h6>
+                <p class="py-2 para-light">- Menerima dan menginput data NTE ke sistem inventory (SCMT)<br>
+                - Mendistibusi NTE untuk keperluan operasional (ONT, STB, Access Point)<br>
+                - Memvalidasi dan menginventarisasi status NTE<br>
+                - Melakukan stock opname ketersediaan NTE di gudang<br>
+                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
+                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
+                -  Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja<br>
+                </p>
+
+                <h6>ACCESS PERFORMANCE</h6>
+                <p class="py-2 para-light">- Memastikan pencapaian sasaran kinerja individu yang selaras dengan pekerjaan, dengan menyusun program kerja dan indikatornya, memahami perannya, mengumpulkan data /informasi, menjadwalkan dan menata prioritas kegiatan, melaksanakan program kerja-program kerja, dan melaporkan hasil kerja kepada atasan secara periodik<br>
+                - Menyajikan data realisasi Rencana Kerja Anggaran (RKA) yang akurat, dengan melakukan evaluasi atas realisasi dan pencapaian RKM<br>
+                - Menyajikan hasil analisa pelaksanaan kemitraan, dengan mengidentifikasikan parameter kontrol yang diperlukan untuk mengukur pelaksanaan kemitraan dan melakukan analisa berkala terhadap realisasi pelaksanaan kemitraan terhadap SLA yang ditetapkan<br>
+                - Menyajikan hasil evaluasi pelaksaaan maintenance oleh mitra akses, dengan membandingkan dan mengidentifikasi kondisi perangkat sebelum dan sesudah dilaksanakannya maintenance secara berkala, serta mengolah data progres dan hasil pekerjaan mitra<br>
+                - Melaksanakan implementasi aktivitas-aktivitas budaya organisasi<br>
+                - Membangun relasi dengan unit kerja lain dan key person (eksternal/ internal) untuk mendukung penyelesaian pekerjaan<br>
+                - Memastikan kompetensi yang dipersyaratkan bagi pekerjaan ditingkatkan, dengan mempelajari keahlian /pengetahuan yang sesuai untuk menyelesaikan pekerjaan dengan efektif dan menciptakan inovasi kerja
+                </p>
                 
 
                 
