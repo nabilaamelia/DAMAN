@@ -1,9 +1,9 @@
 <?php $role_id = $this->session->userdata('role_id'); ?>
 <div class="container-fluid">
   <center><h3>DATA PESERTA PKL TELKOM SIDOARJO</h3></center>
-  <?php if($role_id == 1): ?>
-    <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_pkl"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
-  <?php endif; ?>
+  
+  <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_data_pkl"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
+  
   
   <!--search -->
   <div class="row mb-4">
@@ -25,9 +25,11 @@
     <tr>
       <th>NO</th>
       <th>NAMA</th>
-      <th>ASAL INSTANSI</th>
+      <th>INSTANSI</th><!-- 
       <th>NO HP</th>
-      <th>EMAIL</th>
+      <th>EMAIL</th> -->
+      <th>WAKTU</th>
+      <th>STATUS</th>
       <!-- <th>ALAMAT</th> -->
       <!-- <th>MULAI</th>
         <th>SELESAI</th> -->
@@ -38,21 +40,26 @@
 
       <?php 
       // $no=1;
-      foreach($datapkl as $pkl) : ?>
+      foreach($datapkl as $pkl) : 
+        date_default_timezone_set('Asia/Jakarta');
+        $akhir  = date_create();
+        $awal   = date_create($pkl->tgl_selesai);
+        $diff  = date_diff($awal, $akhir); ?>
 
         <tr>
           <td><?php echo ++$start ?></td>
           <td><?php echo $pkl->nama ?></td>
           <td><?php echo $pkl->asal_instansi ?></td>
-          <td><?php echo $pkl->no_hp ?></td>
-          <td><?php echo $pkl->email ?></td>
-          
-          <td>
-            <a href="<?php echo base_url('Peserta_pkl/Detail_Admin/'.$pkl->id_peserta ) ?>">
-              <button class="btn btn-primary btn-sm" style="cursor:pointer;border:none" data-toggle="tooltip" data-placement="top" title="Detail"><i class="fa fa-info-circle"></i></button>
-            </a>
-          </td> 
-          <?php if($role_id == 1) : ?>        
+          <td><?php echo $diff->days; ?> Hari</td>
+          <!-- <td><?php echo $pkl->no_hp ?></td>
+            <td><?php echo $pkl->email ?></td> -->
+            <td><?php echo $pkl->status ?></td>
+
+            <td>
+              <a href="<?php echo base_url('Peserta_pkl/Detail_Admin/'.$pkl->id_peserta ) ?>">
+                <button class="btn btn-primary btn-sm" style="cursor:pointer;border:none" data-toggle="tooltip" data-placement="top" title="Detail"><i class="fa fa-info-circle"></i></button>
+              </a>
+            </td>        
             <td>
               <button class="btn btn-primary btn-sm" data-toggle="modal"title="Edit Data" data-target="#edit_data_pkl<?php echo $pkl->id_peserta; ?>"><i class="fa fa-edit"></i></button>
 
@@ -148,85 +155,84 @@
                 </div>
               </div>
             </div>
-          <?php endif; ?>
-          
-        </tr>
 
-      <?php endforeach; ?>
+          </tr>
 
-    </table>
-    <div class="row">
-      <div class="col">
-        <?= $this->pagination->create_links(); ?>
-      </div>
-    </div>
+        <?php endforeach; ?>
 
-  </div>
-
-  <!-- Modal Tambah -->
-  <div class="modal fade" id="tambah_data_pkl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content modal-xl">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FORM TAMBAH DATA PKL</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </table>
+      <div class="row">
+        <div class="col">
+          <?= $this->pagination->create_links(); ?>
         </div>
-        <div class="modal-body">
-          <form action="<?php echo base_url().'admin/tambah_data_pkl'; ?>" method="post" enctype="multipart/form-data" >
+      </div>
 
-            <div class="form-group">
-              <label>Nama</label>
-              <input type="text" name="nama" class="form-control" required>
-            </div>
+    </div>
 
-            <div class="form-group">
-              <label>Asal Instansi</label>
-              <input type="text" name="asal_instansi" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-              <label>No Hp</label>
-              <input type="number" name="no_hp" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" name="email" class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label>Alamat</label>
-              <textarea class="form-control" name="alamat" id="" cols="30" rows="3" required></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Tanggal Mulai</label>
-              <input type="date" name="tgl_mulai" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-              <label>Tanggal Selesai</label>
-              <input type="date" name="tgl_selesai" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-              <label>Foto</label><br>
-              <input type="file" name="foto" class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label>Status</label>
-              <input type="text" name="status" class="form-control" required>
-            </div>
-
+    <!-- Modal Tambah -->
+    <div class="modal fade" id="tambah_data_pkl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-xl">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">FORM TAMBAH DATA PKL</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Simpan</button>
-            <button type="button" class="btn  btn-success" data-dismiss="modal" aria-label="Close">Close</button>
-          </div>
+          <div class="modal-body">
+            <form action="<?php echo base_url().'admin/tambah_data_pkl'; ?>" method="post" enctype="multipart/form-data" >
 
-        </form>
+              <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="nama" class="form-control" required>
+              </div>
 
+              <div class="form-group">
+                <label>Asal Instansi</label>
+                <input type="text" name="asal_instansi" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>No Hp</label>
+                <input type="number" name="no_hp" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Alamat</label>
+                <textarea class="form-control" name="alamat" id="" cols="30" rows="3" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Tanggal Mulai</label>
+                <input type="date" name="tgl_mulai" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>Tanggal Selesai</label>
+                <input type="date" name="tgl_selesai" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>Foto</label><br>
+                <input type="file" name="foto" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Status</label>
+                <input type="text" name="status" class="form-control" required>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Simpan</button>
+              <button type="button" class="btn  btn-success" data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+
+          </form>
+
+        </div>
       </div>
     </div>
-  </div>

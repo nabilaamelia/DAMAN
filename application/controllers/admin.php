@@ -206,7 +206,6 @@ class Admin extends CI_Controller{
 	}
 	public function Detail_pengurus($id){
 		$data['pengurus'] = $this->Model_data->detail_pengurus($id)->result();
-		echo print_r($data);
 		$this->load->view("templates_admin/header");
 		$this->load->view("templates_admin/sidebar");
 		$this->load->view("admin/detail_pengurus", $data);
