@@ -25,17 +25,13 @@
         <div class="row d-flex align-items-center">
             <div class="col-lg-12" data-aos="fade-right">
                 <h1 class="mb-5"><center>DAMAN PROFILE</center></h1>
-                <p>Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
-                
-
 
                 <center >
                 <video  width="1000" height="500" controls autoplay >
                     <source src="<?php echo base_url()?>assets/images/profile.mp4" type="video/mp4">
                 </video>
+                <p>Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
                 </center>
-
-                
 
                 <h2>ADVALJAR OPERATION</h2>
                 <div class="container" style="justify">
