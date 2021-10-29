@@ -24,7 +24,7 @@
     <div class="container" >
         <div class="row d-flex align-items-center">
             <div class="col-lg-12" data-aos="fade-right">
-                <h1><center>PROFIL DAMAN</center></h1>
+                <h1 class="mb-5"><center>PROFIL DAMAN</center></h1>
                 <p>Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
                 
 
