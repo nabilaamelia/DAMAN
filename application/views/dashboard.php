@@ -27,7 +27,7 @@
                 <h1 class="mb-5"><center>DAMAN PROFILE</center></h1>
 
                 <center >
-                <video  width="1000" height="500" controls autoplay >
+                <video  width="1000" height="500" controls muted autoplay >
                     <source src="<?php echo base_url()?>assets/images/profile.mp4" type="video/mp4">
                 </video>
                 <p>Unit Access Management adalah salah satu Unit di Telkom Indonesia yang berfungsi sebagai pengelolaan data pelanggan. Dimana terdiri dari sub-unit yang memiliki fungsi tertentu.</p>
