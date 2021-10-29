@@ -446,7 +446,7 @@ class Admin extends CI_Controller{
 
 		}
 		else{
-			$config ['upload_path'] = './assets/images/profile_info';
+			$config ['upload_path'] = './assets/images/info_pkl';
 			$config ['allowed_types'] = 'jpg|jpeg|png|gif';
 
 			$this->load->library('upload', $config);

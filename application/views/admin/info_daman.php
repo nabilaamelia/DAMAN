@@ -47,7 +47,7 @@
             </td>
           <?php else: ?>
             <td>
-              <img src="<?php echo base_url('assets/images/info_pkl/'.$pengurus->foto) ?>" class="card-img-top" alt="..." width="150" height="300>
+              <img src="<?php echo base_url('assets/images/info_pkl/'.$info->foto) ?>" class="card-img-top" alt="..." width="150" height="300">
             </td>
           <?php endif; ?>
 

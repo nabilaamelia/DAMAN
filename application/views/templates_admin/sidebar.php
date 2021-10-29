@@ -40,11 +40,11 @@
                     <span>STRUKTUR ORGANISASI</span>
                 </a>
             </li>
-
-            <!-- <li class="nav-item">
+<!-- 
+            <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/cek_info_daman') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>INFO DAMAN</span>
+                    <span>GALERI</span>
                 </a>
             </li> -->
 
