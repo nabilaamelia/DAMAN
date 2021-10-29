@@ -117,7 +117,11 @@
 
                         <div class="form-group">
                           <label>Status</label>
-                          <input type="text" name="status" class="form-control" value="<?php echo $pkl->status ?>" required>
+                          <select class="form-control"  name="status" required>
+                            <option value="<?php echo  $pkl->status ?>"><?php echo $pkl->status ?></option>
+                            <option value="AKTIF">AKTIF</option>
+                            <option value="TIDAK AKTIF">TIDAK AKTIF</option>
+                          </select>
                         </div>
 
                       </div>
@@ -222,7 +226,10 @@
 
               <div class="form-group">
                 <label>Status</label>
-                <input type="text" name="status" class="form-control" required>
+                <select class="form-control"  name="status" required>
+                  <option value="AKTIF">AKTIF</option>
+                  <option value="TIDAK AKTIF">TIDAK AKTIF</option>
+                </select>
               </div>
 
             </div>
