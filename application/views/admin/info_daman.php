@@ -1,9 +1,11 @@
 <!-- <script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script> -->
+<?php $role_id = $this->session->userdata('role_id'); ?>
 <script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
 <div class="container-fluid">
   <center><h3>INFO DATA MANAGEMENT TELKOM SIDOARJO</h3></center>
+  <?php if($role_id == 1) : ?>
   <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#tambah_info_daman"><i class="fas fa-plus fa-sm"></i> Tambah Data</button>
-  <!--search -->
+  <?php endif ?>
   <div class="row mb-4">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -25,7 +27,9 @@
       <th>Judul</th>
       <th>Isi</th>
       <th>Foto</th>
+      <?php if($role_id == 1) : ?>
       <th colspan="3" class="text-center">AKSI</th>
+      <?php endif; ?>
     </tr>
 
     <?php 
@@ -47,9 +51,9 @@
             </td>
           <?php endif; ?>
 
-          <td>
-            <!-- <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#edit_info_daman"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button> -->
+          <?php if($role_id == 1) : ?>
 
+          <td>
             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_info_daman<?php echo $info->id_info; ?>"><i class="fa fa-edit"></i></button>
 
             <!-- Ubah Data -->
@@ -93,7 +97,8 @@
             </div>
             <!-- Akhir edit data -->
             
-          </td> 
+          </td>
+          
           <td>
             <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_info_daman<?php echo $info->id_info; ?>"><i class="fa fa-trash"></i></i></button>
             <!-- <?php echo anchor('admin/data_barang/hapus/' .$info->id_info, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?> -->
@@ -114,6 +119,7 @@
               </div>
             </div>
           </div>
+          <?php endif; ?> 
 
         </tr>
 

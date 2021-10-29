@@ -1,3 +1,4 @@
+<?php $role_id = $this->session->userdata('role_id'); ?>
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -40,12 +41,12 @@
                 </a>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/cek_info_daman') ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>INFO DAMAN</span>
                 </a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('admin/presensi_peserta') ?>">
@@ -53,13 +54,21 @@
                     <span>PRESENSI PESERTA</span>
                 </a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/data_admin') ?>">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>ADMIN</span>
-                </a>
-            </li>
+            <?php if($role_id == 1) : ?> 
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/data_admin') ?>">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>ADMIN</span>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/data_admin') ?>">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>GANTI PASSWORD</span>
+                    </a>
+                </li>
+            <?php endif; ?>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">

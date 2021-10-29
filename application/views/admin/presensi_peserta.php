@@ -6,7 +6,6 @@
     <tr>
       <th>No</th>
       <th>Judul</th>
-      <th>FORM</th>
       <th>TAMPIL</th>
       <th colspan="3" class="text-center">AKSI</th>
     </tr>
@@ -19,50 +18,7 @@
         <tr>
           <td><?php echo ++$page ?></td>
           <td><?php echo $presensi->judul ?></td>
-          <td><a href="<?php echo $presensi->absen ?>" class="btn btn-primary">AKSI</a></td>
           <td><a href="<?php echo $presensi->tampil ?>" class="btn btn-primary">AKSI</a></td>
-
-          <td>
-            <!-- <button class="btn btn-sm btn-primary mb-4" data-toggle="modal" data-target="#edit_presensi_peserta"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button> -->
-
-            <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_presensi_peserta<?php echo $presensi->id_presensi; ?>"><i class="fa fa-edit"></i></button> -->
-
-            <!-- Ubah Data -->
-            <!-- <div class="modal fade" id="edit_presensi_peserta<?php echo $presensi->id_presensi; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">EDIT PRESENSI PESERTA</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="<?php echo base_url().'admin/edit_presensi_peserta/'.$presensi->id_presensi; ?>" method="post" enctype="multipart/form-data" >
-
-                      <div class="form-group">
-                        <label>Judul</label>
-                        <input type="text" name="judul" class="form-control" value="<?php echo $presensi->judul ?>">
-                      </div>
-
-                      <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea class="form-control" name="keterangan" cols="30" rows="10"><?php echo $presensi->keterangan ?></textarea>
-                      </div>
-
-                    </div>
-                    <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary">Simpan</button>
-
-                      <button type="button" class="btn  btn-success" data-dismiss="modal" aria-label="Close">Close</button>
-                    </div>
-
-                  </form>
-
-                </div>
-              </div>
-            </div> -->
-            <!-- Akhir edit data -->
-            
-          </td> 
           <td>
             <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_presensi_peserta<?php echo $presensi->id_presensi; ?>"><i class="fa fa-trash"></i></i></button>
             <!-- <?php echo anchor('admin/data_barang/hapus/' .$presensi->id_presensi, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?> -->
